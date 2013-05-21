@@ -1,0 +1,6 @@
+<layers>
+  <layer
+      name="VilaixTheme"
+      interface="vilaix.theme.browser.interfaces.IVilaixTheme"
+  />
+</layers>
