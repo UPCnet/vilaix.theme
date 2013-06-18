@@ -1,0 +1,22 @@
+//   ==========================================================================
+//     MODIFICACIONS GENWEB
+//   ==========================================================================
+
+#portal-header h1.pull-left {
+  // Override the media query for retina images.
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) {
+      height: 46px;
+      width: 207px;
+      background: url('/++ulearn++static/images/logo-upcnet-ulearn-ca.png') no-repeat;
+      -webkit-background-size: 100%;
+      -moz-background-size: 100%;
+      -o-background-size: 100%;
+      background-size: 100%;
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<portlets>    
+    <portlet title="NoticiesVilaix" addview="vilaix.portlets.news"
+        description="Portlet de noticies propi"/>
+    <portlet title="NoticiaDestacadaVilaix" addview="vilaix.portlets.noticiaDestacada"
+        description="Portlet de noticia destacada"/>
+    <portlet title="MesConsultatVilaix" addview="vilaix.portlets.mesConsultat"
+        description="Portlet del mes consultat"/>
+    <portlet title="AgendaVilaix" addview="vilaix.portlets.agendaVilaix"
+        description="Portlet Agenda"/>
+</portlets>

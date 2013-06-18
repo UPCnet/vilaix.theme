@@ -1,0 +1,39 @@
+<tal:sections tal:define="portal_tabs view/portal_tabs;
+                          portal_url context/@@plone_portal_state/portal_url;"
+     tal:condition="portal_tabs"
+     i18n:domain="plone">
+
+	<section id="content-area">
+  		<div class="container">		
+			<div class="row-fluid">
+			  	<div class="span12 menu_peu" tal:define="tab1 view/num_carp">
+					<ul class="nav nav-list" tal:attributes="class tab1;">
+					  	<div class="row-fluid">
+						  	<tal:bl tal:repeat="tab view/homePortalTabs">
+							  	<div class="span3 menu_peu_links">
+							  	  <li tal:attributes="id tab/id_menu;
+									                    class tab/selected | nothing">
+										<h4><a href="string:#"
+											   tal:attributes="href tab/id_menu_url;
+											                   title tab/id_menu_titulo"><span
+											   tal:content="tab/id_menu_titulo">
+											</span> </a> </h4>
+									    <ul tal:attributes="id tab/id_sub_menus;">
+										   <tal:bl tal:repeat="subtab tab/sub_menus">
+												<li><a tal:attributes="href subtab/getURL"
+												           tal:content="subtab/Title">
+												    </a>
+												</li>
+										   </tal:bl>
+										</ul>
+								   </li>		  
+								</div>
+							</tal:bl>				
+					  	<div>	 
+					</ul> 
+				</div>
+			</div>
+		</div>
+	</section>
+    
+</tal:sections>

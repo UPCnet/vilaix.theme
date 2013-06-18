@@ -1,0 +1,35 @@
+<!-- <div class="portlet">
+    <h2><b i18n:translate="mes_consultat"> El més consultat </b></h2>
+    <dl class="portlet mes_consultat" i18n:domain="vilaix.core"> 		
+		<dd class="portletItem" tal:define="entries view/retornaConsultats" tal:condition="entries">
+			<ul style="margin-left:15px">
+				<li tal:repeat="obj entries">
+					<a href="#" tal:attributes="href obj/target">
+						<span class="title_noticia" tal:replace="structure obj/title">
+							Titol Noticia
+						</span> 
+					</a>
+				</li>
+			</ul>  
+		</dd>
+	</dl>
+</div>
+ -->
+
+<tal:mesconsultat tal:define="entries view/retornaConsultats"
+               tal:condition="entries"
+               i18n:domain="vilaix.core">
+   
+    <div class="portlet portlet_mes_consultat">
+        <h2><b i18n:translate="mes_consultat"> El més consultat </b></h2>
+        <ul class="list-portlet">
+          <li class="mes_consultat" tal:repeat="obj entries"> 
+              <a href="#" tal:attributes="href obj/target">
+				<span class="title_noticia" tal:replace="structure obj/title">
+					Titol Noticia
+				</span> 
+			  </a>      
+          </li>
+        </ul>       
+    </div>
+</tal:mesconsultat>
