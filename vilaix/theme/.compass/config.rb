@@ -1,13 +1,13 @@
 # Require any additional compass plugins here.
-add_import_path "../../../genweb.theme/genweb/theme/bootstrap/scss"
+additional_import_paths = ["../../../genweb.theme/genweb/theme/scss", "../../../genweb.theme/genweb/theme/bootstrap/scss"]
 
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "./stylesheets"
 sass_dir = "./scss"
-http_images_path = "/++vilaix++static/images"
-images_dir = "static/images"
-# javascripts_dir = "./bootstrap/js"
+http_images_path = "/++genweb++static/images"
+images_dir = "../../../genweb.theme/genweb/theme/static/images"
+javascripts_dir = "./bootstrap/js"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

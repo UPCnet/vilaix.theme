@@ -28,7 +28,7 @@ class BasicTest(unittest.TestCase):
         self.app = self.layer['app']
 
     def test_VilaixTheme_layers_available(self):
-        self.failUnless('VilaixTheme_custom' in self.portal.portal_skins)
+        self.failUnless('vilaixtheme_custom' in self.portal.portal_skins)
 
     def test_VilaixTheme_skin_installed(self):
         self.skins = self.portal.portal_skins

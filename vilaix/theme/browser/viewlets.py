@@ -29,6 +29,8 @@ from genweb.core.utils import genweb_config, havePermissionAtRoot, pref_lang
 
 from genweb.theme.browser.interfaces import IGenwebTheme
 
+from vilaix.theme.browser.interfaces import IVilaixTheme
+
 
 grok.context(Interface)
 
@@ -72,25 +74,25 @@ class viewletBase(grok.Viewlet):
 #         return pm.getPersonalPortrait().absolute_url()
 
 
-# class gwHeader(viewletBase):
-#     grok.name('genweb.header')
-#     grok.template('header')
-#     grok.viewletmanager(IPortalHeader)
-#     grok.layer(IGenwebTheme)
+class gwHeader(viewletBase):
+    grok.name('genweb.header')
+    grok.template('header')
+    grok.viewletmanager(IPortalHeader)
+    grok.layer(IVilaixTheme)
 
-#     def get_image_class(self):
-#         if self.genweb_config().treu_menu_horitzontal:
-#             # Is a L2 type
-#             return 'l2-image'
-#         else:
-#             return 'l3-image'
+    def get_image_class(self):
+        if self.genweb_config().treu_menu_horitzontal:
+            # Is a L2 type
+            return 'l2-image'
+        else:
+            return 'l3-image'
 
-#     def show_login(self):
-#         isAnon = getMultiAdapter((self.context, self.request), name='plone_portal_state').anonymous()
-#         return not self.genweb_config().amaga_identificacio and isAnon
+    def show_login(self):
+        isAnon = getMultiAdapter((self.context, self.request), name='plone_portal_state').anonymous()
+        return not self.genweb_config().amaga_identificacio and isAnon
 
-#     def show_directory(self):
-#         return self.genweb_config().directori_upc
+    def show_directory(self):
+        return self.genweb_config().directori_upc
 
 
 # class gwImportantNews(viewletBase):
@@ -116,15 +118,15 @@ class viewletBase(grok.Viewlet):
 #             IImportant(self.context).is_important = False
 
 
-# class gwGlobalSectionsViewlet(GlobalSectionsViewlet, viewletBase):
-#     grok.name('genweb.globalsections')
-#     grok.viewletmanager(IPortalTop)
-#     grok.layer(IGenwebTheme)
+class gwGlobalSectionsViewlet(GlobalSectionsViewlet, viewletBase):
+    grok.name('genweb.globalsections')
+    grok.viewletmanager(IPortalTop)
+    grok.layer(IVilaixTheme)
 
-#     index = ViewPageTemplateFile('viewlets_templates/sections.pt')
+    index = ViewPageTemplateFile('viewlets_templates/sections.pt')
 
-#     def show_menu(self):
-#         return not self.genweb_config().treu_menu_horitzontal and self.portal_tabs
+    def show_menu(self):
+        return not self.genweb_config().treu_menu_horitzontal and self.portal_tabs
 
 
 # class gwPathBarViewlet(PathBarViewlet, viewletBase):

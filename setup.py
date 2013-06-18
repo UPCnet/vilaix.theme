@@ -30,9 +30,8 @@ setup(name='vilaix.theme',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
-          'five.grok',
-          'genweb.theme',
+          'setuptools',          
+          'genweb.theme'
       ],
       entry_points="""
       # -*- Entry points: -*-

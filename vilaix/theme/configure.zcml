@@ -18,7 +18,7 @@
   <include package=".browser" />
   <include package=".portlets" />
 
-  <cmf:registerDirectory name="VilaixTheme_custom" recursive="True" />
+  <cmf:registerDirectory name="vilaixtheme_custom" recursive="True" />
 
   <include package="plone.resource" file="meta.zcml"/>
 

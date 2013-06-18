@@ -3,7 +3,7 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="genweb.portlets">
+    i18n_domain="vilaix.portlets">
 
     <include package="plone.app.portlets" />
 
@@ -13,5 +13,37 @@
         layer="genweb.theme.browser.interfaces.IGenwebTheme"
         /> -->
 
+    <plone:portlet
+     name="vilaix.portlets.news"
+     interface=".news.INewsPortlet"
+     assignment=".news.Assignment"
+     renderer=".news.Renderer"
+     addview=".news.AddForm"
+     />
+
+    <plone:portlet
+     name="vilaix.portlets.noticiaDestacada"
+     interface=".noticiaDestacada.INoticiaDestacadaPortlet"
+     assignment=".noticiaDestacada.Assignment"
+     renderer=".noticiaDestacada.Renderer"
+     addview=".noticiaDestacada.AddForm"
+     />
+
+    <plone:portlet
+     name="vilaix.portlets.mesConsultat"
+     interface=".mesConsultat.IMesConsultatPortlet"
+     assignment=".mesConsultat.Assignment"
+     renderer=".mesConsultat.Renderer"
+     addview=".mesConsultat.AddForm"
+     />
+
+    <plone:portlet
+     name="vilaix.portlets.agendaVilaix"
+     interface=".agendaVilaix.IAgendaVilaixPortlet"
+     assignment=".agendaVilaix.Assignment"
+     renderer=".agendaVilaix.Renderer"
+     addview=".agendaVilaix.AddForm"
+     editview=".agendaVilaix.EditForm"
+     />
 
 </configure>

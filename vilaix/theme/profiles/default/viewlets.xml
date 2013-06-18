@@ -11,6 +11,7 @@
     <viewlet name="genweb.header"/>
   </order>
   <order manager="plone.portalfooter" skinname="VilaixTheme">
+    <viewlet name="vilaix.navigationPeu"/>
     <viewlet name="genweb.logosfooter"/>
     <viewlet name="genweb.footer"/>
   </order>
@@ -25,7 +26,7 @@
   <hidden manager= "plone.abovecontent" skinname="VilaixTheme">
     <viewlet name="plone.path_bar"/>
   </hidden>
-  <hidden manager= "plone.portalfooter" skinname="VilaixTheme">
+  <hidden manager= "plone.portalfooter" skinname="VilaixTheme">    
     <viewlet name="plone.footer"/>
     <viewlet name="plone.colophon"/>
     <viewlet name="plone.site_actions"/>

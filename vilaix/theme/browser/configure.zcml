@@ -9,4 +9,12 @@
         name="VilaixTheme"
         />
 
+     <browser:viewlet
+      name="vilaix.navigationPeu"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".navigationPeu.navigationPeu"
+      layer=".interfaces.IVilaixTheme"
+      permission="zope2.View"
+      />    
+
 </configure>
