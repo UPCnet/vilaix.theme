@@ -2197,20 +2197,27 @@ body {
 
 /* line 185, ../scss/VilaixTheme.scss */
 .imatge_Destacada {
-  float: left;
-  width: 224px;
-  height: 136px;
-  padding: 2px;
-  margin-right: 10px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
+/* line 190, ../scss/VilaixTheme.scss */
+.text_Destacat {
+  margin-bottom: 0px !important;
+}
+
 /* line 194, ../scss/VilaixTheme.scss */
+.link_footer_destacat {
+  float: right !important;
+  margin-bottom: 0px !important;
+}
+
+/* line 199, ../scss/VilaixTheme.scss */
 .noticia_Destacada {
   background: none;
 }
 
-/* line 198, ../scss/VilaixTheme.scss */
+/* line 203, ../scss/VilaixTheme.scss */
 .portlet_mes_consultat .list-portlet li {
   border-top: 1px solid #e5e5e5;
   margin-left: 0 !important;
@@ -2218,7 +2225,7 @@ body {
   margin-right: 10px;
 }
 
-/* line 205, ../scss/VilaixTheme.scss */
+/* line 210, ../scss/VilaixTheme.scss */
 .mes_consultat {
   background: #F2F2F2;
   margin-right: 0px !important;
@@ -2226,17 +2233,17 @@ body {
   border-top: 3px solid white !important;
 }
 
-/* line 212, ../scss/VilaixTheme.scss */
+/* line 217, ../scss/VilaixTheme.scss */
 .mes_consultat a {
   color: black !important;
 }
 
-/* line 216, ../scss/VilaixTheme.scss */
+/* line 221, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments ul {
   border-bottom: none;
 }
 
-/* line 220, ../scss/VilaixTheme.scss */
+/* line 225, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments ul a {
   display: block;
   padding-left: 70px;
@@ -2245,54 +2252,54 @@ body {
   min-height: 0 !important;
 }
 
-/* line 228, ../scss/VilaixTheme.scss */
+/* line 233, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments .multidate-before {
   padding-left: 73px;
 }
 
-/* line 232, ../scss/VilaixTheme.scss */
+/* line 237, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments .multidate {
   font-size: 107%;
 }
 
-/* line 236, ../scss/VilaixTheme.scss */
+/* line 241, ../scss/VilaixTheme.scss */
 .text_esdeveniment {
   padding-left: 75px;
   font-size: 90%;
 }
 
-/* line 241, ../scss/VilaixTheme.scss */
+/* line 246, ../scss/VilaixTheme.scss */
 .menu_peu {
   border: 2px solid white;
   padding: 10px 10px;
 }
 
-/* line 246, ../scss/VilaixTheme.scss */
+/* line 251, ../scss/VilaixTheme.scss */
 .menu_peu ul {
   list-style: none;
   margin-left: 0px;
 }
 
-/* line 252, ../scss/VilaixTheme.scss */
+/* line 257, ../scss/VilaixTheme.scss */
 .menu_peu h4 {
   background: #0073B8;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 
-/* line 258, ../scss/VilaixTheme.scss */
+/* line 263, ../scss/VilaixTheme.scss */
 .menu_peu li a {
   color: black;
   margin-left: 10px;
 }
 
-/* line 263, ../scss/VilaixTheme.scss */
+/* line 268, ../scss/VilaixTheme.scss */
 .menu_peu_links ul li {
   border-bottom: 2px solid white;
   padding-bottom: 5px;
 }
 
-/* line 268, ../scss/VilaixTheme.scss */
+/* line 273, ../scss/VilaixTheme.scss */
 .menu_peu h4 a {
   color: white;
   margin-left: 10px;

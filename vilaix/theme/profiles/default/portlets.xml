@@ -7,5 +7,5 @@
     <portlet title="MesConsultatVilaix" addview="vilaix.portlets.mesConsultat"
         description="Portlet del mes consultat"/>
     <portlet title="AgendaVilaix" addview="vilaix.portlets.agendaVilaix"
-        description="Portlet Agenda"/>
+        description="Portlet Agenda"/>   	
 </portlets>

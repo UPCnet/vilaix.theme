@@ -87,12 +87,12 @@ class Renderer(base.Renderer):
         destacats = destacats[:1] # Retornem el primer
          
         data = [dict(id=a.id,
-                     description =self.abrevia(a.Description,350), 
+                     description =self.abrevia(a.Description,250), 
                      url=a.getURL(),                    
                      title=a.Title,
                      new = a.getObject(),
                      image = a.getObject().image,
-                     Text = self.abrevia(a.getObject().text.raw,350)) for a in destacats]
+                     Text = self.abrevia(a.getObject().text.raw,250)) for a in destacats]
 
         return data
 

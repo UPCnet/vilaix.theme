@@ -182,13 +182,18 @@ body {
 	padding-left: 4px;
 }
 
-.imatge_Destacada {
-	float: left;
-	width: 224px;
-	height: 136px;	
-	padding: 2px;
-	margin-right: 10px;
+.imatge_Destacada {	
+	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.text_Destacat {
+	margin-bottom: 0px !important;
+}
+
+.link_footer_destacat {
+	float: right !important;
+	margin-bottom: 0px !important;
 }
 
 .noticia_Destacada {
