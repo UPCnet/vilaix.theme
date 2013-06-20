@@ -46,4 +46,14 @@
      editview=".agendaVilaix.EditForm"
      />
 
+    <plone:portlet
+     name="vilaix.portlets.banners"
+     interface=".bannersportlet.IBannersPortlet"
+     assignment=".bannersportlet.Assignment"
+     view_permission="zope2.View"
+     renderer=".bannersportlet.Renderer"
+     addview=".bannersportlet.AddForm"
+     editview=".bannersportlet.EditForm"
+     />
+
 </configure>

@@ -2304,3 +2304,14 @@ body {
   color: white;
   margin-left: 10px;
 }
+
+/* line 278, ../scss/VilaixTheme.scss */
+#baners ul {
+  list-style: none;
+  margin-left: 0px;
+}
+
+/* line 283, ../scss/VilaixTheme.scss */
+#baners ul li {
+  margin-bottom: 8px;
+}
