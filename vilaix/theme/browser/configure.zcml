@@ -9,12 +9,21 @@
         name="VilaixTheme"
         />
 
-     <browser:viewlet
+    <browser:viewlet
       name="vilaix.navigationPeu"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
       class=".navigationPeu.navigationPeu"
       layer=".interfaces.IVilaixTheme"
       permission="zope2.View"
       />    
+
+    <browser:viewlet
+      name="vilaix.carrousel"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"      
+      class=".carrousel.carrousel"
+      layer=".interfaces.IVilaixTheme"
+      permission="zope2.View"
+      />        
 
 </configure>
