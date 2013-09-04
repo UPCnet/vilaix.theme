@@ -78,12 +78,11 @@ class Renderer(base.Renderer):
         """ Mostra la primera noticia destacada
         """
         context = self.context
-
         destacats = context.portal_catalog.searchResults(portal_type = 'News Item',
                                                          review_state=['published',],
+                                                         Destacat = True,
                                                          sort_on='getObjPositionInParent',
                                                         )
-        
         destacats = destacats[:1] # Retornem el primer
          
         data = [dict(id=a.id,

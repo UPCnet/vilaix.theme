@@ -7,7 +7,7 @@
     <div class="portlet portlet-noticia-destacada">
         <!-- <h2><b i18n:translate="avui_destaquem"> Notícia Destacada </b></h2> -->
         <div class="row-fluid" tal:repeat="obj entries">
-          <div class="imatge_Destacada left span4">  
+          <div class="imatge_Destacada left">  
             <img tal:define="scale obj/new/@@images"
                      tal:replace="structure python: scale.scale('image',
                                   scale='mini').tag(css_class='newsImage')" />
@@ -16,7 +16,7 @@
             </p>   
           </div>
 
-          <div class="text_Destacat span8">
+          <div class="text_Destacat">
             <h3>
             <a href="#" tal:attributes="href obj/url">
               <span class="title_noticia" tal:replace="structure obj/title">
@@ -28,7 +28,7 @@
               Text destacat 
             </span>                                       
           </div>    
-          <div class="link_footer_destacat span8">
+          <div class="link_footer_destacat span12">
             <a href="" class="portlet-footer" tal:attributes="href obj/url"><span class="button">Amplia<i class="icon-plus-sign icon-white"></i></span></a>
           </div>     
         </div>   
