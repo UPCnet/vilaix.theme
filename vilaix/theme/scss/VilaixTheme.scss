@@ -131,15 +131,15 @@ body {
 	height: 75px;	
 	padding: 2px;
 	margin-right: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 }
 
 .noticies h2 {
 	margin: 0;
-	font-size: 107%;
+	font-size: 16px;
+    line-height: 21px;
 	color: white;
 	padding: 0px 0px;
-	line-height: 18px;
 	position: relative;
 	border-bottom-width: 0px;
 	background: none;
@@ -181,25 +181,24 @@ body {
 	padding-bottom: 0px;
 	padding-left: 4px;
 }
-
-.imatge_Destacada {	
-	margin-top: 10px;
-	margin-bottom: 10px;
+.portlet.portlet-noticia-destacada {
+    padding: 3px 3px 0;
+        min-height: 145px;
 }
-
+.imatge_Destacada, .text_Destacat {
+	margin:0!important;
+	}
 .text_Destacat {
-	margin-bottom: 0px !important;
+	margin-left:10px!important;
 }
-
-.link_footer_destacat {
-	float: right !important;
-	margin-bottom: 0px !important;
-}
-
 .noticia_Destacada {
 	background: none;
 }
-
+.link_footer_destacat {
+    margin-left: 10px !important;
+    margin-bottom:0!important;
+     margin-top: 10px;
+}
 .portlet_mes_consultat .list-portlet li {
 	border-top: 1px solid #E5E5E5;
 	margin-left: 0 !important;
@@ -284,3 +283,293 @@ body {
 	margin-bottom: 8px;
 }
 
+// Canvis Marc demo Ajuntament - Juliol 2013.
+
+body {
+	background: url("/++vilaix++static/images/fons_vilaix.png") repeat-y scroll center top white;
+	color: #555555;
+}
+#portal-header {
+    background: none repeat scroll 0 0 white;
+    border-bottom: medium none;
+    border-top: 2px solid #0073B8;
+    margin: 0 auto;
+    width: 978px;
+}
+.header-image {
+    background-image: url("/++vilaix++static/images/capcalera.jpg");
+    background-repeat: no-repeat;
+    border-radius: 0 0 0 0;
+    box-shadow: none;
+    height: 130px;
+    margin-top: 10px !important;
+}
+.portlet {
+    background: none repeat scroll 0 0 white;
+    border: 8px solid white;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+}
+.portlet h2 {
+    background: none repeat scroll 0 0 #0073B8;
+    border-bottom-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
+    padding: 6px 15px 7px 10px;
+    position: relative;
+}
+.noticies h2 {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom-width: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+b, strong {
+    font-weight: 600;
+}
+#portal-globalnav .nav > li > a {
+    background-color: transparent;
+    border-right: medium none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 3px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    text-shadow: 1px 1px 0 black;
+    text-transform: uppercase;
+}
+.subnavbar .nav-list a {
+    color: white;
+    font-weight: 600;
+}
+.subnavbar .nav-list {
+    background: none repeat scroll 0 0 white;
+    border: 8px solid white;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.subnavbar .nav-list a {
+	font-size: 14px;
+    background-color: #0073B8;
+    background-image: none;
+    background-repeat: repeat-x;
+    border-top: 0 none !important;
+    color: white;
+    display: block;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 2px;
+    margin-left: -15px;
+    margin-right: -15px;
+	padding: 8px 8px 8px 9px !important;
+    position: relative;
+    text-shadow: none !important;
+}
+.subnavbar .nav-list li:first-child a {
+    border-radius: 0 0 0 0;
+    border-top: 0 none !important;
+}
+.subnavbar .nav-list li:last-child a:only-child {
+    border-radius: 0 0 0 0;
+}
+.button {
+    background: none repeat scroll 0 0 black;
+    font-size: 11px;
+    padding: 1px 0 2px 8px;
+}
+.portlet-footer {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 0 0 0 0;
+    border-top: 1px solid white;
+    display: block;
+    font-size: 92.3077%;
+    padding: 5px 10px 7px;
+    position: relative;
+    text-align: center;
+}
+#portal-globalnav .navbar .nav > li > a:focus, #portal-globalnav .navbar .contentViews > li > a:focus, #portal-globalnav .navbar .configlets > li > a:focus, #portal-globalnav .navbar .formTabs > li > a:focus, #portal-globalnav .navbar .nav > li > a:hover, #portal-globalnav .navbar .contentViews > li > a:hover, #portal-globalnav .navbar .configlets > li > a:hover, #portal-globalnav .navbar .formTabs > li > a:hover {
+    box-shadow: 0 20px 20px -20px rgba(255, 255, 255, 0.4) inset;
+}
+#portal-column-content .span9 {
+		margin-left: 1.6748%;
+}
+#portal-column-content .span4 {
+	margin-left: 2.2%;
+	}
+#content-area {
+    margin-top: 0.8em;
+    padding-bottom: 2em;
+}	
+.imatge_Destacada {
+
+}
+.text_Destacat {
+
+}
+.text_Destacat h3 {
+     font-size: 21px;
+    font-weight: 600;
+    margin-top: 0;
+}
+.link_footer_destacat {
+	 
+	}
+.portletCalendar .ploneCalendar td.event, .portletCalendar .ploneCalendar td.todayevent {
+    background: none repeat scroll 0 0 #F2F2F2;
+    text-shadow: 0 -1px #fff;
+}
+.portletCalendar .ploneCalendar td.event a, .portletCalendar .ploneCalendar td.todayevent a {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border-radius: 10px 10px 10px 10px;
+    color: #444444;
+    padding: 1px 5px;
+}	
+.portletCalendar .ploneCalendar td:not(:empty) {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 50px 50px 50px 50px;
+    text-shadow: 0 1px #FFFFFF;
+}
+.portlet-esdeveniments ul a {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+    }
+ .portlet-esdeveniments li {
+ margin-left:0px!important;
+ }
+#baners {
+	margin-bottom:15px;
+
+}
+#baners img:hover {opacity:0.9;transition:0.5s ease-out 0s;}
+#content-area, #portal-column-content {
+    padding-left: 12px;
+    padding-right: 5px;
+    padding-bottom:0;
+    margin-bottom:0;
+    margin-top: 8px;
+    transition: box-shadow 0.5s ease-out 0s;
+}
+.navbar-inner {
+    background-color: transparent;
+    }
+#portal-header:not(.no-image) + #portal-globalnav .navbar-inner {
+    border-radius: 0 0 0 0 !important;
+    margin-top: -1px;
+}
+#portal-globalnav .navbar-inner {
+    background: none repeat scroll 0 0 #444444;
+    border-bottom: medium none;
+    padding: 0 0 0 85px;
+
+}
+#portal-globalnav {
+    margin-top: 3px;
+}
+#eines {
+	font-size: 12px;
+    margin-top: 10px;
+
+}
+#eines > li > a {
+color:#333;
+}
+.thumbnail, .thumb-img img, .photoAlbumEntry a {
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    display: block;
+    line-height: 18px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+     box-shadow: none;
+}
+.carousel img {border:4px solid #fff;}
+.carousel img:hover {
+    cursor: pointer;
+	border:4px solid #333;
+    }
+.thumbnails .span3 {
+	width: 20%;
+}
+.carousel-inner {
+    border-image: none;
+    border-radius: 0 0 0 0;
+    border-style: none;
+    border-width: 0;
+    overflow: hidden;
+    padding-left: 100px;
+    position: relative;
+     box-shadow: none;
+}
+.menu_peu {
+    background: none repeat scroll 0 0 #0073B8;
+    border: 0 none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) inset, 0 0 0 #DDDDDD;
+    margin: 0 0 0 -2px !important;
+    width: 99.8% !important;
+}
+#peu {
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-top: 5px solid #888888;
+    font-size: 92.3077%;
+}
+#peu .container {
+    border-top: 0 none;
+    margin-top: 0;
+}
+.menu_peu li a {
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.menu_peu_links ul li {
+    border-bottom: 1px solid white;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+.portlet_mes_consultat {
+	margin-bottom:20px;
+
+}
+.portlet-static-social-links {
+    background: none repeat scroll 0 0 white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin-top: -5px;
+    padding: 8px 8px 1px;
+    text-align: center;
+}
+.portlet-static-social-links img {
+    height: auto;
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 50px;
+}
+.portlet-static-social-links img:hover {opacity:0.9;transition: all 0.2s ease-in-out 0s;}
+.portlet-noticies {
+    min-height: 385px;
+    padding-bottom: 3px;
+}
+.portlet-noticies .icon-news {display:none;}
+.carousel {
+    background: none repeat scroll 0 0 white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 25px;
+    position: relative;
+}
+.portlet-esdeveniments {
+	margin-bottom: -15px;
+}

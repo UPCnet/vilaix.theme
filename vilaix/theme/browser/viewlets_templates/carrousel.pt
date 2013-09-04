@@ -25,17 +25,17 @@
 	                        </li>
 	                        <li class="span3" >	                           
 	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
+	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_2.jpg" alt="">	
 	                            </div>
 	                        </li>
 	                        <li class="span3" >	                            
 	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
+	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_3.jpg" alt="">	
 	                            </div>
 	                        </li>
 	                        <li class="span3" >	                           
 	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
+	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_4.jpg" alt="">	
 	                            </div>
 	                        </li>	                        
 	                    </ul>
@@ -44,53 +44,30 @@
 	                    <ul class="thumbnails">
 	                        <li class="span3">	                            
 	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
+	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_5.jpg" alt="">	
 	                            </div>
 	                        </li>
 	                        <li class="span3">	                            
 	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
+	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_6.jpg" alt="">	
 	                            </div>
 	                        </li>
 	                        <li class="span3">	                            
 	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
+	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_7.jpg" alt="">	
 	                            </div>
 	                        </li>
 	                        <li class="span3">	                           
 	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
+	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_8.jpg" alt="">	
 	                            </div>
 	                        </li>
 	                    </ul>
 	              </div>
-	              <div class="item">
-	                    <ul class="thumbnails">
-	                        <li class="span3">	                           
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3">	                            
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3">	                            
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3">	                            
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                    </ul>
-	              </div>
+	              
 	            </div>
-	            <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
-	            <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
+	             <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+                 <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
 	        </div>
 		</div>
 	</div>		
@@ -118,8 +95,8 @@
 	                         
 	              
 	            </div>
-	            <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
-	            <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
+	             <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+                 <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
 	        </div>
 	    </div>
 	    

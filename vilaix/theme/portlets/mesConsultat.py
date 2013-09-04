@@ -102,7 +102,7 @@ class Renderer(base.Renderer):
         consultats = sorted(data,reverse=True)
 
 
-        return consultats[:5]
+        return consultats[:3]
 
     def abrevia(self, summary, sumlenght):   
         """ Retalla contingut de cadenes
