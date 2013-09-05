@@ -78,10 +78,13 @@ class Renderer(base.Renderer):
         """ Mostra la primera noticia destacada
         """
         context = self.context
+        # urltool = getToolByName(context, 'portal_url').getPortalObject()
+        # path = urltool.absolute_url() + '/news/noticies_destacades'   
         destacats = context.portal_catalog.searchResults(portal_type = 'News Item',
                                                          review_state=['published',],
-                                                         Destacat = True,
-                                                         sort_on='getObjPositionInParent',
+                                                         destacat = True,
+                                                         sort_on='modified',
+                                                         sort_order='reverse',
                                                         )
         destacats = destacats[:1] # Retornem el primer
          

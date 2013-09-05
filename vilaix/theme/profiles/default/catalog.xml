@@ -2,7 +2,7 @@
 <object name="portal_catalog" meta_type="Plone Catalog Tool"> 
 
 
-	<index name="Destacat" meta_type="FieldIndex">
+	<index name="destacat" meta_type="FieldIndex">
 		<indexed_attr value="destacat"/>
 	</index>
 	<column value="destacat"/>	
