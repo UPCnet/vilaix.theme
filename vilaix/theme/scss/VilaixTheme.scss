@@ -293,9 +293,9 @@ body {
     background: none repeat scroll 0 0 white;
     border-bottom: medium none;
     border-top: 2px solid #0073B8;
-    margin: 0 auto;
-    width: 978px;
+    margin: 0 auto;    
 }
+.link_footer_destacat {margin-left: 0 !important;}
 .header-image {
     background-image: url("/++vilaix++static/images/capcalera.jpg");
     background-repeat: no-repeat;
@@ -338,7 +338,7 @@ b, strong {
 #portal-globalnav .nav > li > a {
     background-color: transparent;
     border-right: medium none;
-    color: white;
+    color: white!important;
     font-size: 12px;
     font-weight: 600;
     margin-right: 3px;
@@ -573,3 +573,81 @@ color:#333;
 .portlet-esdeveniments {
 	margin-bottom: -15px;
 }
+// Canvis Marc setembre 2013 - Ajustos Responsive
+.text_Destacat {
+    float:left;
+    width: 65%;
+}
+.imatge_Destacada {
+float:left;
+  width: 30%;
+}
+#baners ul li {
+    background: none repeat scroll 0 0 #333333;}
+
+#portal-globalnav .navbar .brand {
+    color: #FFFFFF;
+    text-shadow: none;
+}
+input, button, select, textarea {
+    font-family: 'Open Sans',sans-serif;
+}
+
+@media only screen 
+and (max-width : 640px) {
+
+#portal-globalnav .navbar-inner {
+    padding: 0 0 0 5px;
+}
+.navbar .btn-navbar, .navbar .btn-navbar:active {
+    background-color: #444444;
+    background-image: none;
+}
+#portal-globalnav .nav-collapse .nav > li > a, #portal-globalnav .nav-collapse .contentViews > li > a, #portal-globalnav .nav-collapse .configlets > li > a, #portal-globalnav .nav-collapse .formTabs > li > a, #portal-globalnav .nav-collapse .dropdown-menu a, .nav-collapse-eines.nav-collapse .nav > li > a, .nav-collapse-eines.nav-collapse .contentViews > li > a, .nav-collapse-eines.nav-collapse .configlets > li > a, .nav-collapse-eines.nav-collapse .formTabs > li > a, .nav-collapse-eines.nav-collapse .dropdown-menu a {
+padding: 5px 15px 5px 5px;    
+}
+#portal-globalnav .nav > li {
+    border-bottom: 1px solid;
+ }
+ #content-area, #portal-column-content {
+    margin-top: 5px;
+    padding-bottom: 0;
+    padding-left: 0;
+   padding-right: 0;
+ }
+.subnavbar {
+    margin-bottom: 15px;
+}
+
+#baners ul {
+    background: none repeat scroll 0 0 white;
+    border: 8px solid white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    list-style: none outside none;
+    margin-left: 0;
+}
+#baners ul li:last-child {
+    margin-bottom: 0;
+}
+#portal-column-content .span9, #portal-column-content .span4  {
+    margin-left: 0;
+}
+[class*="span"], .cella {
+        margin-bottom: 15px;
+    }
+.imatge_Destacada {margin-bottom:10px!important;}   
+.text_Destacat {margin-left: 0 !important;}
+.text_Destacat {
+    float:left;
+    width: 100%;
+}
+.imatge_Destacada {
+float:left;
+  width: 100%;
+}
+.link_footer_destacat {
+    float:left;
+    clear:both;
+}
+}
+
