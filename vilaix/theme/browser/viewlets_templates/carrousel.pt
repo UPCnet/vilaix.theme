@@ -1,5 +1,7 @@
-<tal:carousel tal:define="banners view/getImatges" 
-     i18n:domain="vilaix.core">
+<tal:carousel tal:define="banners view/getElementsCarrousel;
+						  blocs view/getBlocs" 
+			  tal:condition="banners"
+     		  i18n:domain="vilaix.core">
 	
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -12,73 +14,15 @@
 		});
 	</script>	
 	
+
 	<div class="container">
 	    <div class="row-fluid">
 		    <div class="carousel slide" id="myCarousel">
-	            <div class="carousel-inner">
+	            <div class="carousel-inner">	            
 	              <div class="item active">
-	                    <ul class="thumbnails">
-	                        <li class="span3">	                            
-	                            <div class="thumbnail">
-	                            	<img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3" >	                           
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_2.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3" >	                            
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_3.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3" >	                           
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_4.jpg" alt="">	
-	                            </div>
-	                        </li>	                        
-	                    </ul>
-	              </div>
-	              <div class="item">
-	                    <ul class="thumbnails">
-	                        <li class="span3">	                            
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_5.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3">	                            
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_6.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3">	                            
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_7.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                        <li class="span3">	                           
-	                            <div class="thumbnail">
-	                                <img tal:attributes="src string:${view/portal_url}/++vilaix++static/images/banner_152x90_8.jpg" alt="">	
-	                            </div>
-	                        </li>
-	                    </ul>
-	              </div>
-	              
-	            </div>
-	             <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
-                 <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
-	        </div>
-		</div>
-	</div>		
 
-	<!-- <div class="container">
-	    <div class="row-fluid">
-	        <div class="carousel slide span12" id="myCarousel">
-	            <div class="carousel-inner">
-	              <div class="item" tal:repeat="section banners">
-	                    <ul class="thumbnails">
-	                    	<li class="span3">
+	                    <ul tal:define="bannersBloc python:banners[0]" class="thumbnails">
+	                    	<li class="span3" tal:repeat="section bannersBloc">
 								<tal:item tal:define="obj python:section.getObject()">
 						   			<a tal:attributes="href obj/URLdesti;
 						   			                   target python:obj.Obrirennovafinestra and '_blank' or nothing;
@@ -91,16 +35,37 @@
 						   	    </tal:item>
 							</li> 	                      
 	                    </ul>
-	              </div>      
-	                         
+	               
+	              	
+	              </div>
+	              <div class="item" tal:repeat="x python:range(1, blocs)">
+
+	                    <ul tal:define="bannersBloc python:banners[x]" class="thumbnails">
+	                    	<li class="span3" tal:repeat="section bannersBloc">
+								<tal:item tal:define="obj python:section.getObject()">
+						   			<a tal:attributes="href obj/URLdesti;
+						   			                   target python:obj.Obrirennovafinestra and '_blank' or nothing;
+						   			                   title python:view.getAltAndTitle(obj.Title())">
+							   		 	<img  class="img_carousel" tal:attributes="src string:${obj/absolute_url}/Imatge;
+						       		 	                     alt python:view.getAltAndTitle(obj.Title());
+						       		 	                     title python:view.getAltAndTitle(obj.Title());"
+						       		 	                      />
+							       	</a>
+						   	    </tal:item>
+							</li> 	                      
+	                    </ul>
+	               
+	              	
+	              </div>
+
+	              
 	              
 	            </div>
 	             <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
                  <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
 	        </div>
-	    </div>
-	    
-	</div> -->
+		</div>
+	</div>	
 
 	
 </tal:carousel>

@@ -7,20 +7,31 @@ from Products.CMFCore.utils import getToolByName
 class carrousel(ViewletBase):
     render = ViewPageTemplateFile('viewlets_templates/carrousel.pt')
     
-    def getImatges(self):
-        """ Retorna les imatges per mostar al carousel
+    def getElementsCarrousel(self):
+        """ Retorna tots els objectes de tipus Carrousel que hi ha a la carpeta config
         """
         urltool = getToolByName(self.context, 'portal_url')        
         portal_catalog = getToolByName(self, 'portal_catalog')
         path = urltool.getPortalPath()   
         lt = getToolByName(self, 'portal_languages')
+        nElements = 4
+        llistaElementsCarrousel = []  
         # Cerca contingut per mostar al carousel en diversos idiomes
         #path = path + '/config-'+ lt.getPreferredLanguage() +'/carrousel/',
-        imatges = portal_catalog.searchResults(portal_type = 'Carrousel',
-                                               path = path + '/config'+ '/carrousel/',
+        elementsCarrousel = portal_catalog.searchResults(portal_type = 'Carrousel',
+                                               path = path + '/config',
                                                sort_on='getObjPositionInParent')
+                                                        
+        if len(elementsCarrousel) > 0:
+            #Retorna una llista amb els elementsCarrousel en blocs de 4 elements
+            llistaElementsCarrousel=[elementsCarrousel[i:i+nElements] for i in range(0,len(elementsCarrousel),nElements)]
         
-        return imatges
+        return llistaElementsCarrousel
+
+    def getBlocs(self):
+        llistaElementsCarrousel = self.getElementsCarrousel()
+        return len(llistaElementsCarrousel)
+
        
     def getAltAndTitle(self, altortitle):
         """Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
