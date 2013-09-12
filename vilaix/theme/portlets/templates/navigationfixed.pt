@@ -1,0 +1,68 @@
+<tal:portletNavigationfixed tal:define="portal_url context/@@plone_portal_state/portal_url;"
+ i18n:domain="vilaix.core">
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$(".collapse").collapse()	
+
+					 
+			$(".accordion-toggle").click(function(e){
+			    e.preventDefault();	
+			    if ( $(this).parent("li").hasClass("active") ) {
+			    	$(this).parent("li").removeClass("active")
+			    } else {
+			    	$(this).parent("li").addClass("active")
+			    }			   
+			});		
+					
+		});
+	</script>	
+<!-- 
+	<div class="accordion" id="accordion2">	
+	  <div class="accordion-group" tal:repeat="obj view/mostrarCarpetes">
+	    <div class="accordion-heading">	     
+	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2"  href="" tal:attributes="href obj/collapse" tal:content="obj/title">
+	        Collapsible Group Item #1
+	      </a>	    
+	    </div>
+	    <div id="" tal:attributes="id obj/id" class="accordion-body collapse in">
+	      <div class="accordion-inner" tal:repeat="fill obj/fills">
+	        <a href="" tal:attributes="href fill/url" tal:content="fill/title">
+	        	Collapsible Group Item #1
+	      	</a>	
+	      </div>
+	    </div>
+	  </div>  
+	</div> 
+-->
+
+
+<nav class="subnavbar">
+  <ul id="portlet-navigation-tree accordion2" class="nav nav-list accordion" role="menu" >
+
+	<li role="menuitem" class="navTreeItem visualNoMarker navTreeCurrentNode navTreeFolderish accordion-group" tal:repeat="obj view/mostrarCarpetes" >
+
+        <a class="state-published navTreeCurrentItem navTreeCurrentNode navTreeFolderish contenttype-folder accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="" tal:attributes="href obj/collapse" tal:content="obj/title">            
+            Titol carpeta pare
+        </a>
+
+        
+            <ul id="" tal:attributes="id obj/id" class="navTree navTreeLevel1 accordion-body collapse in">   
+				<li role="menuitem" class="navTreeItem visualNoMarker navTreeFolderish accordion-inner" tal:repeat="fill obj/fills">
+
+			        <a href="" tal:attributes="href fill/url" class="state-published navTreeFolderish contenttype-folder">
+			            
+			            <span tal:content="fill/title">Titol carpeta fill</span>
+			        </a>
+
+				</li>				
+
+            </ul>      
+    
+
+	</li>
+
+ </ul>
+</nav>
+</tal:portletNavigationfixed>
