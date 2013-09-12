@@ -6,13 +6,7 @@
     i18n_domain="vilaix.portlets">
 
     <include package="plone.app.portlets" />
-
-<!--     <plone:portletRenderer
-        portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
-        class=".portlets.gwNavigation"
-        layer="genweb.theme.browser.interfaces.IGenwebTheme"
-        /> -->
-
+  
     <plone:portlet
      name="vilaix.portlets.news"
      interface=".news.INewsPortlet"
@@ -54,6 +48,16 @@
      renderer=".bannersportlet.Renderer"
      addview=".bannersportlet.AddForm"
      editview=".bannersportlet.EditForm"
+     />
+
+    <plone:portlet
+     name="vilaix.portlets.navigationfixed"
+     interface=".navigationfixed.INavigationFixedPortlet"
+     assignment=".navigationfixed.Assignment"
+     view_permission="zope2.View"
+     renderer=".navigationfixed.Renderer"
+     addview=".navigationfixed.AddForm"
+     editview=".navigationfixed.EditForm"
      />
 
 </configure>

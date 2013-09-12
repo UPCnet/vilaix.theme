@@ -9,5 +9,7 @@
     <portlet title="AgendaVilaix" addview="vilaix.portlets.agendaVilaix"
         description="Portlet Agenda"/>   	    
     <portlet title="BannersVilaix" addview="vilaix.portlets.banners"
-        description="Portlet de Banners"/>
+        description="Portlet de Banners"/>    
+    <portlet title="NavigationFixed" addview="vilaix.portlets.navigationfixed"
+        description="Portlet de navegacion fija"/>   
 </portlets>
