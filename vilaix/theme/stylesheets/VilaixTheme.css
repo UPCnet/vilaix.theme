@@ -2828,18 +2828,19 @@ b, strong {
 
 /* line 419, ../scss/VilaixTheme.scss */
 .text_Destacat h3 {
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 600;
+  line-height: 28px;
   margin-top: 0;
 }
 
-/* line 427, ../scss/VilaixTheme.scss */
+/* line 428, ../scss/VilaixTheme.scss */
 .portletCalendar .ploneCalendar td.event, .portletCalendar .ploneCalendar td.todayevent {
   background: none repeat scroll 0 0 #F2F2F2;
   text-shadow: 0 -1px #fff;
 }
 
-/* line 431, ../scss/VilaixTheme.scss */
+/* line 432, ../scss/VilaixTheme.scss */
 .portletCalendar .ploneCalendar td.event a, .portletCalendar .ploneCalendar td.todayevent a {
   background: none repeat scroll 0 0 #DDDDDD;
   border-radius: 10px 10px 10px 10px;
@@ -2847,37 +2848,37 @@ b, strong {
   padding: 1px 5px;
 }
 
-/* line 437, ../scss/VilaixTheme.scss */
+/* line 438, ../scss/VilaixTheme.scss */
 .portletCalendar .ploneCalendar td:not(:empty) {
   background: none repeat scroll 0 0 #FFFFFF;
   border-radius: 50px 50px 50px 50px;
   text-shadow: 0 1px #FFFFFF;
 }
 
-/* line 442, ../scss/VilaixTheme.scss */
+/* line 443, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments ul a {
   font-size: 16px;
   font-weight: 600;
   line-height: 21px;
 }
 
-/* line 447, ../scss/VilaixTheme.scss */
+/* line 448, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments li {
   margin-left: 0px !important;
 }
 
-/* line 450, ../scss/VilaixTheme.scss */
+/* line 451, ../scss/VilaixTheme.scss */
 #baners {
   margin-bottom: 15px;
 }
 
-/* line 454, ../scss/VilaixTheme.scss */
+/* line 455, ../scss/VilaixTheme.scss */
 #baners img:hover {
   opacity: 0.9;
   transition: 0.5s ease-out 0s;
 }
 
-/* line 455, ../scss/VilaixTheme.scss */
+/* line 456, ../scss/VilaixTheme.scss */
 #content-area, #portal-column-content {
   padding-left: 12px;
   padding-right: 5px;
@@ -2887,41 +2888,41 @@ b, strong {
   transition: box-shadow 0.5s ease-out 0s;
 }
 
-/* line 463, ../scss/VilaixTheme.scss */
+/* line 464, ../scss/VilaixTheme.scss */
 .navbar-inner {
   background-color: transparent;
 }
 
-/* line 466, ../scss/VilaixTheme.scss */
+/* line 467, ../scss/VilaixTheme.scss */
 #portal-header:not(.no-image) + #portal-globalnav .navbar-inner {
   border-radius: 0 0 0 0 !important;
   margin-top: -1px;
 }
 
-/* line 470, ../scss/VilaixTheme.scss */
+/* line 471, ../scss/VilaixTheme.scss */
 #portal-globalnav .navbar-inner {
   background: none repeat scroll 0 0 #444444;
   border-bottom: medium none;
   padding: 0 0 0 85px;
 }
 
-/* line 476, ../scss/VilaixTheme.scss */
+/* line 477, ../scss/VilaixTheme.scss */
 #portal-globalnav {
   margin-top: 3px;
 }
 
-/* line 479, ../scss/VilaixTheme.scss */
+/* line 480, ../scss/VilaixTheme.scss */
 #eines {
   font-size: 12px;
   margin-top: 10px;
 }
 
-/* line 484, ../scss/VilaixTheme.scss */
+/* line 485, ../scss/VilaixTheme.scss */
 #eines > li > a {
   color: #333;
 }
 
-/* line 487, ../scss/VilaixTheme.scss */
+/* line 488, ../scss/VilaixTheme.scss */
 .thumbnail, .thumb-img img, .photoAlbumEntry a {
   border: 0 none;
   border-radius: 0 0 0 0;
@@ -2932,23 +2933,24 @@ b, strong {
   box-shadow: none;
 }
 
-/* line 496, ../scss/VilaixTheme.scss */
+/* line 497, ../scss/VilaixTheme.scss */
 .carousel img {
   border: 4px solid #fff;
 }
 
-/* line 497, ../scss/VilaixTheme.scss */
+/* line 498, ../scss/VilaixTheme.scss */
 .carousel img:hover {
   cursor: pointer;
   border: 4px solid #333;
 }
 
-/* line 501, ../scss/VilaixTheme.scss */
-.thumbnails .span3 {
-  width: 20%;
+/* line 502, ../scss/VilaixTheme.scss */
+.carousel .item {
+  margin-left: -20px;
+  margin-right: 65px;
 }
 
-/* line 504, ../scss/VilaixTheme.scss */
+/* line 506, ../scss/VilaixTheme.scss */
 .carousel-inner {
   border-image: none;
   border-radius: 0 0 0 0;
@@ -2960,7 +2962,7 @@ b, strong {
   box-shadow: none;
 }
 
-/* line 514, ../scss/VilaixTheme.scss */
+/* line 516, ../scss/VilaixTheme.scss */
 .menu_peu {
   background: none repeat scroll 0 0 #0073B8;
   border: 0 none;
@@ -2969,39 +2971,39 @@ b, strong {
   width: 99.8% !important;
 }
 
-/* line 521, ../scss/VilaixTheme.scss */
+/* line 523, ../scss/VilaixTheme.scss */
 #peu {
   background: none repeat scroll 0 0 #F2F2F2;
   border-top: 5px solid #888888;
   font-size: 92.3077%;
 }
 
-/* line 526, ../scss/VilaixTheme.scss */
+/* line 528, ../scss/VilaixTheme.scss */
 #peu .container {
   border-top: 0 none;
   margin-top: 0;
 }
 
-/* line 530, ../scss/VilaixTheme.scss */
+/* line 532, ../scss/VilaixTheme.scss */
 .menu_peu li a {
   color: white;
   font-size: 12px;
   margin-left: 10px;
 }
 
-/* line 535, ../scss/VilaixTheme.scss */
+/* line 537, ../scss/VilaixTheme.scss */
 .menu_peu_links ul li {
   border-bottom: 1px solid white;
   padding-bottom: 4px;
   padding-top: 4px;
 }
 
-/* line 540, ../scss/VilaixTheme.scss */
+/* line 542, ../scss/VilaixTheme.scss */
 .portlet_mes_consultat {
   margin-bottom: 20px;
 }
 
-/* line 544, ../scss/VilaixTheme.scss */
+/* line 546, ../scss/VilaixTheme.scss */
 .portlet-static-social-links {
   background: none repeat scroll 0 0 white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -3010,7 +3012,7 @@ b, strong {
   text-align: center;
 }
 
-/* line 551, ../scss/VilaixTheme.scss */
+/* line 553, ../scss/VilaixTheme.scss */
 .portlet-static-social-links img {
   height: auto;
   margin-left: 6px;
@@ -3018,24 +3020,24 @@ b, strong {
   width: 50px;
 }
 
-/* line 557, ../scss/VilaixTheme.scss */
+/* line 559, ../scss/VilaixTheme.scss */
 .portlet-static-social-links img:hover {
   opacity: 0.9;
   transition: all 0.2s ease-in-out 0s;
 }
 
-/* line 558, ../scss/VilaixTheme.scss */
+/* line 560, ../scss/VilaixTheme.scss */
 .portlet-noticies {
   min-height: 385px;
   padding-bottom: 3px;
 }
 
-/* line 562, ../scss/VilaixTheme.scss */
+/* line 564, ../scss/VilaixTheme.scss */
 .portlet-noticies .icon-news {
   display: none;
 }
 
-/* line 563, ../scss/VilaixTheme.scss */
+/* line 565, ../scss/VilaixTheme.scss */
 .carousel {
   background: none repeat scroll 0 0 white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -3047,62 +3049,69 @@ b, strong {
   position: relative;
 }
 
-/* line 573, ../scss/VilaixTheme.scss */
+/* line 575, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments {
   margin-bottom: -15px;
 }
 
-/* line 577, ../scss/VilaixTheme.scss */
+/* line 581, ../scss/VilaixTheme.scss */
+#portal-header h1 {
+  float: left;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+/* line 587, ../scss/VilaixTheme.scss */
 .text_Destacat {
   float: left;
   width: 65%;
 }
 
-/* line 581, ../scss/VilaixTheme.scss */
+/* line 591, ../scss/VilaixTheme.scss */
 .imatge_Destacada {
   float: left;
   width: 30%;
 }
 
-/* line 585, ../scss/VilaixTheme.scss */
+/* line 596, ../scss/VilaixTheme.scss */
 #baners ul li {
   background: none repeat scroll 0 0 #333333;
 }
 
-/* line 588, ../scss/VilaixTheme.scss */
+/* line 599, ../scss/VilaixTheme.scss */
 #portal-globalnav .navbar .brand {
   color: #FFFFFF;
   text-shadow: none;
 }
 
-/* line 592, ../scss/VilaixTheme.scss */
+/* line 603, ../scss/VilaixTheme.scss */
 input, button, select, textarea {
   font-family: 'Open Sans',sans-serif;
 }
 
 @media only screen and (max-width: 640px) {
-  /* line 599, ../scss/VilaixTheme.scss */
+  /* line 610, ../scss/VilaixTheme.scss */
   #portal-globalnav .navbar-inner {
     padding: 0 0 0 5px;
   }
 
-  /* line 602, ../scss/VilaixTheme.scss */
+  /* line 613, ../scss/VilaixTheme.scss */
   .navbar .btn-navbar, .navbar .btn-navbar:active {
     background-color: #444444;
     background-image: none;
   }
 
-  /* line 606, ../scss/VilaixTheme.scss */
+  /* line 617, ../scss/VilaixTheme.scss */
   #portal-globalnav .nav-collapse .nav > li > a, #portal-globalnav .nav-collapse .contentViews > li > a, #portal-globalnav .nav-collapse .configlets > li > a, #portal-globalnav .nav-collapse .formTabs > li > a, #portal-globalnav .nav-collapse .dropdown-menu a, .nav-collapse-eines.nav-collapse .nav > li > a, .nav-collapse-eines.nav-collapse .contentViews > li > a, .nav-collapse-eines.nav-collapse .configlets > li > a, .nav-collapse-eines.nav-collapse .formTabs > li > a, .nav-collapse-eines.nav-collapse .dropdown-menu a {
     padding: 5px 15px 5px 5px;
   }
 
-  /* line 609, ../scss/VilaixTheme.scss */
+  /* line 620, ../scss/VilaixTheme.scss */
   #portal-globalnav .nav > li {
     border-bottom: 1px solid;
   }
 
-  /* line 612, ../scss/VilaixTheme.scss */
+  /* line 623, ../scss/VilaixTheme.scss */
   #content-area, #portal-column-content {
     margin-top: 5px;
     padding-bottom: 0;
@@ -3110,12 +3119,12 @@ input, button, select, textarea {
     padding-right: 0;
   }
 
-  /* line 618, ../scss/VilaixTheme.scss */
+  /* line 629, ../scss/VilaixTheme.scss */
   .subnavbar {
     margin-bottom: 15px;
   }
 
-  /* line 622, ../scss/VilaixTheme.scss */
+  /* line 633, ../scss/VilaixTheme.scss */
   #baners ul {
     background: none repeat scroll 0 0 white;
     border: 8px solid white;
@@ -3124,46 +3133,101 @@ input, button, select, textarea {
     margin-left: 0;
   }
 
-  /* line 629, ../scss/VilaixTheme.scss */
+  /* line 640, ../scss/VilaixTheme.scss */
   #baners ul li:last-child {
     margin-bottom: 0;
   }
 
-  /* line 632, ../scss/VilaixTheme.scss */
+  /* line 643, ../scss/VilaixTheme.scss */
   #portal-column-content .span9, #portal-column-content .span4 {
     margin-left: 0;
   }
 
-  /* line 635, ../scss/VilaixTheme.scss */
+  /* line 646, ../scss/VilaixTheme.scss */
   [class*="span"], .cella {
     margin-bottom: 15px;
   }
 
-  /* line 638, ../scss/VilaixTheme.scss */
+  /* line 649, ../scss/VilaixTheme.scss */
   .imatge_Destacada {
     margin-bottom: 10px !important;
   }
 
-  /* line 639, ../scss/VilaixTheme.scss */
+  /* line 650, ../scss/VilaixTheme.scss */
   .text_Destacat {
     margin-left: 0 !important;
   }
 
-  /* line 640, ../scss/VilaixTheme.scss */
+  /* line 651, ../scss/VilaixTheme.scss */
   .text_Destacat {
     float: left;
     width: 100%;
   }
 
-  /* line 644, ../scss/VilaixTheme.scss */
+  /* line 655, ../scss/VilaixTheme.scss */
   .imatge_Destacada {
     float: left;
     width: 100%;
   }
 
-  /* line 648, ../scss/VilaixTheme.scss */
+  /* line 659, ../scss/VilaixTheme.scss */
   .link_footer_destacat {
     float: left;
     clear: both;
+  }
+
+  /* line 663, ../scss/VilaixTheme.scss */
+  .imatge_Destacada img {
+    width: 100%;
+  }
+
+  /* line 666, ../scss/VilaixTheme.scss */
+  .header-image {
+    background-size: auto;
+    height: 130px !important;
+    background-position: center center;
+  }
+
+  /* line 671, ../scss/VilaixTheme.scss */
+  .noticies img {
+    margin-bottom: 100px;
+  }
+
+  /* line 674, ../scss/VilaixTheme.scss */
+  .portletCalendar .ploneCalendar {
+    font-size: 100%;
+  }
+
+  /* line 677, ../scss/VilaixTheme.scss */
+  .weekdays th {
+    padding: 12px;
+  }
+
+  /* line 680, ../scss/VilaixTheme.scss */
+  .carousel-inner {
+    padding-left: 0;
+  }
+
+  /* line 684, ../scss/VilaixTheme.scss */
+  .carousel img {
+    width: 100%;
+  }
+
+  /* line 687, ../scss/VilaixTheme.scss */
+  .carousel .item {
+    margin-left: 20px;
+    margin-right: 27px;
+  }
+
+  /* line 691, ../scss/VilaixTheme.scss */
+  #portal-header .btn-navbar.pull-right, #portal-header .btn-navbar.newsImageContainer {
+    margin-left: 85%;
+    position: absolute;
+  }
+
+  /* line 695, ../scss/VilaixTheme.scss */
+  #portal-header h1 {
+    width: 260px;
+    margin-bottom: -5px;
   }
 }

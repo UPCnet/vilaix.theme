@@ -1,9 +1,9 @@
 <div class="container"
      i18n:domain="genweb">
   <div class="clearfix">
-    <h1 class="pull-left">
+    <h1>   
       <a tal:attributes="href string:${viewlet/portal_url}" accesskey="1">
-        <img tal:attributes="src string:${viewlet/portal_url}/++vilaix++static/images/logoVILAIX.png"
+        <img tal:attributes="src string:${viewlet/portal_url}/config/carrousel8/Imatge"
              alt="Vilaix">
       </a>      
     </h1>
