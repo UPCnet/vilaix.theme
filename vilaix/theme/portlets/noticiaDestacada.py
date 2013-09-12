@@ -43,7 +43,7 @@ class Renderer(base.Renderer):
     def __init__(self, *args):
         base.Renderer.__init__(self, *args)
 
-    @ram.cache(render_cachekey)
+    # @ram.cache(render_cachekey)
     def render(self):
         return xhtml_compress(self._template())
   
@@ -87,7 +87,7 @@ class Renderer(base.Renderer):
                                                          sort_order='reverse',
                                                         )
         destacats = destacats[:1] # Retornem el primer
-         
+
         data = [dict(id=a.id,
                      description =self.abrevia(a.Description,250), 
                      url=a.getURL(),                    
