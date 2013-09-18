@@ -124,6 +124,7 @@ class Renderer(base.Renderer):
         return catalog(portal_type='News Item',
                        review_state=state,
                        path=path,
+                       destacat = False,
                        sort_on='Date',
                        sort_order='reverse',
                        sort_limit=limit)[:limit]      
