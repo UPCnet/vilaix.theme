@@ -31,6 +31,8 @@ from genweb.theme.browser.interfaces import IGenwebTheme
 
 from vilaix.theme.browser.interfaces import IVilaixTheme
 
+import random
+
 
 grok.context(Interface)
 
@@ -94,6 +96,21 @@ class gwHeader(viewletBase):
     def show_directory(self):
         return self.genweb_config().directori_upc
 
+    def get_image_capsalera(self):
+        #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
+        urltool = getToolByName(self.context, 'portal_url')
+        portal_catalog = getToolByName(self.context, 'portal_catalog')
+        path = urltool.getPortalPath() + '/imatges-capcalera'        
+        resultats = []
+       
+        imatges = self.context.portal_catalog.searchResults(portal_type='Image',
+                                                            path=path)
+        
+        imatge = random.choice(imatges)
+
+        style = 'background-image: url(' + imatge.getPath() +')'       
+        
+        return style
 
 # class gwImportantNews(viewletBase):
 #     grok.name('genweb.important')
@@ -125,9 +142,66 @@ class gwGlobalSectionsViewlet(GlobalSectionsViewlet, viewletBase):
 
     index = ViewPageTemplateFile('viewlets_templates/sections.pt')
 
+    allowed_section_types = ['Folder', 'Collection', 'Document']
+
     def show_menu(self):
         return not self.genweb_config().treu_menu_horitzontal and self.portal_tabs
 
+    def menuPrincipal(self):
+        """ returns folders (menu-principal)"""
+        urltool = getToolByName(self.context, 'portal_url')
+        portal_catalog = getToolByName(self.context, 'portal_catalog')
+        # Obtain all folders in first level "published" o "visible"
+        path = urltool.getPortalPath() + '/menu-principal'
+        folders = portal_catalog.searchResults(portal_type=self.allowed_section_types,
+                                               path=dict(query=path, depth=1),
+                                               sort_on='getObjPositionInParent')
+        results = []
+        for fold in folders:
+            if (fold.portal_type in self.allowed_section_types):
+                if fold.exclude_from_nav is not True:
+                    results.append(dict(name=fold.Title,
+                                        url=fold.getURL(),
+                                        id=fold.getId,
+                                        description=fold.Description))
+
+        return results
+
+    def menu(self):
+        """ returns subfolders (submenus) for the dropdown in navbar"""
+        urltool = getToolByName(self.context, 'portal_url')
+        portal_catalog = getToolByName(self.context, 'portal_catalog')
+        # Obtain all folders in first level "published" o "visible"
+        path = urltool.getPortalPath() + '/menu-principal'
+        folders = portal_catalog.searchResults(portal_type=self.allowed_section_types,
+                                               path=dict(query=path, depth=1),
+                                               sort_on='getObjPositionInParent')
+
+        subfolders = {}
+        for fold in folders:
+            if (fold.portal_type in self.allowed_section_types):
+                if fold.exclude_from_nav is not True:
+                    subfolders[fold.getId] = self.SubMenu(fold.getPath())
+        return subfolders
+
+    def SubMenu(self, path):
+        """ Get subfolders of current folder for create submenu"""
+        path = path
+        portal_catalog = getToolByName(self.context, 'portal_catalog')
+        subfolders = portal_catalog.searchResults(portal_type=self.allowed_section_types,
+                                                  path=dict(query=path, depth=1),
+                                                  sort_on='getObjPositionInParent')
+
+        results = []
+        for fold in subfolders:
+            if (fold.portal_type in self.allowed_section_types):
+                if fold.exclude_from_nav is not True:
+                    results.append(dict(name=fold.Title,
+                                        url=fold.getURL(),
+                                        id=fold.getId,
+                                        description=fold.Description))
+
+        return results
 
 # class gwPathBarViewlet(PathBarViewlet, viewletBase):
 #     grok.name('genweb.pathbar')

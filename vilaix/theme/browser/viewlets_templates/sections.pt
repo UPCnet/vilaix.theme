@@ -1,31 +1,45 @@
 <nav id="portal-globalnav"
-     tal:define="portal_tabs view/portal_tabs"
+     tal:define="menuPrincipal view/menuPrincipal;
+                 subfolders view/menu"
      tal:condition="view/show_menu"
      i18n:domain="plone"><!-- #portal-globalnav -->
-  <div class="container">
-    <div class="navbar" role="navigation">
+    <div class="container">
+    <div class="navbar">
       <div class="navbar-inner">
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse-menu">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <h2 class="hidden-desktop brand">Menú</h2>
+        <h2 class="hidden-desktop brand"></h2>
         <div class="nav-collapse nav-collapse-menu">
           <ul class="nav"
-              tal:define="selected_tab python:view.selected_portal_tab">
-             
-            <tal:tabs tal:repeat="tab portal_tabs">
-              <li tal:define="tid tab/id"
-                  tal:attributes="id string:portaltab-${tid};
-                                  class python:selected_tab==tid and 'active' or 'plain'">
+              tal:define="selected_tab python:view.selected_portal_tab">          
+            <tal:tabs tal:repeat="tab menuPrincipal">
+              <li tal:define="tid tab/id;
+                              showSubfolders python:subfolders.get(tid, [])"
+                  tal:attributes="id string:portaltab-${tid};" class="dropdown">
                 <a href=""
-                   tal:content="tab/name"
                    tal:attributes="href tab/url;
-                                   class string:state-${tab/review_state|nothing}">
-                   Tab Name
+                                   title tab/description|nothing;
+                                   alt   tab/description|nothing;
+                                   class python:'dropdown-toggle'" data-toggle="dropdown">
+                   <tal:tab content="tab/name"></tal:tab>
+                   <b tal:condition="showSubfolders" class="caret"></b>
                 </a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"
+                    tal:condition="showSubfolders">
+                    <li tal:repeat="subitem showSubfolders" >
+                        <a role="menuitem" tabindex="-1" href=""
+                            tal:content="subitem/name"
+                            tal:attributes="href  subitem/url;
+                                            alt   subitem/description|nothing;
+                                            title subitem/description|nothing;">SUBMENU</a>
+                    </li>
+                </ul>
+
               </li>
+
             </tal:tabs>
           </ul>
         </div>

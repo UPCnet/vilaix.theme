@@ -67,7 +67,8 @@
   </div> -->
 
   <div class="header-image l3-image"
-       tal:attributes="class string:header-image ${viewlet/get_image_class}"></div>
+       tal:attributes="class string:header-image ${viewlet/get_image_class};
+                       style string:${viewlet/get_image_capsalera}"></div>
 
 </div>
 <div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true"
