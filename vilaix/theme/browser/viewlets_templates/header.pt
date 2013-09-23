@@ -30,13 +30,13 @@
                tal:attributes="href string:${viewlet/portal_url}/contact">
                Contact
              </a></li>
-        <li tal:condition="viewlet/show_directory">
+        <!-- <li tal:condition="viewlet/show_directory">
             <a href="http://directori.upc.edu" target="_blank" accesskey="7">
                 Directori UPC
                 <img class="img_blank" src="++genweb++static/images/blank_blau.png"
                   i18n:domain="genweb"
                   i18n:attributes="alt obrir_link_finestra_nova">
-            </a></li>
+            </a></li> -->
         <li tal:condition="python:viewlet.show_login()">
             <a href="" data-toggle="modal" data-target="#loginModal"
                tal:attributes="href string:${viewlet/portal_url}/popup_login_form?came_from=${context/absolute_url}"

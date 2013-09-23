@@ -7,7 +7,7 @@
 		$(document).ready(function () {
 			$('.carousel').carousel({
 			  interval: 0,
-			  group: 4,
+			  group: 2,
     		  indicator: true
 			})
 
@@ -17,7 +17,7 @@
 
 	<div class="container">
 	    <div class="row-fluid">
-		    <div class="carousel slide carousel_normal" id="myCarousel">
+		    <div class="carousel slide carousel_mobile" id="myCarouselMobile">
 	            <div class="carousel-inner">	            
 	              <div class="item active">
 
@@ -61,8 +61,8 @@
 	              
 	              
 	            </div>
-	             <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
-                 <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
+	             <a data-slide="prev" href="#myCarouselMobile" class="left carousel-control">‹</a>
+                 <a data-slide="next" href="#myCarouselMobile" class="right carousel-control">›</a>
 	        </div>
 		</div>
 	</div>	

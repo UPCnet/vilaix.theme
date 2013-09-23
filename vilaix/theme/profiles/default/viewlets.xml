@@ -12,6 +12,7 @@
   </order>
   <order manager="plone.portalfooter" skinname="VilaixTheme">
     <viewlet name="vilaix.carrousel"/>
+    <viewlet name="vilaix.carrousel_mobile"/>  
     <viewlet name="vilaix.navigationPeu"/>
     <viewlet name="genweb.logosfooter"/>
     <viewlet name="genweb.footer"/>

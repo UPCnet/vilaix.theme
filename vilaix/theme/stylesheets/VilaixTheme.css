@@ -3400,6 +3400,14 @@ h1, h2, h3 {
   top: 2px;
 }
 
+.carousel_normal {
+    display: none;
+}
+
+.carousel_mobile {
+  display: block;
+}
+
 @media only screen and (min-width: 500px) {
   /* line 839, ../scss/VilaixTheme.scss */
   #portal-column-one {
@@ -3409,5 +3417,14 @@ h1, h2, h3 {
   /* line 840, ../scss/VilaixTheme.scss */
   #portal-column-content {
     margin-left: 12px;
+  }
+
+  .carousel_normal {
+    display: block;
+;
+  }
+
+  .carousel_mobile {
+    display: none;
   }
 }

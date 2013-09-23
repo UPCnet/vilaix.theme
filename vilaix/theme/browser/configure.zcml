@@ -26,4 +26,12 @@
       permission="zope2.View"
       />        
 
+    <browser:viewlet
+      name="vilaix.carrousel_mobile"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"      
+      class=".carrousel_mobile.carrousel"
+      layer=".interfaces.IVilaixTheme"
+      permission="zope2.View"
+      />
 </configure>
