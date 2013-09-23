@@ -12,4 +12,20 @@
         description="Portlet de Banners"/>    
     <portlet title="NavigationFixed" addview="vilaix.portlets.navigationfixed"
         description="Portlet de navegacion fija"/>   
+    <assignment name="navigation" category="context" key="/"
+    manager="plone.leftcolumn" type="portlets.Navigation" visible="False">
+      <property name="topLevel">1</property>
+      <property name="currentFolderOnly">False</property>
+      <property name="name"></property>
+      <property name="includeTop">False</property>
+      <property name="bottomLevel">2</property>
+      <property name="root"/>
+    </assignment>
+    <assignment name="navigation-fixed" category="context" key="/"
+        manager="plone.leftcolumn" type="vilaix.portlets.navigationfixed"
+        visible="True">
+      <property name="root">/menu-lateral</property>
+      <property name="currentFolderOnly">False</property>
+      <property name="name"/>
+    </assignment>
 </portlets>

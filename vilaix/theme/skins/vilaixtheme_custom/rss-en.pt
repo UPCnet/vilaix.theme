@@ -22,8 +22,8 @@
 
 	<h2>RSS</h2>
     <ul class="list list-links">
-    	<li><a href="http://www.upc.edu/agenda-actividades/todas/RSS?set_language=es" target="_blank">Events  <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(open in a new window)"></a></li>
-	    <li><a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=en" target="_blank">News <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(open in a new window)"></a></li>	   	
+    	<li><a tal:attributes="href string:${portal_url}/esdeveniments/aggregator/RSS?set_language=en" target="_blank">Events  <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(open in a new window)"></a></li>
+	    <li><a tal:attributes="href string:${portal_url}/news/aggregator/RSS?set_language=en" target="_blank">News <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(open in a new window)"></a></li>	   	
     </ul>
 
 	<h2>Free readers</h2>

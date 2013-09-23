@@ -20,8 +20,8 @@
 
   <h2>RSS del Ayuntamiento</h2>
   <ul class="list list-links">
-  	<li><a href="http://www.upc.edu/agenda-actividades/todas/RSS?set_language=es" target="_blank">Agenda  <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(abrir en ventana nueva)"></a></li>
-    <li><a target="_blank" href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=es">Noticias <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(abrir en ventana nueva)"></a></li>    
+  	<li><a tal:attributes="href string:${portal_url}/esdeveniments/aggregator/RSS?set_language=es" target="_blank">Agenda  <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(abrir en ventana nueva)"></a></li>
+    <li><a target="_blank" tal:attributes="href string:${portal_url}/news/aggregator/RSS?set_language=es">Noticias <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(abrir en ventana nueva)"></a></li>    
   </ul>
 
   <h2>Agregadores de libre distribución</h2>

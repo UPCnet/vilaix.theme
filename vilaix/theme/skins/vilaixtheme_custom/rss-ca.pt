@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<div metal:fill-slot="main" class="plain">
+<div metal:fill-slot="main" class="plain" tal:define="portal_url context/@@plone_portal_state/portal_url;">
 
   <h1 class="documentFirstHeading">Informació RSS</h1>
   	
@@ -22,8 +22,8 @@
 
   <h2>RSS de l'Ajuntament</h2>
   <ul class="list list-links">
-  	<li><a href="http://www.upc.edu/agenda/totes/RSS" target="_blank">Agenda UPC <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></a></li>
-  	<li><a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=ca" target="_blank">Notícies <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></a></li>  	
+  	<li><a tal:attributes="href string:${portal_url}/esdeveniments/aggregator/RSS?set_language=ca" target="_blank">Agenda <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></a></li>
+  	<li><a tal:attributes="href string:${portal_url}/news/aggregator/RSS?set_language=ca" target="_blank">Notícies <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></a></li>  	
   </ul>
 
   <h2>Agregadors de distribució lliure</h2>
