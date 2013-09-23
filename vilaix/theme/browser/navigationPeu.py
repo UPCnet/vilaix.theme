@@ -20,7 +20,7 @@ class navigationPeu(GlobalSectionsViewlet):
         tabs_root = context_state.is_portal_root()
         cont = 1
 
-        path = urltool.getPortalPath()
+        path = urltool.getPortalPath() + '/menu-principal'
         folders = portal_catalog.searchResults(portal_type = 'Folder',
                                          path = dict(query=path, depth=1),
                                          review_state=['internally_published','external','published'],
@@ -28,7 +28,7 @@ class navigationPeu(GlobalSectionsViewlet):
 
         results = []
         for fold in folders:
-            if cont <= 4:
+            #if cont <= 4:
                 if fold.exclude_from_nav == False:
                     results.append(dict(id_menu_titulo=fold.Title,
                                         id_menu_url=fold.getURL(),
@@ -44,6 +44,6 @@ class navigationPeu(GlobalSectionsViewlet):
                     cont = cont + 1
                 else:
                     continue
-            else:
-                continue
+            #else:
+                #continue
         return results

@@ -18,12 +18,12 @@
                tal:attributes="href string:${viewlet/portal_url}">
                Home
              </a></li>
-        <li><a accesskey="3"
+       <!--  <li><a accesskey="3"
                i18n:domain="plone"
                i18n:translate="Site Map"
                tal:attributes="href string:${viewlet/portal_url}/sitemap">
                Site Map
-             </a></li>
+             </a></li> -->
         <li><a accesskey="9"
                i18n:domain="plone"
                i18n:translate="Contact"

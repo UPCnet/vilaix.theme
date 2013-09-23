@@ -211,39 +211,39 @@ class gwGlobalSectionsViewlet(GlobalSectionsViewlet, viewletBase):
 #     index = ViewPageTemplateFile('viewlets_templates/path_bar.pt')
 
 
-# class gwFooter(viewletBase):
-#     grok.name('genweb.footer')
-#     grok.template('footer')
-#     grok.viewletmanager(IPortalFooter)
-#     grok.layer(IGenwebTheme)
+class gwFooter(viewletBase):
+    grok.name('genweb.footer')
+    grok.template('footer')
+    grok.viewletmanager(IPortalFooter)
+    grok.layer(IVilaixTheme)
 
-#     def getLinksPeu(self):
-#         """ links fixats per accessibilitat/rss/about """
-#         idioma = self.pref_lang()
-#         footer_links = {
-#             "ca": {
-#                 "rss": "rss-ca",
-#                 "about": "sobre-aquest-web",
-#                 "accessibility": "accessibilitat"
-#             },
-#             "es": {
-#                 "rss": "rss-es",
-#                 "about": "sobre-esta-web",
-#                 "accessibility": "accesibilidad"
-#             },
-#             "en": {
-#                 "rss": "rss-en",
-#                 "about": "about-this-web",
-#                 "accessibility": "accessibility"
-#             },
-#             "zh": {
-#                 "rss": "rss-en",
-#                 "about": "about-this-web",
-#                 "accessibility": "accessibility"
-#             },
-#         }
+    def getLinksPeu(self):
+        """ links fixats per accessibilitat/rss/about """
+        idioma = self.pref_lang()
+        footer_links = {
+            "ca": {
+                "rss": "rss-ca",
+                "about": "sobre-aquest-web",
+                "accessibility": "accessibilitat"
+            },
+            "es": {
+                "rss": "rss-es",
+                "about": "sobre-esta-web",
+                "accessibility": "accesibilidad"
+            },
+            "en": {
+                "rss": "rss-en",
+                "about": "about-this-web",
+                "accessibility": "accessibility"
+            },
+            # "zh": {
+            #     "rss": "rss-en",
+            #     "about": "about-this-web",
+            #     "accessibility": "accessibility"
+            # },
+        }
 
-#         return footer_links[idioma]
+        return footer_links[idioma]
 
 
 # class gwSearchViewletManager(grok.ViewletManager):
