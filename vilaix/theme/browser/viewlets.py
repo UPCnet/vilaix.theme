@@ -102,13 +102,14 @@ class gwHeader(viewletBase):
         portal_catalog = getToolByName(self.context, 'portal_catalog')
         path = urltool.getPortalPath() + '/imatges-capcalera'        
         resultats = []
+        #Imatge capcalera per defecte
+        style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
        
         imatges = self.context.portal_catalog.searchResults(portal_type='Image',
                                                             path=path)
-        
-        imatge = random.choice(imatges)
-
-        style = 'background-image: url(' + imatge.getPath() +')'       
+        if imatges.actual_result_count != 0:
+            imatge = random.choice(imatges)
+            style = 'background-image: url(' + imatge.getPath() +')'       
         
         return style
 

@@ -28,4 +28,48 @@
       <property name="currentFolderOnly">False</property>
       <property name="name"/>
     </assignment>
+    <assignment name="navigation-fixed" category="context" key="/"
+      manager="genweb.portlets.HomePortletManager1" type="vilaix.portlets.navigationfixed"
+      visible="True">
+      <property name="root">/menu-lateral</property>
+      <property name="currentFolderOnly">False</property>
+      <property name="name"/>
+    </assignment>
+    <assignment name="banners-portlet" category="context" key="/"
+      manager="genweb.portlets.HomePortletManager1" type="vilaix.portlets.banners"
+      visible="True">
+      <property name="content">/banners_esquerra</property>     
+      <property name="name"/>
+   </assignment>
+   <assignment name="noticia-destacada" category="context" key="/"
+      manager="genweb.portlets.HomePortletManager2" type="vilaix.portlets.noticiaDestacada"
+      visible="True">      
+      <property name="name"/>
+   </assignment>
+   <assignment name="noticia" category="context" key="/"
+      manager="genweb.portlets.HomePortletManager3" type="vilaix.portlets.news"
+      visible="True">      
+      <property name="name"/>
+   </assignment>
+   <assignment name="banners-portlet" category="context" key="/"
+      manager="genweb.portlets.HomePortletManager6" type="vilaix.portlets.banners"
+      visible="True">
+      <property name="content">/banners_dreta</property>     
+      <property name="name"/>
+   </assignment>
+   <assignment name="mes-consultat" category="context" key="/"
+      manager="genweb.portlets.HomePortletManager6" type="vilaix.portlets.mesConsultat"
+      visible="True">          
+      <property name="name"/>
+   </assignment>
+   <assignment name="esdeveniments" category="context" key="/"
+      manager="genweb.portlets.HomePortletManager7" type="portlets.Events"
+      visible="True">          
+      <property name="name"/>
+   </assignment>
+   <assignment name="calendari" category="context" key="/"
+      manager="genweb.portlets.HomePortletManager10" type="portlets.Calendar"
+      visible="True">          
+      <property name="name"/>
+   </assignment>
 </portlets>
