@@ -8,7 +8,7 @@ class carrousel(ViewletBase):
     render = ViewPageTemplateFile('viewlets_templates/carrousel_mobile.pt')
     
     def getElementsCarrousel(self):
-        """ Retorna tots els objectes de tipus Carrousel que hi ha a la carpeta config
+        """ Retorna tots els objectes de tipus Carrousel que hi ha a la carpeta carrousel
         """
         urltool = getToolByName(self.context, 'portal_url')        
         portal_catalog = getToolByName(self, 'portal_catalog')
@@ -17,9 +17,9 @@ class carrousel(ViewletBase):
         nElements = 2
         llistaElementsCarrousel = []  
         # Cerca contingut per mostar al carousel en diversos idiomes
-        #path = path + '/config-'+ lt.getPreferredLanguage() +'/carrousel/',
+        #path = path + '/carrousel-'+ lt.getPreferredLanguage() +'/carrousel/',
         elementsCarrousel = portal_catalog.searchResults(portal_type = 'Carrousel',
-                                               path = path + '/config',
+                                               path = path + '/carrousel',
                                                sort_on='getObjPositionInParent')
                                                         
         if len(elementsCarrousel) > 0:
