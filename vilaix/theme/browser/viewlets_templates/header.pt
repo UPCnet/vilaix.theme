@@ -3,7 +3,7 @@
   <div class="clearfix">
     <h1>   
       <a tal:attributes="href string:${viewlet/portal_url}" accesskey="1">
-        <img tal:attributes="src string:${viewlet/portal_url}/carrousel/carrousel8/Imatge"
+        <img tal:attributes="src string:${viewlet/portal_url}/++vilaix++static/images/logoVILAIX.png"
              alt="Vilaix">
       </a>      
     </h1>

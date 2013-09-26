@@ -2,8 +2,6 @@
 <metadata>
   <version>0001</version>
   <dependencies>
-    <dependency>profile-genweb.core:default</dependency>
-    <dependency>profile-upc.genweb.banners:default</dependency>
-    <dependency>profile-upc.genweb.logosfooter:default</dependency>
+    <dependency>profile-vilaix.core:default</dependency> 
 </dependencies>
 </metadata>
