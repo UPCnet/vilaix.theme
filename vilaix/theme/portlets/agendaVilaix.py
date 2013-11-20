@@ -109,7 +109,8 @@ class Renderer(base.Renderer):
 
     def all_events_link(self):
         if self.have_events_folder:
-            events = self.portal.esdeveniments
+            #events = self.portal.esdeveniments
+            events = self.portal.events
             return '%s' % events.absolute_url()
         else:
             return '%s/events_listing' % self.portal_url
@@ -148,7 +149,9 @@ class Renderer(base.Renderer):
         return bb 
 
     def textEsdeveniment(self, a):  
-        return self.abrevia(a.getObject().text.raw,100)   
+        #import ipdb; ipdb.set_trace()
+        #return self.abrevia(a.getObject().text.raw,100) 
+        return self.abrevia(a.getObject().SearchableText(),100)   
         
     @memoize
     def _data(self):
@@ -171,7 +174,11 @@ class Renderer(base.Renderer):
                           path=path,
                           sort_on='start',
                           sort_limit=limit)[:limit]
+        if len(results) < limit:
+          limit = len(results)
+
         count = len(results)
+        #import ipdb; ipdb.set_trace()
         if count < limit:
             results2 = catalog(portal_type=('Event'),
                        review_state=state,

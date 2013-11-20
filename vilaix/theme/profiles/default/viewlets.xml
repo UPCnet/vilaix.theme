@@ -5,10 +5,12 @@
     <viewlet name="plone.header"/>
     <viewlet name="genweb.globalsections"/>
     <viewlet name="genweb.pathbar"/>
+    <viewlet name="vilaix.carrousel"/>
+    <viewlet name="vilaix.carrousel_mobile"/>  
   </order>
   <order manager="plone.portalheader" skinname="VilaixTheme">
     <viewlet name="plone.skip_links"/>
-    <viewlet name="genweb.header"/>
+    <viewlet name="genweb.header"/>    
   </order>
   <order manager="plone.portalfooter" skinname="VilaixTheme">
     <viewlet name="vilaix.carrousel"/>

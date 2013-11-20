@@ -20,7 +20,7 @@ from genweb.core.utils import genweb_config, pref_lang
 from genweb.portlets.browser.manager import ISpanStorage
 
 from scss import Scss
-from genweb.theme.scss import dynamic_scss
+#from genweb.theme.scss import dynamic_scss
 
 from plone.formwidget.recaptcha.view import RecaptchaView, IRecaptchaInfo
 from recaptcha.client.captcha import displayhtml
