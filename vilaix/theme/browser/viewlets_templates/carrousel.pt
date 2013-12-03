@@ -61,8 +61,10 @@
 	              
 	              
 	            </div>
+	            <tal:bloc tal:condition="python: blocs > 1">
 	             <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
                  <a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
+                </tal:bloc>
 	        </div>
 		</div>
 	</div>	

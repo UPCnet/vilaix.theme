@@ -13,6 +13,7 @@
      assignment=".news.Assignment"
      renderer=".news.Renderer"
      addview=".news.AddForm"
+     editview=".news.EditForm"
      />
 
     <plone:portlet
@@ -21,6 +22,7 @@
      assignment=".noticiaDestacada.Assignment"
      renderer=".noticiaDestacada.Renderer"
      addview=".noticiaDestacada.AddForm"
+     editview=".noticiaDestacada.EditForm"
      />
 
     <plone:portlet
@@ -59,5 +61,23 @@
      addview=".navigationfixed.AddForm"
      editview=".navigationfixed.EditForm"
      />
+    
+    <plone:portlet
+     name="vilaix.portlets.seccio"
+     interface=".seccio.ISeccioPortlet"
+     assignment=".seccio.Assignment"
+     renderer=".seccio.Renderer"
+     addview=".seccio.AddForm"
+     editview=".seccio.EditForm"
+     />
+
+    <plone:portlet
+     name="vilaix.portlets.QueryPortlet"
+     interface=".queryportlet.IQueryPortlet"
+     assignment=".queryportlet.Assignment"
+     renderer=".queryportlet.Renderer"
+     addview=".queryportlet.AddForm"
+     editview=".queryportlet.EditForm"
+    />
 
 </configure>

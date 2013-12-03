@@ -1,0 +1,72 @@
+# -*- coding: utf-8 -*-
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from interfaces import IPortletItemRenderer
+from renderer import PortletItemRenderer
+from Products.CMFCore.utils import getToolByName
+
+from plone.app.contenttypes.interfaces import IEvent
+from plone.app.contenttypes.interfaces import INewsItem
+from five.grok import adapter
+from five.grok import implementer
+
+from Products.CMFCore.interfaces import IContentish
+from DateTime.DateTime import DateTime
+from Acquisition import aq_inner
+
+from genweb.core import GenwebMessageFactory as TAM
+
+from zope.i18nmessageid import MessageFactory
+PLMF = MessageFactory('plonelocales')
+
+
+@adapter(IContentish)
+@implementer(IPortletItemRenderer)
+class DefaultPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('default.pt')
+    css_class = 'contentish-item'
+
+
+@adapter(IEvent)
+@implementer(IPortletItemRenderer)
+class EventPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('event.pt')
+    css_class = 'multidate'
+
+    def sameDay(self):    
+        if DateTime.Date(self.item.start) == DateTime.Date(self.item.end):
+            return True
+        else:
+            return False
+    
+    def getText(self): 
+        return self.cropText(self.item.getObject().SearchableText(), 100)
+    
+    def getMonthAbbr(self, data):
+        context = aq_inner(self.context)
+        month = DateTime.month(data)
+        self._ts = getToolByName(context, 'translation_service')
+        monthName = TAM(self._ts.month_msgid(month, format='a'),
+                              default=self._ts.month_english(month, format='a'))
+        return monthName
+
+    def getMonth(self, data):
+        context = aq_inner(self.context)
+        month = DateTime.month(data)
+        self._ts = getToolByName(context, 'translation_service')
+        monthName = PLMF(self._ts.month_msgid(month),
+                              default=self._ts.month_english(month))
+        return monthName
+        
+    def getDay(self, data):
+        day = str(DateTime.day(data))
+        return day      
+
+
+@adapter(INewsItem)
+@implementer(IPortletItemRenderer)
+class NewsPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('newsitem.pt')
+    css_class = 'noticies clearfix'
+
+    def getText(self):       
+        return self.cropText(self.item.getObject().text.raw, 100)

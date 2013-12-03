@@ -1,0 +1,19 @@
+<li tal:attributes="class view/rendererClass">
+      
+    <img tal:attributes="src string:${view/item/getURL}/@@images/image/tile" />
+
+    <time class="smaller" tal:define="data view/item/Date" tal:content="python:view.toLocalizedTime(data)">May 5</time>
+   
+    <h2><a href=""
+       tal:attributes="href view/item/getURL">
+        <span tal:replace="view/item/Title">
+        Notícies RSS
+        </span>
+    </a></h2>   
+   
+    <span tal:replace="structure view/getText">
+        Text Noticia 
+    </span>   
+    
+  
+</li>

@@ -1,0 +1,52 @@
+<tal:slider tal:define="sliders viewlet/sliderItems" 
+			  tal:condition="sliders"
+     		  i18n:domain="vilaix.core">
+	
+
+	<div class="container">
+	    <div class="row-fluid">
+		    <div class="span12">
+
+	            <div id="mySlider" class="carousel slide" data-interval="4000">
+	              <!-- Carousel items -->
+	              <div class="carousel-inner">
+	                <tal:carouselItem repeat="item sliders">
+	                  <div tal:define="isTheFirst repeat/item/start"
+	                       tal:attributes="class python:isTheFirst and 'item active' or 'item'">
+	                    <img tal:attributes="src item/img"/>
+	                    <!-- <div class="carousel-caption">
+	                    </div> -->
+	                    <!-- <div class="carousel-caption-text">
+	                      <a tal:attributes="href item/url;
+	                                         title item/title;
+	                                         target item/target|nothing"><h4 tal:content="item/title"></h4></a>
+	                      <p tal:replace="structure item/text"></p>
+	                    </div> -->
+
+	                  </div>
+	                </tal:carouselItem>
+	              </div>
+	              <!-- Carousel nav -->
+	              <tal:bloc tal:condition="python:len(sliders) > 1">
+		              <a class="carousel-control left" href="#mySlider" data-slide="prev">&lsaquo;</a>
+		              <a class="carousel-control right" href="#mySlider" data-slide="next">&rsaquo;</a>
+	          	  </tal:bloc>
+	            </div>    
+	                   
+        	</div>      
+		</div>
+	</div>	
+
+
+
+ 	<script type="text/javascript">
+	     $(document).ready(function(event) {
+	         intervalid = setInterval(function(event) {
+	             $('.carousel').carousel('cycle')
+	             clearInterval(intervalid)
+	             console.log('interval')
+	         }, 2000)
+	     })
+    </script> 
+	
+</tal:slider>

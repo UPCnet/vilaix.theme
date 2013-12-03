@@ -10,7 +10,9 @@
   </order>
   <order manager="plone.portalheader" skinname="VilaixTheme">
     <viewlet name="plone.skip_links"/>
-    <viewlet name="genweb.header"/>    
+    <viewlet name="genweb.header"/>   
+    <viewlet name="vilaix.randomImage"/>  
+    <viewlet name="vilaix.slider"/>  
   </order>
   <order manager="plone.portalfooter" skinname="VilaixTheme">
     <viewlet name="vilaix.carrousel"/>
@@ -20,12 +22,17 @@
     <viewlet name="genweb.footer"/>
   </order>
 
+  <hidden manager="plone.portaltop" skinname="VilaixTheme">
+    <viewlet name="vilaix.carrousel"/>
+    <viewlet name="vilaix.carrousel_mobile"/>  
+  </hidden>
   <hidden manager= "plone.portalheader" skinname="VilaixTheme">
     <viewlet name="plone.personal_bar"/>
     <viewlet name="plone.logo"/>
     <viewlet name="plone.global_sections"/>
     <viewlet name="plone.searchbox"/>
     <viewlet name="plone.app.i18n.locales.languageselector"/>
+    <viewlet name="vilaix.slider"/>
   </hidden>
   <hidden manager= "plone.abovecontent" skinname="VilaixTheme">
     <viewlet name="plone.path_bar"/>

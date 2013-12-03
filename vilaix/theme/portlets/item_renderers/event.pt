@@ -1,0 +1,62 @@
+<li tal:define="sameday view/sameDay;
+    			toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+    			item_startdate python:toLocalizedTime(view.item.start);
+    			item_enddate python:toLocalizedTime(view.item.end);
+    			startday python:view.getDay(view.item.start);
+    			endday python:view.getDay(view.item.end);
+    			startmonth python:view.getMonth(view.item.start);
+    			startmonth_abbr python:view.getMonthAbbr(view.item.start);
+    			endmonth python:view.getMonth(view.item.end);
+                endmonth_abbr python:view.getMonthAbbr(view.item.end)"
+    tal:attributes="class view/rendererClass">
+
+    <tal:co tal:condition="sameday">
+        <a href="#" tal:attributes="href view/item/getURL">
+          <tal:repl tal:replace="view/item/Title">Some Event</tal:repl>
+        </a>
+
+        <div class="text_esdeveniment">
+          <span tal:replace="structure view/getText"> Text esdeveniment </span>
+        </div>                                                         
+
+        <time class="smaller"
+                tal:attributes="datetime item_startdate">
+            <tal:repl tal:replace="startday">28</tal:repl>
+            <abbr rel="tooltip"
+                  data-placement="left"
+                  tal:attributes="title startmonth">
+                <tal:repl tal:replace="startmonth_abbr">set.</tal:repl>
+            </abbr> 
+        </time>
+    </tal:co>
+
+    <tal:co tal:condition="not: sameday">
+        <a href="#" class="multidate-before" tal:attributes="href view/item/getURL">
+          <tal:repl tal:replace="view/item/Title">Some Event</tal:repl>
+        </a>
+
+        <div class="text_esdeveniment">
+          <span tal:replace="structure view/getText"> Text esdeveniment </span>
+        </div>   
+        
+        <time class="smaller"
+                tal:attributes="datetime item_startdate">
+            <tal:repl tal:replace="startday">28</tal:repl>
+            <abbr rel="tooltip"
+                  data-placement="left"
+                  tal:attributes="title startmonth">
+                <tal:repl tal:replace="startmonth_abbr">set.</tal:repl>
+            </abbr>
+        </time>
+        <time class="smaller"
+              tal:attributes="datetime item_enddate">
+            <tal:repl tal:replace="endday">28</tal:repl>
+            <abbr rel="tooltip"
+                  data-placement="left"
+                  tal:attributes="title endmonth">
+                <tal:repl tal:replace="endmonth_abbr">set.</tal:repl>
+            </abbr>
+        </time>
+    </tal:co>   
+  
+</li>

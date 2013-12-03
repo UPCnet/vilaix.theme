@@ -309,7 +309,7 @@ body {
     border: 8px solid white;
     border-radius: 0 0 0 0;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 .portlet h2 {
     background: none repeat scroll 0 0 #0073B8;
@@ -478,6 +478,7 @@ b, strong {
 #portal-globalnav {
     margin-top: 3px;
 }
+
 #eines {
 	font-size: 12px;
     margin-top: 10px;
@@ -558,8 +559,7 @@ color:#333;
     width: 50px;
 }
 .portlet-static-social-links img:hover {opacity:0.9;transition: all 0.2s ease-in-out 0s;}
-.portlet-noticies {
-    min-height: 385px;
+.portlet-noticies {    
     padding-bottom: 3px;
 }
 .portlet-noticies .icon-news {display:none;}
@@ -855,4 +855,53 @@ and (min-width : 500px) {
   .carousel_mobile {
     display: none;
   }
+}
+
+
+NUEVO PILAR ANTES APLICAR CAMBIOS MARC
+
+#mySlider {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+#mySlider .carousel-inner {
+    padding-left: 0px !important;
+}
+
+#mySlider .carousel-inner .item > img{
+    max-width: auto !important;
+    border: none;
+}
+
+#mySlider .carousel-inner .item {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+#mySlider .carousel-control {
+    top: 50%;
+}
+
+#mySlider .carousel img:hover {
+    cursor: pointer;
+    border: none !important;
+}
+
+#mySlider {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#portal-header .container {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+#portal-globalnav {    
+    margin-bottom: 15px !important;
+}
+
+#ajax-spinner {
+    display: none;
 }

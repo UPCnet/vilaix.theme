@@ -16,6 +16,7 @@ from plone.memoize import ram
 
 from genweb.core.interfaces import IGenwebLayer, IHomePage
 from genweb.theme.browser.interfaces import IGenwebTheme, IHomePageView
+from genweb.theme.browser.views import HomePageBase
 from genweb.core.utils import genweb_config, pref_lang
 from genweb.portlets.browser.manager import ISpanStorage
 
@@ -25,6 +26,21 @@ from scss import Scss
 from plone.formwidget.recaptcha.view import RecaptchaView, IRecaptchaInfo
 from recaptcha.client.captcha import displayhtml
 
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from interfaces import IVilaixTheme
+from plone.app.collection.interfaces import ICollection
+
+class CollectionPortletView(HomePageBase):
+    grok.implements(IHomePageView)
+    grok.context(ICollection)
+    grok.layer(IVilaixTheme)
+    grok.name('portletview')
+    
+    def render(self):
+        template = ViewPageTemplateFile('views_templates/portlet-view.pt')
+        # if not IInitializedPortlets.providedBy(self.context) or self.request.get('reset', None):
+        #     self.setDefaultPortlets()
+        return template(self)
 
 # class GWConfig(grok.View):
 #     grok.context(Interface)

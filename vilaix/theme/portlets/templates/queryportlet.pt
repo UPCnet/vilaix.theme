@@ -1,0 +1,20 @@
+<tal:items tal:define="plone_view context/@@plone;
+                       viewActions here/portal_properties/site_properties/typesUseViewActionInListings|python:();
+                       getIcon nocall:plone_view/getIcon;
+                       items view/results"
+               tal:condition="items"
+               i18n:domain="plone">
+
+    <div tal:attributes="class python:view.renderClass(items)">
+        <h2 tal:content="view/data/header"> <i class="icon-news large-icon pull-right"></i></h2>
+        <ul tal:attributes="class python:view.renderClassUL(items)">
+        <tal:item tal:repeat="item items">
+            <tal:renderer replace="structure python:view.renderItem(item)">
+            </tal:renderer>
+        </tal:item>
+        </ul>
+        <!-- <a class="portlet-footer" href="#">More</a> -->
+       <!--  <a href="" class="portlet-footer"><span class="button">Veure Més<i class="icon-plus-sign icon-white"></i></span></a> -->
+      
+    </div>
+</tal:items>

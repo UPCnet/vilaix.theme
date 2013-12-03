@@ -20,6 +20,7 @@ class carrousel(ViewletBase):
         #path = path + '/carrousel-'+ lt.getPreferredLanguage() +'/carrousel/',
         elementsCarrousel = portal_catalog.searchResults(portal_type = 'Carrousel',
                                                path = path + '/carrousel',
+                                               review_state = 'published',
                                                sort_on='getObjPositionInParent')
                                                         
         if len(elementsCarrousel) > 0:

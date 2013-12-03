@@ -28,8 +28,10 @@ from genweb.core.interfaces import IHomePage
 from genweb.core.utils import genweb_config, havePermissionAtRoot, pref_lang
 
 from genweb.theme.browser.interfaces import IGenwebTheme
-
+from genweb.theme.browser.viewlets import gwManagePortletsFallbackViewlet
 from vilaix.theme.browser.interfaces import IVilaixTheme
+
+from plone.app.collection.interfaces import ICollection
 
 import random
 
@@ -112,6 +114,89 @@ class gwHeader(viewletBase):
             style = 'background-image: url(' + imatge.getPath() +')'       
         
         return style
+
+
+
+class randomImage(viewletBase):    
+    grok.name('vilaix.randomImage')
+    grok.template('randomImage')
+    grok.viewletmanager(IPortalHeader)
+    grok.layer(IVilaixTheme)
+
+    def get_image_class(self):
+        if self.genweb_config().treu_menu_horitzontal:
+            # Is a L2 type
+            return 'l2-image'
+        else:
+            return 'l3-image'
+
+    def show_login(self):
+        isAnon = getMultiAdapter((self.context, self.request), name='plone_portal_state').anonymous()
+        return not self.genweb_config().amaga_identificacio and isAnon
+
+    def show_directory(self):
+        return self.genweb_config().directori_upc
+
+    def get_image_capsalera(self):
+        #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
+        urltool = getToolByName(self.context, 'portal_url')
+        portal_catalog = getToolByName(self.context, 'portal_catalog')
+        path = urltool.getPortalPath() + '/imatges-capcalera'        
+        resultats = []
+        #Imatge capcalera per defecte
+        style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
+        
+        imatges = self.context.portal_catalog.searchResults(portal_type='Image',                                                            
+                                                            path=path)
+        
+        values = self.context.portal_catalog.uniqueValuesFor('Subject')
+                                                           
+        if imatges.actual_result_count != 0:
+            imatge = random.choice(imatges)
+            style = 'background-image: url(' + imatge.getPath() +')'       
+        
+        return style
+
+
+class slider(viewletBase):
+    grok.context(IPloneSiteRoot)
+    grok.name('vilaix.slider')
+    grok.template('slider')
+    grok.viewletmanager(IPortalHeader)
+    grok.layer(IVilaixTheme)
+
+    def sliderItems(self):
+        catalog = getToolByName(self.context, 'portal_catalog')
+        utool = getToolByName(self.context, 'portal_url')
+        path = '{0}/slider'.format(utool.getPortalPath()),
+        items = catalog.searchResults(
+            portal_type='Carrousel',
+            path=dict(query=path,
+                      depth=1),
+            review_state = 'published',
+            sort_on='getObjPositionInParent')
+
+        results = []
+        for item in items:
+            obj = item.getObject()
+            results.append(
+                {'img': '%s/Imatge' % (item.getURL()),
+                 'url': obj.URLdesti,
+                 'title': item.Title,
+                 'target': obj.Obrirennovafinestra and 'blank' or None,
+                 'text': item.Description,
+                 }
+            )
+
+        return results
+
+class collectionFallbackViewlet(gwManagePortletsFallbackViewlet):
+    grok.context(ICollection)
+    grok.name('plone.manage_portlets_fallback')
+    grok.viewletmanager(IBelowContent)
+    grok.layer(IVilaixTheme)
+
+    render = ViewPageTemplateFile('viewlets_templates/manage_portlets_fallback.pt')
 
 # class gwImportantNews(viewletBase):
 #     grok.name('genweb.important')

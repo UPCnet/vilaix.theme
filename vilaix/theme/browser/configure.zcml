@@ -52,4 +52,6 @@
       layer=".interfaces.IVilaixTheme"
       permission="zope2.View"
       />
+
+ 
 </configure>
