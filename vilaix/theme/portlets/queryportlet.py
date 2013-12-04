@@ -146,9 +146,13 @@ class Renderer(base.Renderer):
             toLocalizedTime=self.plone_view.toLocalizedTime,
             cropText=self.plone_view.cropText)
         fti = self.ptypes.getTypeInfo(item.PortalType())
-        module = fti.klass[:fti.klass.rfind('.')]
-        klass = fti.klass[fti.klass.rfind('.') + 1:]
-        dummy = getattr(sys.modules[module], klass)
+        if fti.content_meta_type == 'Banner':
+            type_specs = self.context.archetype_tool.lookupType(fti.getProperty('product'),fti.getProperty('content_meta_type'))
+            dummy = type_specs['klass']
+        else:
+            module = fti.klass[:fti.klass.rfind('.')]
+            klass = fti.klass[fti.klass.rfind('.') + 1:]
+            dummy = getattr(sys.modules[module], klass)
         renderer = getAdapter(dummy(object), IPortletItemRenderer)
         return renderer(self, **args)
 

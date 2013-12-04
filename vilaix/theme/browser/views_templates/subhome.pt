@@ -41,7 +41,7 @@
         <div class="span9"
             tal:attributes="class python:have_portlets_slot1 and 'span9' or 'span12'">
           <tal:comment replace="nothing"> Fila 1 </tal:comment>
-          <p tal:replace="structure context/rich_description/output">Hola que tal</p>
+          <p tal:replace="structure context/rich_description/output|nothing">Hola que tal</p>
           <div class="row-fluid"
               tal:condition="have_portlets_slot2">
             <div class="span12">

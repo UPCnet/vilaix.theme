@@ -15,6 +15,10 @@ from Acquisition import aq_inner
 
 from genweb.core import GenwebMessageFactory as TAM
 
+from vilaix.core.interfaces import IEquipament
+from vilaix.core.interfaces import ITramit
+from upc.genweb.banners.content.interfaces import IBanner
+
 from zope.i18nmessageid import MessageFactory
 PLMF = MessageFactory('plonelocales')
 
@@ -70,3 +74,32 @@ class NewsPortletItemRenderer(PortletItemRenderer):
 
     def getText(self):       
         return self.cropText(self.item.getObject().text.raw, 100)
+
+
+@adapter(IEquipament)
+@implementer(IPortletItemRenderer)
+class NewsPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('equipament.pt')
+    css_class = 'equipament clearfix'
+
+
+@adapter(ITramit)
+@implementer(IPortletItemRenderer)
+class NewsPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('tramit.pt')
+    css_class = 'tramit clearfix'
+
+
+@adapter(IBanner)
+@implementer(IPortletItemRenderer)
+class NewsPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('banner.pt')
+    css_class = 'banner clearfix'
+
+    def getTarget(self):
+        obj = self.item.getObject()
+        if obj.Obrirennovafinestra:
+            result = '_blank'
+        else:
+            result = ''
+        return result

@@ -1,0 +1,10 @@
+<li tal:attributes="class view/rendererClass">     
+
+   <a target="_blank" href=""
+       tal:attributes="href view/item/URLdesti; 
+       				   target view/getTarget;                       
+                       title view/item/Title">
+        <img tal:attributes="src string:${view/item/getURL}/@@images/Imatge" />   
+    </a>    
+  
+</li>

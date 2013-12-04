@@ -34,10 +34,10 @@ class CollectionPortletView(HomePageBase):
     grok.implements(IHomePageView)
     grok.context(ICollection)
     grok.layer(IVilaixTheme)
-    grok.name('portletview')
+    grok.name('subhome')
     
     def render(self):
-        template = ViewPageTemplateFile('views_templates/portlet-view.pt')
+        template = ViewPageTemplateFile('views_templates/subhome.pt')
         # if not IInitializedPortlets.providedBy(self.context) or self.request.get('reset', None):
         #     self.setDefaultPortlets()
         return template(self)
