@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from plone.memoize.instance import memoize
 from plone.memoize import ram
 from plone.memoize.compress import xhtml_compress
