@@ -13,7 +13,7 @@
     <portlet title="NavigationFixed" addview="vilaix.portlets.navigationfixed"
         description="Portlet de navegacion fija"/>   
     <portlet title="Seccio de noticies" addview="vilaix.portlets.seccio"
-        description="Portlet secció de noticies"/>
+        description="Portlet seccio de noticies"/>
     <portlet title="Query portlet Vilaix" addview="vilaix.portlets.QueryPortlet"
         description="A portlet which displays the results of a query"/>   
     <assignment name="navigation" category="context" key="/"
