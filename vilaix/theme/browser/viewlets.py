@@ -181,12 +181,18 @@ class slider(viewletBase):
 
         results = []
         for item in items:
-            obj = item.getObject()
+            #obj = item.getObject()
+            # results.append(
+            #     {'img': '%s/@@images/image' % (item.getURL()),
+            #      'url': obj.URLdesti,
+            #      'title': item.Title,
+            #      'target': obj.Obrirennovafinestra and 'blank' or None,
+            #      'text': item.Description,
+            #      }
+            # )
             results.append(
-                {'img': '%s/@@images/image' % (item.getURL()),
-                 'url': obj.URLdesti,
-                 'title': item.Title,
-                 'target': obj.Obrirennovafinestra and 'blank' or None,
+                {'img': '%s/@@images/image' % (item.getURL()),                 
+                 'title': item.Title,                 
                  'text': item.Description,
                  }
             )
