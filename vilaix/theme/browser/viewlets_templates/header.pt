@@ -66,11 +66,11 @@
     </h1>
   </div> -->
 
-<!--   <div class="header-image l3-image"
+  <!--  <div class="header-image l3-image"
        tal:attributes="class string:header-image ${viewlet/get_image_class};
-                       style string:${viewlet/get_image_capsalera}"></div>
+                       style string:${viewlet/get_image_capsalera}"></div> -->
 
-</div>
+</div> 
 <div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true"
      i18n:domain="genweb">
   <div class="modal-header">
@@ -82,5 +82,5 @@
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Tanca</button>
-  </div> -->
+  </div> 
 </div>
