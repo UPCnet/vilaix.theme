@@ -95,25 +95,25 @@ class gwHeader(viewletBase):
         isAnon = getMultiAdapter((self.context, self.request), name='plone_portal_state').anonymous()
         return not self.genweb_config().amaga_identificacio and isAnon
 
-    def show_directory(self):
-        return self.genweb_config().directori_upc
+    # def show_directory(self):
+    #     return self.genweb_config().directori_upc
 
-    def get_image_capsalera(self):
-        #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
-        urltool = getToolByName(self.context, 'portal_url')
-        portal_catalog = getToolByName(self.context, 'portal_catalog')
-        path = urltool.getPortalPath() + '/imatges-capcalera'        
-        resultats = []
-        #Imatge capcalera per defecte
-        style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
+    # def get_image_capsalera(self):
+    #     #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
+    #     urltool = getToolByName(self.context, 'portal_url')
+    #     portal_catalog = getToolByName(self.context, 'portal_catalog')
+    #     path = urltool.getPortalPath() + '/imatges-capcalera'        
+    #     resultats = []
+    #     #Imatge capcalera per defecte
+    #     style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
        
-        imatges = self.context.portal_catalog.searchResults(portal_type='Image',
-                                                            path=path)
-        if imatges.actual_result_count != 0:
-            imatge = random.choice(imatges)
-            style = 'background-image: url(' + imatge.getPath() +')'       
+    #     imatges = self.context.portal_catalog.searchResults(portal_type='Image',
+    #                                                         path=path)
+    #     if imatges.actual_result_count != 0:
+    #         imatge = random.choice(imatges)
+    #         style = 'background-image: url(' + imatge.getPath() +')'       
         
-        return style
+    #     return style
 
 
 
@@ -134,26 +134,29 @@ class randomImage(viewletBase):
         isAnon = getMultiAdapter((self.context, self.request), name='plone_portal_state').anonymous()
         return not self.genweb_config().amaga_identificacio and isAnon
 
-    def show_directory(self):
-        return self.genweb_config().directori_upc
+    # def show_directory(self):
+    #     return self.genweb_config().directori_upc
 
     def get_image_capsalera(self):
-        #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
-        urltool = getToolByName(self.context, 'portal_url')
-        portal_catalog = getToolByName(self.context, 'portal_catalog')
-        path = urltool.getPortalPath() + '/imatges-capcalera'        
-        resultats = []
-        #Imatge capcalera per defecte
-        style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
-        
-        imatges = self.context.portal_catalog.searchResults(portal_type='Image',                                                            
-                                                            path=path)
-        
-        values = self.context.portal_catalog.uniqueValuesFor('Subject')
-                                                           
-        if imatges.actual_result_count != 0:
-            imatge = random.choice(imatges)
-            style = 'background-image: url(' + imatge.getPath() +')'       
+        if IPloneSiteRoot.providedBy(self.context):
+            style = 'background-image: url("/++vilaix++static/images/fons-vilaix.png");height: 0px;'
+        else:
+            #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
+            urltool = getToolByName(self.context, 'portal_url')
+            portal_catalog = getToolByName(self.context, 'portal_catalog')
+            path = urltool.getPortalPath() + '/imatges-capcalera'        
+            resultats = []
+            #Imatge capcalera per defecte
+            style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
+            
+            imatges = self.context.portal_catalog.searchResults(portal_type='Image',                                                            
+                                                                path=path)
+            
+            values = self.context.portal_catalog.uniqueValuesFor('Subject')
+                                                               
+            if imatges.actual_result_count != 0:
+                imatge = random.choice(imatges)
+                style = 'background-image: url(' + imatge.getPath() +')'       
         
         return style
 
