@@ -170,7 +170,7 @@ class slider(viewletBase):
         utool = getToolByName(self.context, 'portal_url')
         path = '{0}/slider'.format(utool.getPortalPath()),
         items = catalog.searchResults(
-            portal_type='Carrousel',
+            portal_type='Slider',
             path=dict(query=path,
                       depth=1),
             review_state = 'published',
@@ -180,7 +180,7 @@ class slider(viewletBase):
         for item in items:
             obj = item.getObject()
             results.append(
-                {'img': '%s/Imatge' % (item.getURL()),
+                {'img': '%s/@@images/image' % (item.getURL()),
                  'url': obj.URLdesti,
                  'title': item.Title,
                  'target': obj.Obrirennovafinestra and 'blank' or None,

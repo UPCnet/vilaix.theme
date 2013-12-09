@@ -1,7 +1,7 @@
 3.1.15 (Brainy Betty)
-bb2e6f653725f3f2d4ec5f2f6f0c4914f4a62ece
+8f8e4681daaeff50f912fe920fb0e5c054f5f62d
 o:Sass::Tree::RootNode
-:@has_childrenT:@template"ßO// Aqui posar el SCSS addicional per a suport del tema.
+:@has_childrenT:@template"˛O// Aqui posar el SCSS addicional per a suport del tema.
 $fontAwesomePath: "/++genweb++static/fonts";
 @import "compass_twitter_bootstrap/font-awesome";
 @import "overrides";
@@ -573,7 +573,7 @@ color:#333;
     margin-bottom: 15px;
     margin-left: 20px;
     margin-right: 20px;
-    padding-top: 25px;
+    margin-top: 25px;
     position: relative;
 }
 .portlet-esdeveniments {
@@ -908,8 +908,15 @@ NUEVO PILAR ANTES APLICAR CAMBIOS MARC
 #ajax-spinner {
     display: none;
 }
-:
-@linei:@options{ :@children[ño:Sass::Tree::CommentNode:@silenti :@value["?/* Aqui posar el SCSS addicional per a suport del tema. */;i;	@:
+
+.portlet-carousel {
+    margin-top: 0px !important;
+}
+
+.newsImage {
+    width: 200px;
+}:
+@linei:@options{ :@children[òo:Sass::Tree::CommentNode:@silenti :@value["?/* Aqui posar el SCSS addicional per a suport del tema. */;i;	@:
 @loud0;
 [ o:Sass::Tree::VariableNode:@guarded0:
 @expro:Sass::Script::String	;"/++genweb++static/fonts;i:
@@ -1526,7 +1533,7 @@ hover;i1;;5;!@;i1;!@;i1;i1;	@;"i ;
 [ o;#;$;%;["margin-bottom;o;;"	15px;;&;	@;i:;	@;"i ;
 [ o;#;$;%;["margin-left;o;;"	20px;;&;	@;i;;	@;"i ;
 [ o;#;$;%;["margin-right;o;;"	20px;;&;	@;i<;	@;"i ;
-[ o;#;$;%;["padding-top;o;;"	25px;;&;	@;i=;	@;"i ;
+[ o;#;$;%;["margin-top;o;;"	25px;;&;	@;i=;	@;"i ;
 [ o;#;$;%;["position;o;;"relative;;&;	@;i>;	@;"i ;
 [ o;;T;[".portlet-esdeveniments;o;;[o;;[o;;[o;(;!" ;["portlet-esdeveniments;i@;!@∞;i@;!@∞;i@;i@;	@;"i ;
 [o;#;$;%;["margin-bottom;o;/;0[ ;iÏ;iA;1["px;	@;2"
@@ -1869,4 +1876,10 @@ hover;iv;;5;!@ó;iv;!@ó;iv;iv;	@;"i ;
 [o;#;$;%;["margin-bottom;o;;"15px !important;;&;	@;iÜ;	@;"i ;
 [ o;;T;["#ajax-spinner;o;;[o;;[o;;[o;';!" ;["ajax-spinner;iâ;!@ ;iâ;!@ ;iâ;iâ;	@;"i ;
 [o;#;$;%;["display;o;;"	none;;&;	@;iä;	@;"i ;
+[ o;;T;[".portlet-carousel;o;;[o;;[o;;[o;(;!" ;["portlet-carousel;iç;!@ ;iç;!@ ;iç;iç;	@;"i ;
+[o;#;$;%;["margin-top;o;;"0px !important;;&;	@;ié;	@;"i ;
+[ o;;T;[".newsImage;o;;[o;;[o;;[o;(;!" ;["newsImage;ië;!@3 ;ië;!@3 ;ië;ië;	@;"i ;
+[o;#;$;%;["
+width;o;;"
+200px;;&;	@;ií;	@;"i ;
 [ 

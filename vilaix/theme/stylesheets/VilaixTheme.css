@@ -3045,7 +3045,7 @@ b, strong {
   margin-bottom: 15px;
   margin-left: 20px;
   margin-right: 20px;
-  padding-top: 25px;
+  margin-top: 25px;
   position: relative;
 }
 
@@ -3487,4 +3487,14 @@ NUEVO PILAR ANTES APLICAR CAMBIOS MARC
 /* line 905, ../scss/VilaixTheme.scss */
 #ajax-spinner {
   display: none;
+}
+
+/* line 909, ../scss/VilaixTheme.scss */
+.portlet-carousel {
+  margin-top: 0px !important;
+}
+
+/* line 913, ../scss/VilaixTheme.scss */
+.newsImage {
+  width: 200px;
 }

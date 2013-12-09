@@ -5,16 +5,46 @@
                tal:condition="items"
                i18n:domain="plone">
 
-    <div tal:attributes="class python:view.renderClass(items)">
-        <h2 tal:content="view/data/header"> <i class="icon-news large-icon pull-right"></i></h2>
-        <ul tal:attributes="class python:view.renderClassUL(items)">
-        <tal:item tal:repeat="item items">
-            <tal:renderer replace="structure python:view.renderItem(item)">
-            </tal:renderer>
-        </tal:item>
-        </ul>
+    <div tal:attributes="id python:view.renderID(items);class python:view.renderClass(items)">
+       <tal:slider tal:condition="python:view.isSlider(items)">
+          <div class="carousel-inner">
+            <tal:item tal:repeat="item items">      
+              <div tal:define="isTheFirst repeat/item/start"
+                   tal:attributes="class python:isTheFirst and 'item active' or 'item'">        
+                  <img tal:attributes="src string:${item/getURL}/@@images/image" />   
+              </div>
+            </tal:item>         
+          </div>
+
+          <!-- Carousel nav -->
+          <tal:bloc tal:condition="python:len(items) > 1">
+            <a class="carousel-control left" href="#mySlider" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#mySlider" data-slide="next">&rsaquo;</a>
+          </tal:bloc>
+       </tal:slider>
+
+       <tal:notSlider tal:condition="python:not view.isSlider(items)">
+          <h2 tal:content="view/data/header"> <i class="icon-news large-icon pull-right"></i></h2>
+          <ul tal:attributes="class python:view.renderClassUL(items)">
+            <tal:item tal:repeat="item items">          
+                <tal:renderer replace="structure python:view.renderItem(item)">
+                </tal:renderer>
+            </tal:item>
+          </ul>
+       </tal:notSlider>
         <!-- <a class="portlet-footer" href="#">More</a> -->
        <!--  <a href="" class="portlet-footer"><span class="button">Veure Més<i class="icon-plus-sign icon-white"></i></span></a> -->
       
     </div>
+  
+    <script type="text/javascript">
+       $(document).ready(function(event) {
+           intervalid = setInterval(function(event) {
+               $('.carousel').carousel('cycle')
+               clearInterval(intervalid)
+               console.log('interval')
+           }, 2000)
+       })
+    </script> 
+
 </tal:items>

@@ -204,6 +204,22 @@ class Renderer(base.Renderer):
             result = 'portlet portlet-noticies'
         elif item.Type() == u'Event':
             result = 'portlet portlet-esdeveniments'
+        elif item.Type() == u'Slider':
+            result = 'carousel slide portlet-carousel'
+        return result
+    
+    def renderID(self, items):
+        item = items[0]
+        result = ''
+        if item.Type() == u'Slider':
+            result = 'mySlider'
+        return result
+    
+    def isSlider(self, items):
+        item = items[0]
+        result = False
+        if item.Type() == u'Slider':
+            result = True
         return result
     
     def renderClassUL(self, items):

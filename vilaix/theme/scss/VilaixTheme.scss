@@ -570,7 +570,7 @@ color:#333;
     margin-bottom: 15px;
     margin-left: 20px;
     margin-right: 20px;
-    padding-top: 25px;
+    margin-top: 25px;
     position: relative;
 }
 .portlet-esdeveniments {
@@ -904,4 +904,12 @@ NUEVO PILAR ANTES APLICAR CAMBIOS MARC
 
 #ajax-spinner {
     display: none;
+}
+
+.portlet-carousel {
+    margin-top: 0px !important;
+}
+
+.newsImage {
+    width: 200px;
 }

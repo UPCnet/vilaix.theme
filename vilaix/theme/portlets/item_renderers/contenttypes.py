@@ -17,6 +17,7 @@ from genweb.core import GenwebMessageFactory as TAM
 
 from vilaix.core.interfaces import IEquipament
 from vilaix.core.interfaces import ITramit
+from vilaix.core.interfaces import ISlider
 from upc.genweb.banners.content.interfaces import IBanner
 
 from zope.i18nmessageid import MessageFactory
@@ -78,21 +79,21 @@ class NewsPortletItemRenderer(PortletItemRenderer):
 
 @adapter(IEquipament)
 @implementer(IPortletItemRenderer)
-class NewsPortletItemRenderer(PortletItemRenderer):
+class EquipamentPortletItemRenderer(PortletItemRenderer):
     template = ViewPageTemplateFile('equipament.pt')
     css_class = 'equipament clearfix'
 
 
 @adapter(ITramit)
 @implementer(IPortletItemRenderer)
-class NewsPortletItemRenderer(PortletItemRenderer):
+class TramitPortletItemRenderer(PortletItemRenderer):
     template = ViewPageTemplateFile('tramit.pt')
     css_class = 'tramit clearfix'
 
 
 @adapter(IBanner)
 @implementer(IPortletItemRenderer)
-class NewsPortletItemRenderer(PortletItemRenderer):
+class BannerPortletItemRenderer(PortletItemRenderer):
     template = ViewPageTemplateFile('banner.pt')
     css_class = 'banner clearfix'
 
@@ -103,3 +104,18 @@ class NewsPortletItemRenderer(PortletItemRenderer):
         else:
             result = ''
         return result
+
+@adapter(ISlider)
+@implementer(IPortletItemRenderer)
+class SliderPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('slider.pt')
+    css_class = 'slider clearfix'
+
+    def getTarget(self):
+        obj = self.item.getObject()
+        if obj.Obrirennovafinestra:
+            result = '_blank'
+        else:
+            result = ''
+        return result
+        
