@@ -5,8 +5,8 @@
                i18n:domain="plone">
    
     <div class="portlet portlet-noticia-destacada">
-        <!-- <h2><b i18n:translate="avui_destaquem"> Notícia Destacada </b></h2> -->
-        <div class="row-fluid" tal:repeat="obj entries">
+      <h2 i18n:translate="avui_destaquem">Destaquem</h2>
+        <div class="row-fluid noticia-destacada" tal:repeat="obj entries">
           <div class="imatge_Destacada left">  
             <img tal:define="scale obj/new/@@images"
                      tal:replace="structure python: scale.scale('image',

@@ -3498,3 +3498,8 @@ NUEVO PILAR ANTES APLICAR CAMBIOS MARC
 .newsImage {
   width: 200px;
 }
+
+/* line 917, ../scss/VilaixTheme.scss */
+.noticia-destacada {
+  margin-top: 10px !important;
+}

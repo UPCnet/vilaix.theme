@@ -1,7 +1,7 @@
 3.1.15 (Brainy Betty)
-8f8e4681daaeff50f912fe920fb0e5c054f5f62d
+64283fe2b5128a05ccf7b0f183608811efe14133
 o:Sass::Tree::RootNode
-:@has_childrenT:@template"þO// Aqui posar el SCSS addicional per a suport del tema.
+:@has_childrenT:@template"9P// Aqui posar el SCSS addicional per a suport del tema.
 $fontAwesomePath: "/++genweb++static/fonts";
 @import "compass_twitter_bootstrap/font-awesome";
 @import "overrides";
@@ -915,8 +915,14 @@ NUEVO PILAR ANTES APLICAR CAMBIOS MARC
 
 .newsImage {
     width: 200px;
-}:
-@linei:@options{ :@children[˜o:Sass::Tree::CommentNode:@silenti :@value["?/* Aqui posar el SCSS addicional per a suport del tema. */;i;	@:
+}
+
+.noticia-destacada {
+    margin-top: 10px !important;
+}
+
+:
+@linei:@options{ :@children[™o:Sass::Tree::CommentNode:@silenti :@value["?/* Aqui posar el SCSS addicional per a suport del tema. */;i;	@:
 @loud0;
 [ o:Sass::Tree::VariableNode:@guarded0:
 @expro:Sass::Script::String	;"/++genweb++static/fonts;i:
@@ -1882,4 +1888,6 @@ hover;iv;;5;!@—;iv;!@—;iv;iv;	@;"i ;
 [o;#;$;%;["
 width;o;;"
 200px;;&;	@;i’;	@;"i ;
+[ o;;T;[".noticia-destacada;o;;[o;;[o;;[o;(;!" ;["noticia-destacada;i•;!@G ;i•;!@G ;i•;i•;	@;"i ;
+[o;#;$;%;["margin-top;o;;"10px !important;;&;	@;i–;	@;"i ;
 [ 
