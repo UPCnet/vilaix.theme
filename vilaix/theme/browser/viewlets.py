@@ -138,6 +138,8 @@ class randomImage(viewletBase):
     #     return self.genweb_config().directori_upc
 
     def get_image_capsalera(self):
+        style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
+
         if IPloneSiteRoot.providedBy(self.context):
             style = 'background-image: url("/++vilaix++static/images/fons-vilaix.png");height: 0px;'
         else:
@@ -145,7 +147,7 @@ class randomImage(viewletBase):
             urltool = getToolByName(self.context, 'portal_url')
             portal_catalog = getToolByName(self.context, 'portal_catalog')
             path = urltool.getPortalPath() + '/material-multimedia/imatges-capcalera'     
-            contenido = self.context
+            contenido = self.context 
 
             if contenido.portal_type == 'Collection' and contenido.layout == 'subhome':
                 filtre = contenido.query
