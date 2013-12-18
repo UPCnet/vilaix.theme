@@ -19,7 +19,7 @@ class carrousel(ViewletBase):
         # Cerca contingut per mostar al carousel en diversos idiomes
         #path = path + '/carrousel-'+ lt.getPreferredLanguage() +'/carrousel/',
         elementsCarrousel = portal_catalog.searchResults(portal_type = 'Carrousel',
-                                               path = path + '/carrousel',
+                                               path = path + '/material-multimedia/carroussel',
                                                review_state = 'published',
                                                sort_on='getObjPositionInParent')
                                                         

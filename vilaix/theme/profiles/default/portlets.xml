@@ -42,7 +42,7 @@
     <assignment name="banners-portlet" category="context" key="front-page"
       manager="genweb.portlets.HomePortletManager1" type="vilaix.portlets.banners"
       visible="True">
-      <property name="content">/banners_esquerra</property>     
+      <property name="content">/material-multimedia/banners/banners_esquerra</property>     
       <property name="name"/>
    </assignment>
    <assignment name="noticia-destacada" category="context" key="front-page"
@@ -58,7 +58,7 @@
    <assignment name="banners-portlet" category="context" key="front-page"
       manager="genweb.portlets.HomePortletManager6" type="vilaix.portlets.banners"
       visible="True">
-      <property name="content">/banners_dreta</property>     
+      <property name="content">/material-multimedia/banners/banners_dreta</property>     
       <property name="name"/>
    </assignment>
    <assignment name="mes-consultat" category="context" key="front-page"

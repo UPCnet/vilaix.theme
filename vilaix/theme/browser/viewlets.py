@@ -144,16 +144,30 @@ class randomImage(viewletBase):
             #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
             urltool = getToolByName(self.context, 'portal_url')
             portal_catalog = getToolByName(self.context, 'portal_catalog')
-            path = urltool.getPortalPath() + '/imatges-capcalera'        
-            resultats = []
-            #Imatge capcalera per defecte
-            style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
-            
-            imatges = self.context.portal_catalog.searchResults(portal_type='Image',                                                            
-                                                                path=path)
-            
-            values = self.context.portal_catalog.uniqueValuesFor('Subject')
-                                                               
+            path = urltool.getPortalPath() + '/material-multimedia/imatges-capcalera'     
+            contenido = self.context
+
+            if contenido.portal_type == 'Collection' and contenido.layout == 'subhome':
+                filtre = contenido.query
+                etiqueta = []
+                #Dades filtre --> [{u'i': u'Subject', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'prova']}]
+                for i in filtre:
+                    if i['i'] == 'Subject':                       
+                        etiquetas = i['v']
+                        num = len(etiquetas)
+                        for n in range(num):                            
+                            etiqueta.append(etiquetas[n].encode())                   
+                imatges = self.context.portal_catalog.searchResults(portal_type='Image',path=path, Subject=etiqueta)
+            else:  
+                #resultats = []
+                #Imatge capcalera per defecte
+                style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
+                imatges = self.context.portal_catalog.searchResults(portal_type='Image',                                                            
+                                                                    path=path)
+                
+                values = self.context.portal_catalog.uniqueValuesFor('Subject')
+
+
             if imatges.actual_result_count != 0:
                 imatge = random.choice(imatges)
                 style = 'background-image: url(' + imatge.getPath() +')'       
@@ -171,12 +185,12 @@ class slider(viewletBase):
     def sliderItems(self):
         catalog = getToolByName(self.context, 'portal_catalog')
         utool = getToolByName(self.context, 'portal_url')
-        path = '{0}/slider'.format(utool.getPortalPath()),
+        path = '{0}/material-multimedia/sliders'.format(utool.getPortalPath()),
         items = catalog.searchResults(
             portal_type='Slider',
             path=dict(query=path,
                       depth=1),
-            review_state = 'published',
+            review_state = 'published',            
             sort_on='getObjPositionInParent')
 
         results = []
