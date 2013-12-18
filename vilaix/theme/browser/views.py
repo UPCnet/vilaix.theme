@@ -57,8 +57,7 @@ class CollectionPortletView(HomePageBase):
  		# Portlet slider
 
 	    assignment = setPortletAssignment(3, self.context, 'slider', QueryPortletAssignment, span=7)
-	    query = [{u'i': u'portal_type', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'Slider']},
-	             {u'i': u'path', u'o': u'plone.app.querystring.operation.string.path', u'v': u'/subhome/slider'}]
+	    query = [{u'i': u'portal_type', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'Slider']}]
 	    setupQueryPortlet(assignment, u'SLIDER', query, None, False, u"")
 
 	    # Portlet Tramit
