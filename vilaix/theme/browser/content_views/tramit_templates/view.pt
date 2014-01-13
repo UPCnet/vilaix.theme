@@ -34,77 +34,77 @@
 	            
 	            	<div class="columnes">
 	            		
-                  <div>
+                  <div class="camptramit">
                     <label class="horizontal">
           					Qui el pot sol·licitar?      
       					    </label>
   		            	<p tal:replace="structure context/qui/raw | nothing"></p>
                   </div>
 		            	
-                  <div>
+                  <div class="camptramit">
   		            	<label class="horizontal">
           					Documentació que cal aportar
           			    </label>
   		            	<p tal:replace="structure context/documentacio/raw | nothing"></p>
                   </div>
 		            	
-                  <div>
+                  <div class="camptramit">
   		            	<label class="horizontal">
           					Quan es pot demanar?
           			    </label>
           			    <p tal:replace="structure context/quan/raw | nothing"></p>
                   </div>
 		            	
-                  <div>
+                  <div class="camptramit">
   						      <label class="horizontal">
           					Quin és el temps de tramitació/resolució?
           			    </label>
   		            	<p tal:replace="structure context/quin/raw | nothing"></p>
                   </div>
 
-                  <div>
+                  <div class="camptramit">
   		            	<label class="horizontal">
           					Tipus de silenci
           			    </label>
   		            	<p tal:replace="structure context/tipus_silenci/raw | nothing"></p>
                   </div>
 
-                  <div>
+                  <div class="camptramit">
   		            	<label class="horizontal">
           					Quin preu té la tramitació?
           			    </label>
   		            	<p tal:replace="structure context/preu/raw | nothing"></p>
                   </div>
 
-                  <div>
+                  <div class="camptramit">
   		            	<label class="horizontal">
           					Com puc fer el pagament?
           			    </label>
   		            	<p tal:replace="structure context/pagament/raw | nothing"></p>
                   </div>
 
-                  <div>
+                  <div class="camptramit">
                     <label class="horizontal">
                     Quins canals de tramitació té?
                     </label>
                     <p tal:replace="structure context/canals/raw | nothing"></p>
                   </div>
 
-                  <div>
+                  <div class="camptramit">
                     <label class="horizontal">
                     Quin és l'organisme responsable?
                     </label>
                     <p tal:replace="structure context/responsable/raw | nothing"></p>
                   </div>
 
-                  <div>
+                  <div class="camptramit">
                     <label class="horizontal">
                     Enllaç per iniciar el tràmit electrònicament
                     </label>
-                    <p><a tal:attributes="href  context/inici | nothing"><span>Iniciar tràmit</span></a></p>
+                    <p><a tal:attributes="href  context/inici | nothing" class="tramita"><span>Iniciar tràmit</span></a></p>
                   </div>
 
-                  <div>
+                  <div class="camptramit">
                     <label class="horizontal">
                     Fitxer annex per iniciar el tràmit presencialment.
                     </label>
