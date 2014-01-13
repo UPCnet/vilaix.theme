@@ -29,7 +29,7 @@
 	            <div class="span12">
 
 	            	
-	            	<img tal:define="imatge view/getImage" tal:attributes="src string:${imatge}" /> 
+	            	<img tal:define="imatge view/getImage" tal:condition="imatge" tal:attributes="src string:${imatge}" /> 
 	            
 	            	<div class="columnes">
 	            		<label class="horizontal">

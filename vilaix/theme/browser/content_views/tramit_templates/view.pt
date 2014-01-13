@@ -28,63 +28,88 @@
 	          <div class="row-fluid">
 	            <div class="span12">
 
-	            	<img tal:define="imatge view/getImage" tal:attributes="src string:${imatge}" /> 
+             
+	            	<img tal:define="imatge view/getImage" tal:condition="imatge" tal:attributes="src string:${imatge}" /> 
+             
 	            
 	            	<div class="columnes">
-	            		<label class="horizontal">
-        					Qui el pot sol·licitar?      
-    					    </label>
-		            	<p><span tal:content="structure context/qui/raw | nothing"></span></p>
+	            		
+                  <div>
+                    <label class="horizontal">
+          					Qui el pot sol·licitar?      
+      					    </label>
+  		            	<p tal:replace="structure context/qui/raw | nothing"></p>
+                  </div>
 		            	
-		            	<label class="horizontal">
-        					Documentació que cal aportar
-        			    </label>
-		            	<p><span tal:content="structure context/documentacio/raw | nothing"></span></p>
+                  <div>
+  		            	<label class="horizontal">
+          					Documentació que cal aportar
+          			    </label>
+  		            	<p tal:replace="structure context/documentacio/raw | nothing"></p>
+                  </div>
 		            	
-		            	<label class="horizontal">
-        					Quan es pot demanar?
-        			    </label>
-        			    <p><span tal:content="structure context/quan/raw | nothing"></span></p>
+                  <div>
+  		            	<label class="horizontal">
+          					Quan es pot demanar?
+          			    </label>
+          			    <p tal:replace="structure context/quan/raw | nothing"></p>
+                  </div>
 		            	
-						      <label class="horizontal">
-        					Quin és el temps de tramitació/resolució?
-        			    </label>
-		            	<p><span tal:content="structure context/quin/raw | nothing"></span></p>
+                  <div>
+  						      <label class="horizontal">
+          					Quin és el temps de tramitació/resolució?
+          			    </label>
+  		            	<p tal:replace="structure context/quin/raw | nothing"></p>
+                  </div>
 
-		            	<label class="horizontal">
-        					Tipus de silenci
-        			    </label>
-		            	<p><span tal:content="structure context/tipus_silenci/raw | nothing"></span></p>
+                  <div>
+  		            	<label class="horizontal">
+          					Tipus de silenci
+          			    </label>
+  		            	<p tal:replace="structure context/tipus_silenci/raw | nothing"></p>
+                  </div>
 
-		            	<label class="horizontal">
-        					Quin preu té la tramitació?
-        			    </label>
-		            	<p><span tal:content="structure context/preu/raw | nothing"></span></p>
+                  <div>
+  		            	<label class="horizontal">
+          					Quin preu té la tramitació?
+          			    </label>
+  		            	<p tal:replace="structure context/preu/raw | nothing"></p>
+                  </div>
 
-		            	<label class="horizontal">
-        					Com puc fer el pagament?
-        			    </label>
-		            	<p><span tal:content="structure context/pagament/raw | nothing"></span></p>
+                  <div>
+  		            	<label class="horizontal">
+          					Com puc fer el pagament?
+          			    </label>
+  		            	<p tal:replace="structure context/pagament/raw | nothing"></p>
+                  </div>
 
-                  <label class="horizontal">
-                  Quins canals de tramitació té?
-                  </label>
-                  <p><span tal:content="structure context/canals/raw | nothing"></span></p>
+                  <div>
+                    <label class="horizontal">
+                    Quins canals de tramitació té?
+                    </label>
+                    <p tal:replace="structure context/canals/raw | nothing"></p>
+                  </div>
 
-                  <label class="horizontal">
-                  Quin és l'organisme responsable?
-                  </label>
-                  <p><span tal:content="structure context/responsable/raw | nothing"></span></p>
+                  <div>
+                    <label class="horizontal">
+                    Quin és l'organisme responsable?
+                    </label>
+                    <p tal:replace="structure context/responsable/raw | nothing"></p>
+                  </div>
 
-                  <label class="horizontal">
-                  Enllaç per iniciar el tràmit electrònicament
-                  </label>
-                  <p><a tal:attributes="href  context/inici | nothing"><span tal:content="context/inici | nothing"></span></a></p>
+                  <div>
+                    <label class="horizontal">
+                    Enllaç per iniciar el tràmit electrònicament
+                    </label>
+                    <p><a tal:attributes="href  context/inici | nothing"><span>Iniciar tràmit</span></a></p>
+                  </div>
 
-                  <label class="horizontal">
-                  Fitxer annex per iniciar el tràmit presencialment.
-                  </label>
-                  <p><a tal:define="fitxer view/getFitxer" tal:attributes="href fitxer| nothing"><span tal:content="context/fitxer_inici/filename | nothing"></span></a></p>
+                  <div>
+                    <label class="horizontal">
+                    Fitxer annex per iniciar el tràmit presencialment.
+                    </label>
+                    <p><a tal:define="fitxer view/getFitxer" tal:attributes="href fitxer| nothing"><span tal:content="context/fitxer_inici/filename | nothing"></span></a></p>
+                  </div>
  					
  					      </div>
 
