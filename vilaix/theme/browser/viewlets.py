@@ -18,7 +18,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import PersonalBarViewlet, GlobalSectionsViewlet, PathBarViewlet
 from plone.app.layout.viewlets.common import SearchBoxViewlet, TitleViewlet, ManagePortletsFallbackViewlet
 from plone.app.layout.viewlets.interfaces import IHtmlHead, IPortalTop, IPortalHeader, IBelowContent
-from plone.app.layout.viewlets.interfaces import IPortalFooter, IAboveContentTitle
+from plone.app.layout.viewlets.interfaces import IPortalFooter, IAboveContentTitle, IAboveContentBody
 from Products.CMFPlone.interfaces import IPloneSiteRoot
 
 from Products.ATContentTypes.interface.news import IATNewsItem

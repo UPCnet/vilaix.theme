@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="serveiesports">
+
+<body class="equipament">
+
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main"
+        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+        <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
+  
+    	<h1 class="documentFirstHeading" tal:content="context/Title" /> 
+    
+	    <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
+
+	    <div class="documentDescription description"  tal:content="context/Description"></div>
+
+	     <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
+         
+         <div id="content-core">
+
+         	<div id="equipament">
+	          <div class="row-fluid">
+	            <div class="span12">
+
+	            	
+	            	<img tal:define="imatge view/getImage" tal:attributes="src string:${imatge}" /> 
+	            
+	            	<div class="columnes">
+	            		<label class="horizontal">
+        					Tipus equipament        
+    					</label>
+		            	<p><span tal:content="context/tipus | nothing"></span></p>
+		            	
+		            	<label class="horizontal">
+        					Adreça de contacte
+        			    </label>
+		            	<p><span tal:content="context/adreca_contacte | nothing"></span></p>
+		            	
+		            	<label class="horizontal">
+        					Codi Postal
+        			    </label>
+        			    <p><span tal:content="context/codi_postal | nothing"></span></p>
+		            	
+						<label class="horizontal">
+        					Població
+        			    </label>
+		            	<p><span tal:content="context/poblacio | nothing"></span></p>
+
+		            	<label class="horizontal">
+        					Telèfon
+        			    </label>
+		            	<p><span tal:content="context/telefon | nothing"></span></p>
+
+		            	<label class="horizontal">
+        					Adreça de correu
+        			    </label>
+		            	<p><span tal:content="context/adreca_correu | nothing"></span></p>
+
+		            	<label class="horizontal">
+        					Horari
+        			    </label>
+		            	<p><span tal:content="context/horari | nothing"></span></p>
+ 					
+ 					</div>
+
+		            	<label class="horizontal">
+        					Més informació
+        			    </label>
+        			    <p tal:replace="structure context/mes_informacio/raw | nothing"></p>
+		            	
+
+		            	<label class="horizontal">
+        					Ubicació
+        			    </label>
+        			    <p tal:replace="structure context/ubicacio/raw | nothing"></p>
+		       
+  
+	            </div>
+	          </div>
+	        </div>
+            
+         </div>
+         <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
+
+
+    </tal:main-macro>
+
+</metal:main>
+
+</body>
+</html>

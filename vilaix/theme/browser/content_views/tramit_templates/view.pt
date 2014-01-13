@@ -1,0 +1,105 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="serveiesports">
+
+<body class="tramit">
+
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main"
+        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+        <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
+  
+    	<h1 class="documentFirstHeading" tal:content="context/Title" /> 
+    
+	    <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
+
+	    <div class="documentDescription description"  tal:content="context/Description"></div>
+
+	     <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
+         
+         <div id="content-core">
+
+         	<div id="tramit">
+	          <div class="row-fluid">
+	            <div class="span12">
+
+	            	<img tal:define="imatge view/getImage" tal:attributes="src string:${imatge}" /> 
+	            
+	            	<div class="columnes">
+	            		<label class="horizontal">
+        					Qui el pot sol·licitar?      
+    					    </label>
+		            	<p><span tal:content="structure context/qui/raw | nothing"></span></p>
+		            	
+		            	<label class="horizontal">
+        					Documentació que cal aportar
+        			    </label>
+		            	<p><span tal:content="structure context/documentacio/raw | nothing"></span></p>
+		            	
+		            	<label class="horizontal">
+        					Quan es pot demanar?
+        			    </label>
+        			    <p><span tal:content="structure context/quan/raw | nothing"></span></p>
+		            	
+						      <label class="horizontal">
+        					Quin és el temps de tramitació/resolució?
+        			    </label>
+		            	<p><span tal:content="structure context/quin/raw | nothing"></span></p>
+
+		            	<label class="horizontal">
+        					Tipus de silenci
+        			    </label>
+		            	<p><span tal:content="structure context/tipus_silenci/raw | nothing"></span></p>
+
+		            	<label class="horizontal">
+        					Quin preu té la tramitació?
+        			    </label>
+		            	<p><span tal:content="structure context/preu/raw | nothing"></span></p>
+
+		            	<label class="horizontal">
+        					Com puc fer el pagament?
+        			    </label>
+		            	<p><span tal:content="structure context/pagament/raw | nothing"></span></p>
+
+                  <label class="horizontal">
+                  Quins canals de tramitació té?
+                  </label>
+                  <p><span tal:content="structure context/canals/raw | nothing"></span></p>
+
+                  <label class="horizontal">
+                  Quin és l'organisme responsable?
+                  </label>
+                  <p><span tal:content="structure context/responsable/raw | nothing"></span></p>
+
+                  <label class="horizontal">
+                  Enllaç per iniciar el tràmit electrònicament
+                  </label>
+                  <p><a tal:attributes="href  context/inici | nothing"><span tal:content="context/inici | nothing"></span></a></p>
+
+                  <label class="horizontal">
+                  Fitxer annex per iniciar el tràmit presencialment.
+                  </label>
+                  <p><a tal:define="fitxer view/getFitxer" tal:attributes="href fitxer| nothing"><span tal:content="context/fitxer_inici/filename | nothing"></span></a></p>
+ 					
+ 					      </div>
+
+		           
+	            </div>
+	          </div>
+	        </div>
+            
+         </div>
+         <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
+
+
+    </tal:main-macro>
+
+</metal:main>
+
+</body>
+</html>
