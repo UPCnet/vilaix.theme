@@ -108,7 +108,7 @@
                     <label class="horizontal">
                     Fitxer annex per iniciar el tràmit presencialment.
                     </label>
-                    <p><a tal:define="fitxer view/getFitxer" tal:attributes="href fitxer| nothing"><span tal:content="context/fitxer_inici/filename | nothing"></span></a></p>
+                    <p><a tal:define="fitxer view/getFitxer" tal:attributes="href fitxer| nothing"  class="tramit_annex"><span tal:content="context/fitxer_inici/filename | nothing"></span></a></p>
                   </div>
  					
  					      </div>
