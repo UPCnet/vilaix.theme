@@ -17,18 +17,18 @@ class View(grok.View):
     def portal(self):
         return getSite()
 
-    def getImage(self):
-        catalog = getToolByName(self.context, 'portal_catalog')
-        utool = getToolByName(self.context, 'portal_url')
+    # def getImage(self):
+    #     catalog = getToolByName(self.context, 'portal_catalog')
+    #     utool = getToolByName(self.context, 'portal_url')
         
-        url = self.request.getURL()
+    #     url = self.request.getURL()
 
-        if self.context.image:           
-            url_imatge = '%s/++widget++form.widgets.image/@@download/%s' % (url.replace("view", "@@edit"), self.context.image.filename)
-        else:
-            url_imatge = ''
+    #     if self.context.image:           
+    #         url_imatge = '%s/++widget++form.widgets.image/@@download/%s' % (url.replace("view", "@@edit"), self.context.image.filename)
+    #     else:
+    #         url_imatge = ''
       
-        return url_imatge
+    #     return url_imatge
     
     def getFitxer(self):
         catalog = getToolByName(self.context, 'portal_catalog')
