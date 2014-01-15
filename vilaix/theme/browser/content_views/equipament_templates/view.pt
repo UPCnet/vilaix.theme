@@ -78,7 +78,8 @@
 		            	<label class="horizontal">
         					Ubicació
         			    </label>
-        			    <p tal:replace="structure context/ubicacio/raw | nothing"></p>
+                
+        			    <p tal:replace="structure view/getMapa | nothing"></p>
 		       
   
 	            </div>
