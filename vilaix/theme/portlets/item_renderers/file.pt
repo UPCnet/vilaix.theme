@@ -1,0 +1,8 @@
+<li tal:attributes="class view/rendererClass">	
+    <a target="_blank" href=""
+       tal:attributes="href view/item/getURL">
+        <span tal:replace="view/item/Title">
+        File
+        </span>
+    </a>
+</li>

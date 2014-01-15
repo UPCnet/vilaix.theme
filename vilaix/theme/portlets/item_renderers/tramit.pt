@@ -1,7 +1,7 @@
 <li tal:attributes="class view/rendererClass">
    
    <a href=""
-       tal:attributes="href view/item/getURL">
+       tal:attributes="href view/url">
         <span tal:replace="view/item/Title">
          Títol tràmit
         </span>

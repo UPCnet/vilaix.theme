@@ -149,8 +149,7 @@ class Renderer(base.Renderer):
              
         return bb 
 
-    def textEsdeveniment(self, a):  
-        #import ipdb; ipdb.set_trace()
+    def textEsdeveniment(self, a):          
         #return self.abrevia(a.getObject().text.raw,100) 
         return self.abrevia(a.getObject().SearchableText(),100)   
         
@@ -179,7 +178,7 @@ class Renderer(base.Renderer):
           limit = len(results)
 
         count = len(results)
-        #import ipdb; ipdb.set_trace()
+       
         if count < limit:
             results2 = catalog(portal_type=('Event'),
                        review_state=state,

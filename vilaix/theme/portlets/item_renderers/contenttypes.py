@@ -6,6 +6,7 @@ from Products.CMFCore.utils import getToolByName
 
 from plone.app.contenttypes.interfaces import IEvent
 from plone.app.contenttypes.interfaces import INewsItem
+from plone.app.contenttypes.interfaces import IFile
 from five.grok import adapter
 from five.grok import implementer
 
@@ -118,4 +119,9 @@ class SliderPortletItemRenderer(PortletItemRenderer):
         else:
             result = ''
         return result
-        
+
+@adapter(IFile)
+@implementer(IPortletItemRenderer)
+class EquipamentPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('file.pt')
+    css_class = 'file clearfix'

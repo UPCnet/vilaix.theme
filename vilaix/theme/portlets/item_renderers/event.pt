@@ -11,7 +11,7 @@
     tal:attributes="class view/rendererClass">
 
     <tal:co tal:condition="sameday">
-        <a href="#" tal:attributes="href view/item/getURL">
+        <a href="#" tal:attributes="href view/url">
           <tal:repl tal:replace="view/item/Title">Some Event</tal:repl>
         </a>
 
@@ -31,7 +31,7 @@
     </tal:co>
 
     <tal:co tal:condition="not: sameday">
-        <a href="#" class="multidate-before" tal:attributes="href view/item/getURL">
+        <a href="#" class="multidate-before" tal:attributes="href view/url">
           <tal:repl tal:replace="view/item/Title">Some Event</tal:repl>
         </a>
 

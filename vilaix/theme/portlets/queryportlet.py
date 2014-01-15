@@ -141,9 +141,36 @@ class Renderer(base.Renderer):
         else:
             return self._standard_results()
 
+    def brainToDict(self, item):
+        
+        if self.context.getLayout() == 'subhome':
+            url = self.context.absolute_url() + '/' + item.id
+        else:
+            url = item.getURL()
+
+        content = {
+            'show_children': True,
+            'children': [],
+            'getURL': url,
+            'getRemoteUrl': url,
+            'item_icon': None,
+            'portal_type': item.portal_type,
+            'currentItem': False,
+            'currentParent': False,
+            'normalized_id': item.id,
+            'normalized_review_state': item.review_state,
+            'Title': item.Title,
+        }
+
+        return content
+
     def renderItem(self, item):
+       
+        content = self.brainToDict(item)
+        
         args = dict(
             item=item,
+            url=content['getURL'],
             toLocalizedTime=self.plone_view.toLocalizedTime,
             cropText=self.plone_view.cropText)
         fti = self.ptypes.getTypeInfo(item.PortalType())
