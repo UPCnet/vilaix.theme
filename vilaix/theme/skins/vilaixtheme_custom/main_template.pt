@@ -37,6 +37,8 @@
     <meta name="author" content="Servei de Comunicació i Promoció" />
     <meta name="description" content="Genweb UPC v4.0 - El generador de webs de la UPC" />
     <link rel="shortcut icon" type="image/x-icon" tal:attributes="href string:${portal_url}/++genweb++static/favicon.ico" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,700' rel='stylesheet' type='text/css'>
 
     <metal:baseslot define-slot="base">
         <base tal:attributes="href plone_view/renderBase" /><!--[if lt IE 7]></base><![endif]-->
