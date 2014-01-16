@@ -402,28 +402,28 @@ class gwFooter(viewletBase):
 #             return False
 
 
-# class TitleViewlet(TitleViewlet, viewletBase):
-#     grok.context(Interface)
-#     grok.name('plone.htmlhead.title')
-#     grok.viewletmanager(IHtmlHead)
-#     grok.layer(IGenwebTheme)
+class TitleViewlet(TitleViewlet, viewletBase):
+    grok.context(Interface)
+    grok.name('plone.htmlhead.title')
+    grok.viewletmanager(IHtmlHead)
+    grok.layer(IVilaixTheme)
 
-#     def update(self):
-#         portal_state = getMultiAdapter((self.context, self.request),
-#                                         name=u'plone_portal_state')
-#         context_state = getMultiAdapter((self.context, self.request),
-#                                          name=u'plone_context_state')
-#         page_title = escape(safe_unicode(context_state.object_title()))
-#         portal_title = escape(safe_unicode(portal_state.navigation_root_title()))
+    def update(self):
+        portal_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_portal_state')
+        context_state = getMultiAdapter((self.context, self.request),
+                                         name=u'plone_context_state')
+        page_title = escape(safe_unicode(context_state.object_title()))
+        portal_title = escape(safe_unicode(portal_state.navigation_root_title()))
 
-#         genweb_title = getattr(self.genweb_config(), 'html_title_%s' % self.pref_lang(), 'Genweb UPC')
-#         if not genweb_title:
-#             genweb_title = 'Genweb UPC'
-#         genweb_title = escape(safe_unicode(re.sub(r'(<.*?>)', r'', genweb_title)))
+        genweb_title = getattr(self.genweb_config(), 'html_title_%s' % self.pref_lang(), 'Genweb Vilaix')
+        if not genweb_title:
+            genweb_title = 'Genweb Vilaix'
+        genweb_title = escape(safe_unicode(re.sub(r'(<.*?>)', r'', genweb_title)))
 
-#         marca_UPC = escape(safe_unicode(u"UPC. Universitat Politècnica de Catalunya · BarcelonaTech"))
+        marca_UPC = escape(safe_unicode(u"Apropa't & Conversa"))
 
-#         if page_title == portal_title:
-#             self.site_title = u"%s &mdash; %s" % (genweb_title, marca_UPC)
-#         else:
-#             self.site_title = u"%s &mdash; %s &mdash; %s" % (page_title, genweb_title, marca_UPC)
+        if page_title == portal_title:
+            self.site_title = u"%s &mdash; %s" % (genweb_title, marca_UPC)
+        else:
+            self.site_title = u"%s &mdash; %s &mdash; %s" % (page_title, genweb_title, marca_UPC)
