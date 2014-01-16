@@ -23,7 +23,10 @@ class View(grok.View):
         
         url = self.request.getURL()
 
-        url_imatge = '%s/++widget++form.widgets.image/@@download/%s' % (url.replace("view", "@@edit"), self.context.image.filename)
+        url_imatge = ''
+
+        if self.context.image:
+            url_imatge = '%s/++widget++form.widgets.image/@@download/%s' % (url.replace("view", "@@edit"), self.context.image.filename)
        
         return url_imatge
     
