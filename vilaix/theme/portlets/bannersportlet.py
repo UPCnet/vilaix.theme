@@ -59,7 +59,7 @@ class IBannersPortlet(IPortletDataProvider):
                                     "Leave blank to use the Plone site root."),
             required=False,
             source=SearchableTextSourceBinder({'object_provides': IBannerContainer.__identifier__,},
-                                              default_query='path:'))
+                                              default_query='path:/material-multimedia/banners'))
 
 class Assignment(base.Assignment):
     """Portlet assignment.
