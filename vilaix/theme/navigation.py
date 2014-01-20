@@ -23,7 +23,7 @@ class PhysicalNavigationBreadcrumbs(BrowserView):
         real_context = aq_inner(self.context)
         request_path = self.request.get('PATH_INFO', '')
         if 'VirtualHostBase' in request_path:
-            path = ('',) + re.search(r'VirtualHostBase/\w+/.*?/(.*?)/VirtualHostRoot/.*?/(.*)', request_path).groups()
+            path = ('',) + re.search(r'VirtualHostBase/\w+/.*?/(.*?)/VirtualHostRoot/(?:.*?/)?(.*)', request_path).groups()
             request_path = '/'.join(path)
         context_path = '/'.join(real_context.getPhysicalPath())
 
