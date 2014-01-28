@@ -70,8 +70,8 @@ class Renderer(base.Renderer):
         portal_state = getMultiAdapter((context, self.request),
             name='plone_portal_state')
         portal = portal_state.portal()
-        if 'news' in getNavigationRootObject(context, portal).objectIds():
-            return '%s/news' % portal_state.navigation_root_url()
+        if 'noticies' in getNavigationRootObject(context, portal).objectIds():
+            return '%s/noticies/noticies' % portal_state.navigation_root_url()
         return None
 
   

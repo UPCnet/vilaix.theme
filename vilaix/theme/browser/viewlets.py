@@ -32,6 +32,8 @@ from genweb.theme.browser.viewlets import gwManagePortletsFallbackViewlet
 from vilaix.theme.browser.interfaces import IVilaixTheme
 
 from plone.app.collection.interfaces import ICollection
+from genweb.core import HAS_CAS
+from zope.security import checkPermission
 
 import random
 
@@ -60,23 +62,29 @@ class viewletBase(grok.Viewlet):
         return lt.getPreferredLanguage()
 
 
-# class gwPersonalBarViewlet(PersonalBarViewlet, viewletBase):
-#     grok.name('genweb.personalbar')
-#     grok.viewletmanager(IPortalTop)
-#     grok.layer(IGenwebTheme)
+class gwPersonalBarViewlet(PersonalBarViewlet, viewletBase):
+    grok.name('genweb.personalbar')
+    grok.viewletmanager(IPortalTop)
+    grok.layer(IVilaixTheme)
 
-#     index = ViewPageTemplateFile('viewlets_templates/personal_bar.pt')
+    index = ViewPageTemplateFile('viewlets_templates/personal_bar.pt')
 
-#     def showRootFolderLink(self):
-#         return havePermissionAtRoot(self)
+    def showRootFolderLink(self):
+        return havePermissionAtRoot()
 
-#     def canManageSite(self):
-#         return getSecurityManager().checkPermission("plone.app.controlpanel.Overview", self.portal)
+    def canManageSite(self):
+        return checkPermission("plone.app.controlpanel.Overview", self.portal())
 
-#     def getPortraitMini(self):
-#         pm = getToolByName(self.portal(), 'portal_membership')
-#         return pm.getPersonalPortrait().absolute_url()
+    def getPortraitMini(self):
+        pm = getToolByName(self.portal(), 'portal_membership')
+        return pm.getPersonalPortrait().absolute_url()
 
+    def logout_link(self):
+        if HAS_CAS:
+            return '{}/cas_logout'.format(self.portal_url)
+        else:
+            return '{}/logout'.format(self.portal_url)
+    
 
 class gwHeader(viewletBase):
     grok.name('genweb.header')

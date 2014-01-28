@@ -1,7 +1,6 @@
 <nav id="portal-globalnav"
      tal:define="menuPrincipal view/menuPrincipal;
-                 subfolders view/menu"
-     tal:condition="view/show_menu"
+                 subfolders view/menu"     
      i18n:domain="plone"><!-- #portal-globalnav -->
     <div class="container">
     <div class="navbar">

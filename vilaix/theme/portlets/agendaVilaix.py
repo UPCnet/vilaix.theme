@@ -110,9 +110,9 @@ class Renderer(base.Renderer):
 
     def all_events_link(self):
         if self.have_events_folder:
-            #events = self.portal.esdeveniments
-            events = self.portal.events
-            return '%s' % events.absolute_url()
+            events = self.portal.esdeveniments
+            #events = self.portal.events
+            return '%s/esdeveniments' % events.absolute_url()
         else:
             return '%s/events_listing' % self.portal_url
 

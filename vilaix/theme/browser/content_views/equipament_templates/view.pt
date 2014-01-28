@@ -34,7 +34,7 @@
 	            	<div class="columnes">
 	            		<label class="horizontal">
         					Tipus equipament        
-    					</label>
+    					    </label>
 		            	<p><span tal:content="context/tipus | nothing"></span></p>
 		            	
 		            	<label class="horizontal">
@@ -47,10 +47,15 @@
         			    </label>
         			    <p><span tal:content="context/codi_postal | nothing"></span></p>
 		            	
-						<label class="horizontal">
+						      <label class="horizontal">
         					Població
         			    </label>
 		            	<p><span tal:content="context/poblacio | nothing"></span></p>
+
+                  <label class="horizontal">
+                  Geolocalització
+                  </label>
+                  <p><span tal:content="context/geolocalitzacio | nothing"></span></p>
 
 		            	<label class="horizontal">
         					Telèfon
@@ -67,7 +72,7 @@
         			    </label>
 		            	<p><span tal:content="context/horari | nothing"></span></p>
  					
- 					</div>
+ 					      </div>
 
 		            	<label class="horizontal">
         					Més informació

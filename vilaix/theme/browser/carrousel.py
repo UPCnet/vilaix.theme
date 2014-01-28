@@ -22,7 +22,7 @@ class carrousel(ViewletBase):
                                                path = path + '/material-multimedia/carroussel',
                                                review_state = 'published',
                                                sort_on='getObjPositionInParent')
-                                                        
+                                                    
         if len(elementsCarrousel) > 0:
             #Retorna una llista amb els elementsCarrousel en blocs de 4 elements
             llistaElementsCarrousel=[elementsCarrousel[i:i+nElements] for i in range(0,len(elementsCarrousel),nElements)]
