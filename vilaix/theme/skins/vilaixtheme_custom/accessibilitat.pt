@@ -73,7 +73,7 @@
       </div>
 
 
-    <h2>Tecles d'accés</h2>
+    <!-- <h2>Tecles d'accés</h2>
     <p>Les tecles d'accés són dreceres de navegació que permeten navegar per aquest web utilitzant el teclat.</p>
     <p>Més informació sobre les tecles d'accés:  <a target="_blank" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey">Guies d'accessibilitat W3C <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></a>.</p>
     <p>Aquest web utilitza una configuració que coincideix amb la majoria de recomanacions d'accessibilitat internacionals.</p>
@@ -89,7 +89,7 @@
          <li><code>8</code> &mdash; Sobre aquest web</li>
          <li><code>9</code> &mdash; Contacte</li>
          <li><code>0</code> &mdash; Consulta accessibilitat</li>
-    </ul>
+    </ul> -->
 
 
     <h2>Optimització</h2>
@@ -98,7 +98,7 @@
 
     <h2>Contacte</h2>
     <p>Continuem treballant per mantenir i millorar l'accessibilitat de totes les pàgines del web. Si observeu alguna anomalia relacionada amb l'accessibilitat contacteu, si us plau, amb l'<a href="/contact"
-       tal:attributes="href string:${portal_url}/contact">Administració del web</a>.</p>
+       tal:attributes="href string:${portal_url}/contact-info">Administració del web</a>.</p>
 
 </div>
 </body>

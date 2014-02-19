@@ -3,7 +3,7 @@
         i18n:domain="genweb">
   <div class="container">
     <div class="row-fluid">
-      <div class="span8">
+      <div class="span7">
         <p>&copy;
           <a href="http://vilaix.upcnet.es/" target="_blank">
             <abbr rel="tooltip" data-placement="top" title="Vilaix - UPCnet">Vilaix - UPCnet</abbr>
@@ -26,7 +26,7 @@
           </p>
         </address>
       </div>
-      <div class="span4" role="complementary" aria-labelledby="titol-sobre-el-web">
+      <div class="span5" role="complementary" aria-labelledby="titol-sobre-el-web">
         <h2 class="goout" id="titol-sobre-el-web"> Sobre el web </h2>
         <ul class="pull-right sobreElWeb" role="menu"
             tal:define="link viewlet/getLinksPeu" >

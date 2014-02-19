@@ -157,7 +157,7 @@ class randomImage(viewletBase):
             path = urltool.getPortalPath() + '/material-multimedia/imatges-capcalera'     
             contenido = self.context 
 
-            if contenido.portal_type == 'Collection' and contenido.layout == 'subhome':
+            if contenido.portal_type == 'Collection' and contenido.getLayout() == 'subhome':
                 filtre = contenido.query
                 etiqueta = []
                 #Dades filtre --> [{u'i': u'Subject', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'prova']}]

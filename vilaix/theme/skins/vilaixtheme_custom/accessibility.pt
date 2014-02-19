@@ -77,7 +77,7 @@ En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que 
 
 </div>
 
-<h2>Access keys</h2>
+<!-- <h2>Access keys</h2>
 <p>
 Access keys enable you to browse this website using your keyboard. Further information is available at <a target="_blank" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey">W3C Accessibility Guidelines <img alt="(open in new window)" src="++genweb++static/images/blank_blau.png" class="img_blank" /></a>.
 </p>
@@ -93,7 +93,7 @@ Access keys enable you to browse this website using your keyboard. Further infor
         <li><code>6</code> &mdash; Site navigation tree</li>
         <li><code>9</code> &mdash; Contact information</li>
         <li><code>0</code> &mdash; Accessibility information</li>
-    </ul>
+    </ul> -->
 
 
 
@@ -102,7 +102,7 @@ Access keys enable you to browse this website using your keyboard. Further infor
 
 
 <h2>Contact</h2>
-<p>We are working to maintain and improve the accessibility of this website. If you notice any accessibility-related anomalies on any of its pages, please contact the <a href="/contact" tal:attributes="href string:${portal_url}/contact">webmaster</a>.</p>
+<p>We are working to maintain and improve the accessibility of this website. If you notice any accessibility-related anomalies on any of its pages, please contact the <a href="/contact-info" tal:attributes="href string:${portal_url}/contact-info">webmaster</a>.</p>
 
 
 

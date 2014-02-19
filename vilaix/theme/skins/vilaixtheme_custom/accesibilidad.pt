@@ -75,7 +75,7 @@ En este sentido, las  técnicas empleadas en la web encajan con lo que la WAI  p
 
 </div>
 
-<h2>Teclas de acceso</h2>
+<!-- <h2>Teclas de acceso</h2>
 <p>Las teclas de acceso son un dispositivo de navegación que permite visitar este web utilizando el teclado.<br />
 Más información sobre las teclas de acceso: <a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey" target="_blank">Guías de
 accesibilidad W3C <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(abrir en ventana nueva)"></a>.</p>
@@ -90,7 +90,7 @@ accesibilidad W3C <img class="img_blank" src="++genweb++static/images/blank_blau
      <li><code>6</code> &mdash; Árbol de navegación</li>
      <li><code>9</code> &mdash; Información de contacto</li>
      <li><code>0</code> &mdash; Consulta accesibilidad</li>
-</ul>
+</ul> -->
 
 
 
@@ -101,7 +101,7 @@ se ha verificado  cuidadosamente el comportamiento con los principales navegador
 
 <h2>Contacto</h2>
 <p>Actualmente, continuamos trabajando para mantener y mejorar la accesibilidad de  todas las páginas de la web.
-Si observa alguna  anomalía, relacionada con la accesibilidad, contacte por favor con la <a href="/contact" tal:attributes="href string:${portal_url}/contact">Administración del web</a>.</p>
+Si observa alguna  anomalía, relacionada con la accesibilidad, contacte por favor con la <a href="/contact-info" tal:attributes="href string:${portal_url}/contact-info">Administración del web</a>.</p>
 
 
 
