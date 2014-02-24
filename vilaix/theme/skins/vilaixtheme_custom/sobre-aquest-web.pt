@@ -26,11 +26,10 @@
   <p>En compliment del que estableixen la Llei orgànica 15/1999, de 13 de desembre,
   sobre protecció de dades de caràcter personal, i el Reial Decret que aprova el Reglament de desenvolupament
   de la Llei Orgànica de Protecció de dades de caràcter personal, us informem que les dades personals recollides per mitjà
-  dels formularis d'aquest web seran tractades de forma confidencial. Quedaran incorporades als fitxers de la Universitat
-  Politècnica de Catalunya per dur a terme una gestió correcta i respondre les consultes o suggeriments que proposeu en
+  dels formularis d'aquest web seran tractades de forma confidencial. Quedaran incorporades als nostres fitxers per dur a terme una gestió correcta i respondre les consultes o suggeriments que proposeu en
   els formularis. Tanmateix, podeu exercir els drets d'accés, rectificació, cancel·lació i oposició contactant
-  amb l'<a href="/contact"
-          tal:attributes="href string:${portal_url}/contact">Administració del web</a>.</p>
+  amb l'<a href="/contact-info"
+          tal:attributes="href string:${portal_url}/contact-info">Administració del web</a>.</p>
           
 </div>
 </body>
