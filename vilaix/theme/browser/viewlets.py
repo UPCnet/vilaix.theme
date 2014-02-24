@@ -36,6 +36,7 @@ from genweb.core import HAS_CAS
 from zope.security import checkPermission
 
 import random
+from genweb.core import GenwebMessageFactory as _
 
 
 grok.context(Interface)
@@ -103,6 +104,60 @@ class gwHeader(viewletBase):
         isAnon = getMultiAdapter((self.context, self.request), name='plone_portal_state').anonymous()
         return not self.genweb_config().amaga_identificacio and isAnon
 
+    def pref_lang(self):
+        """ Extracts the current language for the current user
+        """
+        lt = getToolByName(self.portal(), 'portal_languages')
+        lang = lt.getDefaultLanguage()
+
+        if lang == 'ca':
+            pref_lang = 'Català'
+        elif lang == 'es':
+            pref_lang = 'Español'
+        elif lang == 'en':
+            pref_lang = 'English'
+
+        return pref_lang
+
+    def languages(self):
+        portal = getSite()
+        pl = getToolByName(portal, 'portal_languages')     
+        return pl.supported_langs
+    
+    def getDadesLanguages(self):
+        portal = getSite()
+        urltool = portal.absolute_url()
+        pl = getToolByName(portal, 'portal_languages')     
+        langs_supported = pl.getSupportedLanguages()
+        pref_lang = pl.getPreferredLanguage()
+        default_lang = pl.getDefaultLanguage()
+        dades = []
+        languages = [{'lang': 'ca', 'valor': 'Català'},{'lang': 'es', 'valor': 'Español'},{'lang': 'en', 'valor': 'English'}]
+
+        for i in langs_supported:
+            if i in default_lang:
+                for x in languages:
+                    if x['lang'] in i:
+                        literal=x['valor']
+                dades.append(dict(url="%s?set_language=%s" % (urltool, default_lang),
+                                  lang=default_lang,
+                                  literal=literal,
+                                  google_translated=False
+                                  )
+                            )
+            else:
+                for x in languages:
+                    if x['lang'] in i:
+                        literal=x['valor']
+                dades.append(dict(url="http://translate.google.com/translate?hl=%s&sl=%s&tl=%s&u=%s" % (default_lang, default_lang, i, urltool),
+                                  lang = i,
+                                  literal=literal,
+                                  google_translated=True
+                                  )
+                            )
+
+        return dades
+
     # def show_directory(self):
     #     return self.genweb_config().directori_upc
 
@@ -157,7 +212,7 @@ class randomImage(viewletBase):
             path = urltool.getPortalPath() + '/material-multimedia/imatges-capcalera'     
             contenido = self.context 
 
-            if contenido.portal_type == 'Collection' and contenido.layout == 'subhome':
+            if contenido.portal_type == 'Collection' and contenido.getLayout() == 'subhome':
                 filtre = contenido.query
                 etiqueta = []
                 #Dades filtre --> [{u'i': u'Subject', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'prova']}]

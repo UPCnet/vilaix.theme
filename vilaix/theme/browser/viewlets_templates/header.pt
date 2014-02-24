@@ -44,7 +44,30 @@
                i18n:translate="identificat">
                Identifica't
             </a></li>
-        <!-- <tal:block replace="structure provider:genweb.language_selector_manager" /> -->
+        <tal:languageselector define="languages viewlet/languages">
+           <li class="dropdown"
+               tal:condition="python:len(languages)>=2">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-globe"></i>
+              <tal:selected content="viewlet/pref_lang">
+                  Català
+              </tal:selected>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu pull-right adjust-langs" tal:define="dades viewlet/getDadesLanguages">
+              <li tal:repeat="lang dades">                             
+                 <a tal:attributes="href lang/url">
+                  <i class="icon-translate"
+                     tal:condition="lang/google_translated | nothing"></i>
+                  <tal:lang tal:content="lang/literal" 
+                            i18n:translate="">
+                              Català
+                  </tal:lang>
+                </a> 
+               </li>                 
+            </ul>
+          </li>   
+        </tal:languageselector>       
         <li class="divider"> </li>        
         <li>
           <tal:block replace="structure provider:genweb.search_manager" />
