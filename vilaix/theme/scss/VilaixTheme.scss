@@ -384,9 +384,7 @@ b, strong {
 #portal-globalnav .navbar .nav > li > a:focus, #portal-globalnav .navbar .contentViews > li > a:focus, #portal-globalnav .navbar .configlets > li > a:focus, #portal-globalnav .navbar .formTabs > li > a:focus, #portal-globalnav .navbar .nav > li > a:hover, #portal-globalnav .navbar .contentViews > li > a:hover, #portal-globalnav .navbar .configlets > li > a:hover, #portal-globalnav .navbar .formTabs > li > a:hover {
     box-shadow: 0 20px 20px -20px rgba(255, 255, 255, 0.4) inset;
 }
-#portal-column-content .span9 {
-		margin-left: 1.6%;
-}
+
 #portal-column-content .span4 {
     margin-left: 2.2%;
     width: 32.15%;
@@ -458,6 +456,12 @@ text-decoration: none;
     margin-right: 55px;
     margin-top:10px;
 }
+.span12 #baners li:first-child img {
+    margin-top:0;
+    }
+.span12 #baners li:last-child img {
+    margin-bottom:10px;
+    }    
 .span12 #baners li:last-child img {
     margin-right: 0;
     }
@@ -573,16 +577,6 @@ color:#333;
 
 .portlet-noticies .list-portlet li {border-top:0;}
 
-.carousel {
-    background: none repeat scroll 0 0 white;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    line-height: 1;
-    margin-bottom: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-top: 25px;
-    position: relative;
-}
 
 .dropdown-menu {
     background: none repeat scroll 0 0 #555;
@@ -661,6 +655,9 @@ float:left;
 }
 input, button, select, textarea {
     font-family: 'Open Sans',sans-serif;
+}
+.nav.nav-list.accordion {
+    padding-left: 0;
 }
 
 @media only screen 
@@ -920,9 +917,24 @@ font-size: 14px;
 .subnavbar .nav-list .active ul a span:before, .subnavbar .nav-list .selected ul a span:before {
     top: 2px;
 }
-
-.carousel_normal {
-    display: none;
+.carousel {
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: none;
+    line-height: 1;
+    margin-bottom: -5px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 15px;
+    position: relative;
+}
+.navTreeItem li {
+    margin-bottom: 0;
+}
+.carousel li {padding-top: 0;}
+.carousel_normal .carousel-control {
+    margin-top: 0;
+    opacity: 0.2;
+    top: 30%;
 }
 
 .carousel_mobile {
