@@ -16,9 +16,9 @@ from Acquisition import aq_inner
 
 from genweb.core import GenwebMessageFactory as TAM
 
-from vilaix.core.interfaces import IEquipament
-from vilaix.core.interfaces import ITramit
-from vilaix.core.interfaces import ISlider
+from vilaix.core.content.equipament import IEquipament
+from vilaix.core.content.tramit import ITramit
+from vilaix.core.content.slider import ISlider
 from upc.genweb.banners.content.interfaces import IBanner
 
 from zope.i18nmessageid import MessageFactory
