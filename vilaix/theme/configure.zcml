@@ -65,7 +65,7 @@
       />
 
   <browser:page
-      for="vilaix.core.interfaces.ITramit"
+      for="vilaix.core.content.tramit.ITramit"
       name="breadcrumbs_view"
       class=".navigation.PhysicalNavigationBreadcrumbs"
       permission="zope.Public"
@@ -73,7 +73,7 @@
       />
 
   <browser:page
-      for="vilaix.core.interfaces.IEquipament"
+      for="vilaix.core.content.equipament.IEquipament"
       name="breadcrumbs_view"
       class=".navigation.PhysicalNavigationBreadcrumbs"
       permission="zope.Public"

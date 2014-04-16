@@ -2,7 +2,7 @@
 from five import grok
 from plone.memoize.view import memoize_contextless
 from zope.component.hooks import getSite
-from vilaix.core.interfaces import IEquipament
+from vilaix.core.content.equipament import IEquipament
 from Products.CMFCore.utils import getToolByName
 from urllib import quote
 
