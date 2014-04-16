@@ -2,7 +2,5 @@
 <metadata>
   <version>0001</version>
   <dependencies>
-    <dependency>profile-vilaix.core:default</dependency> 
-    <dependency>profile-collective.portlet.twitter:default</dependency>
-</dependencies>
+  </dependencies>
 </metadata>

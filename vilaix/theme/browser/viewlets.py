@@ -85,7 +85,7 @@ class gwPersonalBarViewlet(PersonalBarViewlet, viewletBase):
             return '{}/cas_logout'.format(self.portal_url)
         else:
             return '{}/logout'.format(self.portal_url)
-    
+
 
 class gwHeader(viewletBase):
     grok.name('genweb.header')
@@ -121,13 +121,13 @@ class gwHeader(viewletBase):
 
     def languages(self):
         portal = getSite()
-        pl = getToolByName(portal, 'portal_languages')     
+        pl = getToolByName(portal, 'portal_languages')
         return pl.supported_langs
-    
+
     def getDadesLanguages(self):
         portal = getSite()
         urltool = portal.absolute_url()
-        pl = getToolByName(portal, 'portal_languages')     
+        pl = getToolByName(portal, 'portal_languages')
         langs_supported = pl.getSupportedLanguages()
         pref_lang = pl.getPreferredLanguage()
         default_lang = pl.getDefaultLanguage()
@@ -165,22 +165,21 @@ class gwHeader(viewletBase):
     #     #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
     #     urltool = getToolByName(self.context, 'portal_url')
     #     portal_catalog = getToolByName(self.context, 'portal_catalog')
-    #     path = urltool.getPortalPath() + '/imatges-capcalera'        
+    #     path = urltool.getPortalPath() + '/imatges-capcalera'
     #     resultats = []
     #     #Imatge capcalera per defecte
     #     style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
-       
+
     #     imatges = self.context.portal_catalog.searchResults(portal_type='Image',
     #                                                         path=path)
     #     if imatges.actual_result_count != 0:
     #         imatge = random.choice(imatges)
-    #         style = 'background-image: url(' + imatge.getPath() +')'       
-        
+    #         style = 'background-image: url(' + imatge.getPath() +')'
+
     #     return style
 
 
-
-class randomImage(viewletBase):    
+class randomImage(viewletBase):
     grok.name('vilaix.randomImage')
     grok.template('randomImage')
     grok.viewletmanager(IPortalHeader)
@@ -209,34 +208,34 @@ class randomImage(viewletBase):
             #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
             urltool = getToolByName(self.context, 'portal_url')
             portal_catalog = getToolByName(self.context, 'portal_catalog')
-            path = urltool.getPortalPath() + '/material-multimedia/imatges-capcalera'     
-            contenido = self.context 
+            path = urltool.getPortalPath() + '/material-multimedia/imatges-capcalera'
+            contenido = self.context
 
             if contenido.portal_type == 'Collection' and contenido.getLayout() == 'subhome':
                 filtre = contenido.query
                 etiqueta = []
                 #Dades filtre --> [{u'i': u'Subject', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'prova']}]
                 for i in filtre:
-                    if i['i'] == 'Subject':                       
+                    if i['i'] == 'Subject':
                         etiquetas = i['v']
                         num = len(etiquetas)
-                        for n in range(num):                            
-                            etiqueta.append(etiquetas[n].encode())                   
+                        for n in range(num):
+                            etiqueta.append(etiquetas[n].encode())
                 imatges = self.context.portal_catalog.searchResults(portal_type='Image',path=path, Subject=etiqueta)
-            else:  
+            else:
                 #resultats = []
                 #Imatge capcalera per defecte
                 style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
-                imatges = self.context.portal_catalog.searchResults(portal_type='Image',                                                            
+                imatges = self.context.portal_catalog.searchResults(portal_type='Image',
                                                                     path=path)
-                
+
                 values = self.context.portal_catalog.uniqueValuesFor('Subject')
 
 
             if imatges.actual_result_count != 0:
                 imatge = random.choice(imatges)
-                style = 'background-image: url(' + imatge.getPath() +')'       
-        
+                style = 'background-image: url(' + imatge.getPath() +')'
+
         return style
 
 
@@ -255,7 +254,7 @@ class slider(viewletBase):
             portal_type='Slider',
             path=dict(query=path,
                       depth=1),
-            review_state = 'published',            
+            review_state = 'published',
             sort_on='getObjPositionInParent')
 
         results = []
@@ -270,13 +269,14 @@ class slider(viewletBase):
             #      }
             # )
             results.append(
-                {'img': '%s/@@images/image' % (item.getURL()),                 
-                 'title': item.Title,                 
+                {'img': '%s/@@images/image' % (item.getURL()),
+                 'title': item.Title,
                  'text': item.Description,
                  }
             )
 
         return results
+
 
 class collectionFallbackViewlet(gwManagePortletsFallbackViewlet):
     grok.context(ICollection)

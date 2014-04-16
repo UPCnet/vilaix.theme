@@ -63,7 +63,7 @@
       description="Installs the vilaix.theme package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  
+
   <browser:page
       for="vilaix.core.interfaces.ITramit"
       name="breadcrumbs_view"
@@ -71,7 +71,7 @@
       permission="zope.Public"
       allowed_attributes="breadcrumbs"
       />
-  
+
   <browser:page
       for="vilaix.core.interfaces.IEquipament"
       name="breadcrumbs_view"
@@ -79,13 +79,14 @@
       permission="zope.Public"
       allowed_attributes="breadcrumbs"
       />
-  
+
   <browser:page
       for="plone.app.contenttypes.interfaces.IEvent"
       name="breadcrumbs_view"
       class=".navigation.PhysicalNavigationBreadcrumbs"
       permission="zope.Public"
       allowed_attributes="breadcrumbs"
+      layer=".browser.interfaces.IVilaixTheme"
       />
 
    <browser:page
@@ -94,6 +95,7 @@
       class=".navigation.PhysicalNavigationBreadcrumbs"
       permission="zope.Public"
       allowed_attributes="breadcrumbs"
+      layer=".browser.interfaces.IVilaixTheme"
       />
 
 </configure>
