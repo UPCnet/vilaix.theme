@@ -255,6 +255,7 @@ class slider(viewletBase):
             path=dict(query=path,
                       depth=1),
             review_state = 'published',
+            Subject = 'principal',
             sort_on='getObjPositionInParent')
 
         results = []
