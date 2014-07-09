@@ -28,7 +28,7 @@ from genweb.core.interfaces import IHomePage
 from genweb.core.utils import genweb_config, havePermissionAtRoot, pref_lang
 
 from genweb.theme.browser.interfaces import IGenwebTheme
-from genweb.theme.browser.viewlets import gwManagePortletsFallbackViewlet
+from genweb.theme.browser.viewlets import gwManagePortletsFallbackViewletMixin
 from vilaix.theme.browser.interfaces import IVilaixTheme
 
 from plone.app.collection.interfaces import ICollection
@@ -279,7 +279,7 @@ class slider(viewletBase):
         return results
 
 
-class collectionFallbackViewlet(gwManagePortletsFallbackViewlet):
+class collectionFallbackViewlet(gwManagePortletsFallbackViewletMixin):
     grok.context(ICollection)
     grok.name('plone.manage_portlets_fallback')
     grok.viewletmanager(IBelowContent)
