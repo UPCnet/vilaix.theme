@@ -81,7 +81,9 @@ class CollectionPortletView(HomePageBase):
         # Portlet Agenda
 
         assignment = setPortletAssignment(10, self.context, 'agenda', QueryPortletAssignment, span=5)
-        query = [{u'i': u'portal_type', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'Event']}]
+        query = [{u'i': u'portal_type', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'Event']},
+                 {u'i': u'end', u'o': u'plone.app.querystring.operation.date.afterToday'}]
+
         setupQueryPortlet(assignment, u'AGENDA', query, 3, False, u"")
 
         # Portlet navegacio
