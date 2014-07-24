@@ -4,7 +4,7 @@
       tal:omit-tag="">
   <div class="portlet portlet-esdeveniments"
          i18n:domain="plone">
-        <h2 i18n:translate="aquesta_setmana_fem">Aquesta setmana fem...</h2>     
+        <h2 i18n:translate="aquesta_setmana_fem">Aquesta setmana fem...</h2>
         <ul class="unstyled">
             <tal:events tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                                 DateTime python:modules['DateTime'].DateTime"
@@ -22,13 +22,13 @@
                                 text python:view.textEsdeveniment(obj)"
                     tal:attributes="class python: sameday and '' or 'multidate'">
                     <tal:co tal:condition="sameday">
-                        <a href="#" tal:attributes="href obj/getURL">
+                        <a href="#" class="multidate-before" tal:attributes="href obj/getURL">
                           <tal:repl tal:replace="obj/pretty_title_or_id">Some Event</tal:repl>
                         </a>
 
                         <div class="text_esdeveniment">
                           <span tal:replace="structure text"> Text esdeveniment </span>
-                        </div>                                                         
+                        </div>
 
                         <time class="smaller"
                                 tal:attributes="datetime item_startdate">
@@ -48,8 +48,8 @@
 
                         <div class="text_esdeveniment">
                           <span tal:replace="structure text"> Text esdeveniment </span>
-                        </div>   
-                        
+                        </div>
+
                         <time class="smaller"
                                 tal:attributes="datetime item_startdate">
                             <tal:repl tal:replace="startday">28</tal:repl>
@@ -72,7 +72,7 @@
                 </li>
             </tal:events>
         </ul>
-      
+
         <a href="" class="portlet-footer" tal:attributes="href view/all_events_link"><span class="button">Veure tots els actes<i class="icon-plus-sign icon-white"></i></span></a>
   </div>
 </html>

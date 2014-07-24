@@ -123,36 +123,37 @@ class Renderer(base.Renderer):
         else:
             return None
 
-    def abrevia(self, summary, sumlenght):   
+    def abrevia(self, summary, sumlenght):
         """ Retalla contingut de cadenes
-        """  
+        """
         i=0
         bb=''
 
         if sumlenght<len(summary):
             bb=summary[:sumlenght]
-            
+
             lastspace = bb.rfind(' ')
             cutter = lastspace
             precut = bb[0:cutter]
 
             if precut.count('<b>')>precut.count('</b>'):
                 cutter = summary.find('</b>',lastspace)+4
-            bb=summary[0:cutter]  
-            
+            bb=summary[0:cutter]
+
             if bb.count('<p')>precut.count('</p'):
                 bb+='...</p>'
             else:
                 bb=bb+'...'
         else:
             bb=summary
-             
-        return bb 
 
-    def textEsdeveniment(self, a):          
-        #return self.abrevia(a.getObject().text.raw,100) 
-        return self.abrevia(a.getObject().SearchableText(),100)   
-        
+        return bb
+
+    def textEsdeveniment(self, a):
+        #return self.abrevia(a.getObject().text.raw,100)
+        #return self.abrevia(a.getObject().SearchableText(),100)
+        return self.abrevia(a.getObject().description,100)
+
     @memoize
     def _data(self):
         context = aq_inner(self.context)
@@ -178,7 +179,7 @@ class Renderer(base.Renderer):
           limit = len(results)
 
         count = len(results)
-       
+
         if count < limit:
             results2 = catalog(portal_type=('Event'),
                        review_state=state,
