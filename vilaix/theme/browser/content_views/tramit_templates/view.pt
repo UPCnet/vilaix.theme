@@ -13,48 +13,48 @@
         tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
 
         <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
-  
-    	<h1 class="documentFirstHeading" tal:content="context/Title" /> 
-    
+
+    	<h1 class="documentFirstHeading" tal:content="context/Title" />
+
 	    <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
 
 	    <div class="documentDescription description"  tal:content="context/Description"></div>
 
 	     <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
-         
+
          <div id="content-core">
 
          	<div id="tramit">
 	          <div class="row-fluid">
 	            <div class="span12">
 
-             
-	            <!-- 	<img tal:define="imatge view/getImage" tal:condition="imatge" tal:attributes="src string:${imatge}" /> 
+
+	            <!-- 	<img tal:define="imatge view/getImage" tal:condition="imatge" tal:attributes="src string:${imatge}" />
               -->
-	            
+
 	            	<div class="columnes">
-	            		
+
                   <div class="camptramit" tal:condition="context/qui" >
                     <label class="horizontal">
-          					Qui el pot sol·licitar?      
+          					Qui el pot sol·licitar?
       					    </label>
   		            	<p tal:replace="structure context/qui/raw | nothing"></p>
                   </div>
-		            	
+
                   <div class="camptramit" tal:condition="context/documentacio">
   		            	<label class="horizontal">
           					Documentació que cal aportar
           			    </label>
   		            	<p tal:replace="structure context/documentacio/raw | nothing"></p>
                   </div>
-		            	
+
                   <div class="camptramit" tal:condition="context/quan">
   		            	<label class="horizontal">
           					Quan es pot demanar?
           			    </label>
           			    <p tal:replace="structure context/quan/raw | nothing"></p>
                   </div>
-		            	
+
                   <div class="camptramit" tal:condition="context/quin">
   						      <label class="horizontal">
           					Quin és el temps de tramitació/resolució?
@@ -110,14 +110,23 @@
                     </label>
                     <p><a tal:define="fitxer view/getFitxer" tal:attributes="href fitxer| nothing"  class="tramit_annex"><span tal:content="context/fitxer_inici/filename | nothing"></span></a></p>
                   </div>
- 					
+
+                  <div class="camptramit" tal:define="fitxers view/fitxers_addicionals" tal:condition="fitxers">
+                    <label class="horizontal">
+                    Fitxers addicionals.
+                    </label>
+                    <p tal:repeat="fitxer fitxers">
+                      <a tal:attributes="href fitxer/url_fitxer| nothing"  class="tramit_annex"><span tal:content="fitxer/filename | nothing"></span></a>
+                    </p>
+                  </div>
+
  					      </div>
 
-		           
+
 	            </div>
 	          </div>
 	        </div>
-            
+
          </div>
          <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
 
