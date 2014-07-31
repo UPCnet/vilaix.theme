@@ -1,6 +1,6 @@
 <nav id="portal-globalnav"
      tal:define="menuPrincipal view/menuPrincipal;
-                 subfolders view/menu"     
+                 subfolders view/menu"
      i18n:domain="plone"><!-- #portal-globalnav -->
     <div class="container">
     <div class="navbar">
@@ -13,7 +13,7 @@
         <h2 class="hidden-desktop brand"></h2>
         <div class="nav-collapse nav-collapse-menu">
           <ul class="nav"
-              tal:define="selected_tab python:view.selected_portal_tab">          
+              tal:define="selected_tab python:view.selected_portal_tab">
             <tal:tabs tal:repeat="tab menuPrincipal">
               <li tal:define="tid tab/id;
                               showSubfolders python:subfolders.get(tid, [])"
@@ -22,7 +22,7 @@
                    tal:attributes="href tab/url;
                                    title tab/description|nothing;
                                    alt   tab/description|nothing;
-                                   class python:'dropdown-toggle'" data-toggle="dropdown">
+                                   class python:'dropdown-toggle'" >
                    <tal:tab content="tab/name"></tal:tab>
                    <b tal:condition="showSubfolders" class="caret"></b>
                 </a>
