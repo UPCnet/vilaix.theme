@@ -201,6 +201,7 @@ class randomImage(viewletBase):
 
     def get_image_capsalera(self):
         style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
+        imatges = []
 
         if IPloneSiteRoot.providedBy(self.context):
             style = 'background-image: url("/++vilaix++static/images/fons-vilaix.png");height: 0px;'
@@ -222,9 +223,14 @@ class randomImage(viewletBase):
                         for n in range(num):
                             etiqueta.append(etiquetas[n].encode())
                 imatges = self.context.portal_catalog.searchResults(portal_type='Image',path=path, Subject=etiqueta)
+            elif len(contenido.subject) > 0:
+                etiqueta = []
+                etiquetas = contenido.subject
+                num = len(contenido.subject)
+                for n in range(num):
+                    etiqueta.append(etiquetas[n].encode())
+                imatges = self.context.portal_catalog.searchResults(portal_type='Image',path=path, Subject=etiqueta)
             else:
-                #resultats = []
-                #Imatge capcalera per defecte
                 style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
                 imatges = self.context.portal_catalog.searchResults(portal_type='Image',
                                                                     path=path)
