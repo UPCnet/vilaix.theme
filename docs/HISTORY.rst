@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.1 (unreleased)
+1.1 (2014-09-03)
 ----------------
 
-- Nothing changed yet.
-
+* Ramdom imatges capcalera filtrades per etiquetes [Pilar Marinas]
 
 1.0 (2014-07-31)
 ----------------
