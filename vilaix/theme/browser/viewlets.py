@@ -279,6 +279,7 @@ class slider(viewletBase):
                 {'img': '%s/@@images/image' % (item.getURL()),
                  'title': item.Title,
                  'text': item.Description,
+                 'alt': item.getObject().alt,
                  }
             )
 
