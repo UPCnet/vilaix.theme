@@ -38,15 +38,15 @@ class EventPortletItemRenderer(PortletItemRenderer):
     template = ViewPageTemplateFile('event.pt')
     css_class = 'multidate'
 
-    def sameDay(self):    
+    def sameDay(self):
         if DateTime.Date(self.item.start) == DateTime.Date(self.item.end):
             return True
         else:
             return False
-    
-    def getText(self): 
+
+    def getText(self):
         return self.cropText(self.item.getObject().SearchableText(), 100)
-    
+
     def getMonthAbbr(self, data):
         context = aq_inner(self.context)
         month = DateTime.month(data)
@@ -62,10 +62,10 @@ class EventPortletItemRenderer(PortletItemRenderer):
         monthName = PLMF(self._ts.month_msgid(month),
                               default=self._ts.month_english(month))
         return monthName
-        
+
     def getDay(self, data):
         day = str(DateTime.day(data))
-        return day      
+        return day
 
 
 @adapter(INewsItem)
@@ -74,8 +74,8 @@ class NewsPortletItemRenderer(PortletItemRenderer):
     template = ViewPageTemplateFile('newsitem.pt')
     css_class = 'noticies clearfix'
 
-    def getText(self):       
-        return self.cropText(self.item.getObject().text.raw, 100)
+    def getText(self):
+        return self.cropText(self.item.getObject().text.raw, 230)
 
 
 @adapter(IEquipament)

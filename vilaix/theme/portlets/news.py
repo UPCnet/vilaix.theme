@@ -74,42 +74,42 @@ class Renderer(base.Renderer):
             return '%s/noticies/noticies' % portal_state.navigation_root_url()
         return None
 
-  
-    def abrevia(self, summary, sumlenght):   
+
+    def abrevia(self, summary, sumlenght):
         """ Retalla contingut de cadenes
-        """  
+        """
         i=0
         bb=''
 
         if sumlenght<len(summary):
             bb=summary[:sumlenght]
-            
+
             lastspace = bb.rfind(' ')
             cutter = lastspace
             precut = bb[0:cutter]
 
             if precut.count('<b>')>precut.count('</b>'):
                 cutter = summary.find('</b>',lastspace)+4
-            bb=summary[0:cutter]  
-            
+            bb=summary[0:cutter]
+
             if bb.count('<p')>precut.count('</p'):
                 bb+='...</p>'
             else:
                 bb=bb+'...'
         else:
             bb=summary
-             
-        return bb 
+
+        return bb
 
     def dadesNoticies(self):
         noticies = self._data()
         dades = [dict(id=a.id,
-                     text =self.abrevia(a.getObject().text.raw,100), 
-                     url=a.getURL(),                     
+                     text =self.abrevia(a.getObject().text.raw,230),
+                     url=a.getURL(),
                      title=a.Title,
-                     new = a.getObject(),                     
+                     new = a.getObject(),
                      date = str(a.getObject().effective_date.day()) + '/' + str(a.getObject().effective_date.month()) + '/' + str(a.getObject().effective_date.year()),
-                     image = a.getObject().image) for a in noticies] 
+                     image = a.getObject().image) for a in noticies]
         return dades
 
     @memoize
@@ -127,7 +127,7 @@ class Renderer(base.Renderer):
                        destacat = False,
                        sort_on='Date',
                        sort_order='reverse',
-                       sort_limit=limit)[:limit]      
+                       sort_limit=limit)[:limit]
 
 class AddForm(base.AddForm):
     form_fields = form.Fields(INewsPortlet)
