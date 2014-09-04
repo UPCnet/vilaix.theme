@@ -17,7 +17,7 @@ from plone.app.portlets import PloneMessageFactory as _
 from plone.app.portlets.cache import render_cachekey
 from plone.app.portlets.portlets import base
 from plone.app.contenttypes.interfaces import INewsItem
-
+from plone import api
 
 class INewsPortlet(IPortletDataProvider):
 
@@ -70,8 +70,11 @@ class Renderer(base.Renderer):
         portal_state = getMultiAdapter((context, self.request),
             name='plone_portal_state')
         portal = portal_state.portal()
+        menu = portal['menu-principal']
         if 'noticies' in getNavigationRootObject(context, portal).objectIds():
             return '%s/noticies/noticies' % portal_state.navigation_root_url()
+        elif 'noticies' in menu.objectIds():
+            return '%s/menu-principal/noticies' % portal_state.navigation_root_url()
         return None
 
 
