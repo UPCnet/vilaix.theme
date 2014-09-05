@@ -45,7 +45,8 @@ class EventPortletItemRenderer(PortletItemRenderer):
             return False
 
     def getText(self):
-        return self.cropText(self.item.getObject().SearchableText(), 100)
+        #return self.cropText(self.item.getObject().SearchableText(), 100)
+        return self.cropText(self.item.getObject().Description(), 100)
 
     def getMonthAbbr(self, data):
         context = aq_inner(self.context)

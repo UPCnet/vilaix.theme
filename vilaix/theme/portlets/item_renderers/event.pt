@@ -16,8 +16,8 @@
         </a>
 
         <div class="text_esdeveniment">
-          <span tal:replace="structure view/getText"> Text esdeveniment </span>
-        </div>                                                         
+          <span tal:replace="structure view/getText | nothing"> Text esdeveniment </span>
+        </div>
 
         <time class="smaller"
                 tal:attributes="datetime item_startdate">
@@ -26,7 +26,7 @@
                   data-placement="left"
                   tal:attributes="title startmonth">
                 <tal:repl tal:replace="startmonth_abbr">set.</tal:repl>
-            </abbr> 
+            </abbr>
         </time>
     </tal:co>
 
@@ -36,9 +36,9 @@
         </a>
 
         <div class="text_esdeveniment">
-          <span tal:replace="structure view/getText"> Text esdeveniment </span>
-        </div>   
-        
+          <span tal:replace="structure view/getText | nothing"> Text esdeveniment </span>
+        </div>
+
         <time class="smaller"
                 tal:attributes="datetime item_startdate">
             <tal:repl tal:replace="startday">28</tal:repl>
@@ -57,6 +57,6 @@
                 <tal:repl tal:replace="endmonth_abbr">set.</tal:repl>
             </abbr>
         </time>
-    </tal:co>   
-  
+    </tal:co>
+
 </li>
