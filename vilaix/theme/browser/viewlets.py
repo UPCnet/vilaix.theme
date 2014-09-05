@@ -216,12 +216,16 @@ class randomImage(viewletBase):
                 filtre = contenido.query
                 etiqueta = []
                 #Dades filtre --> [{u'i': u'Subject', u'o': u'plone.app.querystring.operation.selection.is', u'v': [u'prova']}]
-                for i in filtre:
-                    if i['i'] == 'Subject':
-                        etiquetas = i['v']
-                        num = len(etiquetas)
-                        for n in range(num):
-                            etiqueta.append(etiquetas[n].encode())
+                if filtre == None:
+                    etiqueta.append('general')
+                else:
+                    for i in filtre:
+                        if i['i'] == 'Subject':
+                            etiquetas = i['v']
+                            num = len(etiquetas)
+                            for n in range(num):
+                                etiqueta.append(etiquetas[n].encode())
+
                 imatges = self.context.portal_catalog.searchResults(portal_type='Image',path=path, Subject=etiqueta)
             elif len(contenido.subject) > 0:
                 etiqueta = []
