@@ -8,12 +8,12 @@
     <div tal:attributes="id python:view.renderID(items);class python:view.renderClass(items)">
        <tal:slider tal:condition="python:view.isSlider(items)">
           <div class="carousel-inner">
-            <tal:item tal:repeat="item items">      
+            <tal:item tal:repeat="item items">
               <div tal:define="isTheFirst repeat/item/start"
-                   tal:attributes="class python:isTheFirst and 'item active' or 'item'">        
-                  <img tal:attributes="src string:${item/getURL}/@@images/image" />   
+                   tal:attributes="class python:isTheFirst and 'item active' or 'item'">
+                  <img tal:attributes="src string:${item/getURL}/@@images/image" />
               </div>
-            </tal:item>         
+            </tal:item>
           </div>
 
           <!-- Carousel nav -->
@@ -26,17 +26,33 @@
        <tal:notSlider tal:condition="python:not view.isSlider(items)">
           <h2 tal:content="view/data/header"> <i class="icon-news large-icon pull-right"></i></h2>
           <ul tal:attributes="class python:view.renderClassUL(items)">
-            <tal:item tal:repeat="item items">          
+            <tal:item tal:repeat="item items">
                 <tal:renderer replace="structure python:view.renderItem(item)">
                 </tal:renderer>
             </tal:item>
           </ul>
        </tal:notSlider>
-        <!-- <a class="portlet-footer" href="#">More</a> -->
-       <!--  <a href="" class="portlet-footer"><span class="button">Veure Més<i class="icon-plus-sign icon-white"></i></span></a> -->
-      
+
+       <tal:equipamentTramit tal:define="results python:view.isEquipamentTramit(items);
+                                         haslimit python:view.haslimit(items)"
+                             tal:condition="results">
+          <div id="dades" class="toggle-div">
+            <ul tal:attributes="class python:view.renderClassUL(items)" style="display:none" >
+              <tal:item tal:repeat="item results">
+                  <tal:renderer replace="structure python:view.renderItem(item)">
+                  </tal:renderer>
+              </tal:item>
+            </ul>
+            <a data-items="#dades" class="portlet-footer"><span style="display:none" class="button toggle-hide">Ocultar<i class="icon-plus-sign icon-white"></i></span></a>
+            <a tal:condition="haslimit" class="portlet-footer"><span class="button toggle-show">Veure Més<i class="icon-plus-sign icon-white"></i></span></a>
+          </div>
+       </tal:equipamentTramit>
+
+       <!-- <a class="portlet-footer" href="#">More</a> -->
+       <!-- <a href="" class="portlet-footer"><span class="button">Veure Més<i class="icon-plus-sign icon-white"></i></span></a> -->
+
     </div>
-  
+
     <script type="text/javascript">
        $(document).ready(function(event) {
            intervalid = setInterval(function(event) {
@@ -44,7 +60,26 @@
                clearInterval(intervalid)
                console.log('interval')
            }, 2000)
+
+
+           $('.toggle-div').on('click', '.toggle-show, .toggle-hide',  function(event) {
+              $target = $(event.target)
+              $div = $target.closest('.toggle-div')
+              $ul = $div.find('ul')
+              $show = $div.find('.toggle-show')
+              $hide = $div.find('.toggle-hide')
+
+              if ($target.hasClass('toggle-show')) {
+                  $ul.show()
+                  $show.hide()
+                  $hide.show()
+              } else {
+                  $ul.hide()
+                  $hide.hide()
+                  $show.show()
+              }
+           })
        })
-    </script> 
+    </script>
 
 </tal:items>

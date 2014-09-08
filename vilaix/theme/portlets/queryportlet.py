@@ -142,7 +142,7 @@ class Renderer(base.Renderer):
             return self._standard_results()
 
     def brainToDict(self, item):
-        
+
         if self.context.getLayout() == 'subhome':
             url = self.context.absolute_url() + '/' + item.id
         else:
@@ -165,9 +165,9 @@ class Renderer(base.Renderer):
         return content
 
     def renderItem(self, item):
-       
+
         content = self.brainToDict(item)
-        
+
         args = dict(
             item=item,
             url=content['getURL'],
@@ -224,7 +224,7 @@ class Renderer(base.Renderer):
             results = self.queryCatalog()
             results = random.sample(results, self.data.limit)
         return results
-    
+
     def renderClass(self, items):
         item = items[0]
         result = 'portlet'
@@ -235,26 +235,55 @@ class Renderer(base.Renderer):
         elif item.Type() == u'Slider':
             result = 'carousel slide portlet-carousel'
         return result
-    
+
     def renderID(self, items):
         item = items[0]
         result = ''
         if item.Type() == u'Slider':
             result = 'mySlider'
         return result
-    
+
     def isSlider(self, items):
         item = items[0]
         result = False
         if item.Type() == u'Slider':
             result = True
         return result
-    
+
     def renderClassUL(self, items):
         item = items[0]
         result = 'list-portlet'
         if item.Type() == u'Event':
             result = 'unstyled'
+        return result
+
+    def isEquipamentTramit(self, items):
+        item = items[0]
+        results = []
+        limitactual = self.data.limit
+        limit = None
+
+        if item.Type() == u'Equipament' or item.Type() == u'Tramit':
+            if self.data.query:
+                results = self.queryCatalog(limit=limit)
+                if limitactual == limit and limitactual > 0:
+                    results = results[:limit]
+                elif limitactual == limit and limitactual < 0:
+                    results = results
+                else:
+                    results = results[limitactual:]
+        return results
+
+    def haslimit(self, items):
+        limit = self.data.limit
+        senselimit = None
+        results = self.queryCatalog(limit=senselimit)
+        if limit == None:
+            result = False
+        elif limit == len(results):
+            result = False
+        else:
+            result = True
         return result
 
 class AddForm(z3cformhelper.AddForm):
