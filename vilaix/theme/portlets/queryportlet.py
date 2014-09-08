@@ -220,9 +220,13 @@ class Renderer(base.Renderer):
     def _random_results(self):
         # intentionally non-memoized
         results = []
+        limit = self.data.limit
         if self.data.query:
-            results = self.queryCatalog()
-            results = random.sample(results, self.data.limit)
+            results = self.queryCatalog(limit=limit)
+            if limit > 0:
+                results = random.sample(results, self.data.limit)
+            else:
+                results = random.sample(results, len(results))
         return results
 
     def renderClass(self, items):
