@@ -15,21 +15,21 @@
       class=".navigationPeu.navigationPeu"
       layer=".interfaces.IVilaixTheme"
       permission="zope2.View"
-      />    
+      />
 
     <browser:viewlet
       name="vilaix.carrousel"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"      
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".carrousel.carrousel"
       layer=".interfaces.IVilaixTheme"
       permission="zope2.View"
-      />        
+      />
 
     <browser:viewlet
       name="vilaix.carrousel_mobile"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"      
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".carrousel_mobile.carrousel"
       layer=".interfaces.IVilaixTheme"
       permission="zope2.View"
@@ -38,20 +38,26 @@
     <browser:viewlet
       name="vilaix.carrousel"
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"      
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".carrousel.carrousel"
       layer=".interfaces.IVilaixTheme"
       permission="zope2.View"
-      />        
+      />
 
     <browser:viewlet
       name="vilaix.carrousel_mobile"
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"      
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".carrousel_mobile.carrousel"
       layer=".interfaces.IVilaixTheme"
       permission="zope2.View"
       />
 
- 
+    <browser:resource
+      name="plone.formwidget.querystring.querywidget.js"
+      permission="zope2.View"
+      file="querywidget.js"
+      layer=".interfaces.IVilaixTheme"
+      />
+
 </configure>
