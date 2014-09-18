@@ -1,11 +1,17 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2014-09-18)
 ----------------
 
-- Nothing changed yet.
-
+* Afegir js perque funcioni correctament ordenacio queryportlet [Pilar Marinas]
+* Solucionar error al seleccionar elements aleatoriament [Pilar Marinas]
+* Afegir boto veure mes a queryportlet tramits i equipaments [Pilar Marinas]
+* Fer que el renderitzador event mostri titol i descripcio [Pilar Marinas]
+* Si subhome no te etiqueta mostra les imatges capcalera que tenen etiqueta general [Pilar Marinas]
+* Link veure mes noticies [Pilar Marinas]
+* Afegir alt als sliders i modificar template news per temes estils [Pilar Marinas]
+* Afegir mes caracters a la descripcio de les noticies [Pilar Marinas]
 
 1.1 (2014-09-03)
 ----------------
