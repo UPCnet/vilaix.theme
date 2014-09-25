@@ -58,25 +58,10 @@
             Since cookie authentication is disabled, cookie-based login is not available.
         </div>
 
-        <!-- <p class="documentDescription"
-           i18n:translate="genweb-heading_sign_in-v4">
-           Please log in using your UPC intranet user.
-        </p> -->
+
         <div class="accordion" id="accordionLogin">
 
-<!--           <div class="accordion-group">
-            <div class="accordion-heading box-gradient">
-              <a class="accordion-toggle" href="http://cas.upc.edu"
-                 tal:attributes="href context/cas_login_url | nothing">
-                <strong>
-                  <tal:entra i18n:translate="genweb-single-sign-on-v4">Single sign on log in</tal:entra>
-                  <img class="img_blank" src="++genweb++static/images/blank_blau.png"
-                       i18n:attributes="alt obrir_link_finestra_nova">
-                </strong>
-             </a>
-            </div>
 
-          </div> -->
 
           <div class="accordion-group">
             <div class="accordion-heading box-gradient">
@@ -167,20 +152,7 @@
                       <button type="submit" name="submit" class="btn btn-primary"
                               i18n:domain="plone"
                               i18n:translate="label_log_in">Log in</button>
-                      <!-- <h2 class="l"
-                          i18n:translate="genweb-si_heu_oblidat_la_contrasenya_question">
-                          Have you forgotten your password?
-                      </h2>
-                      <p class="s margin0"
-                         i18n:translate="genweb-si_heu_oblidat_la_contrasenya">
-                          If you have forgotten your password,
-                          <tal:recuperarla i18n:name="click_here">
-                            <a tal:attributes="href string:${portal_url}/canvidecontrasenya"
-                               i18n:translate="genweb-per_recuperarla">
-                                click here to retrieve it
-                            </a>
-                          </tal:recuperarla>
-                      </p> -->
+
                     </div>
                   </div>
                 </form>

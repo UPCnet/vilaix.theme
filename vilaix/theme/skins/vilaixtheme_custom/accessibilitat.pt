@@ -16,10 +16,6 @@
 
 
     <h1 class="documentFirstHeading">Accessibilitat</h1>
-    <!-- <p class="documentDescription">
-      Aquest lloc web ha estat generat amb el Genweb UPC v4, una eina que permet la creació i gestió de webs segons el llibre d'estil institucional de la UPC.
-    </p> -->
-
 
     <p> El <a target="_blank" href="https://genweb-vilaix.upcnet.es"><strong>Genweb Vilaix <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></strong></a>
     ha estat desenvolupat per <a target="_blank" href="http://www.upcnet.es">UPCnet <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></a>
@@ -72,24 +68,6 @@
 
       </div>
 
-
-    <!-- <h2>Tecles d'accés</h2>
-    <p>Les tecles d'accés són dreceres de navegació que permeten navegar per aquest web utilitzant el teclat.</p>
-    <p>Més informació sobre les tecles d'accés:  <a target="_blank" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey">Guies d'accessibilitat W3C <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></a>.</p>
-    <p>Aquest web utilitza una configuració que coincideix amb la majoria de recomanacions d'accessibilitat internacionals.</p>
-    <ul class="list list-condensed">
-         <li><code>S</code> &mdash; Vés al contingut</li>
-         <li><code>1</code> &mdash; Upc.edu</li>
-         <li><code>2</code> &mdash; Inici d'aquesta pàgina</li>
-         <li><code>3</code> &mdash; Mapa del web</li>
-         <li><code>4</code> &mdash; Focus al camp de cerca</li>
-         <li><code>5</code> &mdash; Cerca avançada</li>
-         <li><code>6</code> &mdash; Ajuda (només per a editors)</li>
-         <li><code>7</code> &mdash; Directori UPC</li>
-         <li><code>8</code> &mdash; Sobre aquest web</li>
-         <li><code>9</code> &mdash; Contacte</li>
-         <li><code>0</code> &mdash; Consulta accessibilitat</li>
-    </ul> -->
 
 
     <h2>Optimització</h2>

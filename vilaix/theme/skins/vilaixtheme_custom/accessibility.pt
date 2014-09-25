@@ -17,10 +17,6 @@
 
     <h1 class="documentFirstHeading">Accessibility</h1>
 
-<!-- <p>
-This website has been generated with <a target="_blank" href="https://www.upc.edu/comunicacio/www/genweb-upc"><strong>Genweb UPC v3
-<img alt="(open in new window)" src="++genweb++static/images/blank_blau.png" class="img_blank"></strong></a>, a tool that allows to the creation and management of web pages according to the UPC institutional style guide.
- -->
 
  	<p> The <a target="_blank" href="https://genweb-vilaix.upcnet.es"><strong>Genweb Vilaix <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(obriu en una finestra nova)"></strong></a>
     is a project has been developed by <a target="_blank" href="http://www.upcnet.es">UPCnet <img class="img_blank" src="++genweb++static/images/blank_blau.png" alt="(open in new window"></a>
@@ -76,25 +72,6 @@ En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que 
 
 
 </div>
-
-<!-- <h2>Access keys</h2>
-<p>
-Access keys enable you to browse this website using your keyboard. Further information is available at <a target="_blank" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey">W3C Accessibility Guidelines <img alt="(open in new window)" src="++genweb++static/images/blank_blau.png" class="img_blank" /></a>.
-</p>
-<p>This website follows most international recommendations on access keys.</p>
-
-
-<h3 class="prim">Access keys available on this website</h3>
-    <ul class="list list-condensed">
-        <li><code>1</code> &mdash; Home Page</li>
-        <li><code>2</code> &mdash; Skip to content</li>
-        <li><code>3</code> &mdash; Site Map</li>
-        <li><code>4</code> &mdash; Search field focus</li>
-        <li><code>6</code> &mdash; Site navigation tree</li>
-        <li><code>9</code> &mdash; Contact information</li>
-        <li><code>0</code> &mdash; Accessibility information</li>
-    </ul> -->
-
 
 
 <h2>Optimisation</h2>

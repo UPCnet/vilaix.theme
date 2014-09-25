@@ -37,7 +37,7 @@
     <meta name="author" content="Genweb Vilaix" />
     <meta name="description" content="Genweb Vilaix v4.0" />
     <link rel="shortcut icon" type="image/x-icon" tal:attributes="href string:${portal_url}/++vilaix++static/favicon.ico" />
-    
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 
     <metal:baseslot define-slot="base">
@@ -67,8 +67,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" tal:attributes="href string:${portal_url}/++genweb++stylesheets/genwebupc.css">
         <link rel="stylesheet" tal:attributes="href string:${portal_url}/++vilaix++stylesheets/VilaixTheme.css">
-        <!-- <link rel="stylesheet" tal:attributes="href string:${portal_url}/dynamic.css"> -->
-        <!-- <script tal:attributes="src string:${portal_url}/++bootstrap++js/modernizr-2.6.1.min.js"></script> -->
+
 
     </tal:notajax>
 </head>
@@ -201,7 +200,7 @@
 <tal:notajax tal:condition="not:ajax_load">
     <tal:comment replace="nothing"> <!-- A partir d'aqui, els JS comuns d'inicialització --> </tal:comment>
 
-    <!-- <script tal:attributes="src string:${portal_url}/++genweb++static/js/dropkick.js"></script> -->
+
     <script tal:attributes="src string:${portal_url}/++genweb++static/js/scrollability.js"></script>
     <script tal:attributes="src string:${portal_url}/++genweb++static/js/fileinput.js"></script>
     <script tal:attributes="src string:${portal_url}/++genweb++static/js/customInput.js"></script>
@@ -210,16 +209,9 @@
     <script tal:attributes="src string:${portal_url}/++genweb++static/js/keywords.js"></script>
     <script tal:attributes="src string:${portal_url}/++genweb++static/js/jquery.mixitup.min.js"></script>
 
-    <!--[if IE 8]>
-    <script type="text/javascript" src="http://malsup.github.com/jquery.corner.js"></script>
-    <script>
-      $('.header-image').corner('top 8px');
-      $('#portal-globalnav .navbar').corner('bottom 8px');
-    </script>
-    <![endif]-->
 
     <script tal:attributes="src string:${portal_url}/++genweb++js/main.js"></script>
-    <!-- <script tal:attributes="src string:${portal_url}/++ulearn++js/ulearn.js"></script> -->
+
 
 
     <script tal:attributes="src string:${portal_url}/++genweb++static/js/ios-orientationchange-fix.js"></script>

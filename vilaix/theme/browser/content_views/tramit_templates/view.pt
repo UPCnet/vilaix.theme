@@ -29,8 +29,6 @@
 	            <div class="span12">
 
 
-	            <!-- 	<img tal:define="imatge view/getImage" tal:condition="imatge" tal:attributes="src string:${imatge}" />
-              -->
 
 	            	<div class="columnes">
 
