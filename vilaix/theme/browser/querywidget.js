@@ -284,11 +284,11 @@
 
         // Synchronize the '#sort_on' field with the hidden
         // #form-widgets-ICollection-sort_on z3c.form field on load.
-        $('#sort_on').val($('#form-widgets-ICollection-sort_on').val());
+        $('#sort_on').val($('#form-widgets-sort_on').val());
 
         // Synchronize the '#sort_order' field with the hidden
         // #form-widgets-ICollection-sort_reversed z3c.form field on load.
-        if ($('#form-widgets-ICollection-sort_reversed-0').attr('checked')) {
+        if ($('#form-widgets-sort_reversed-0').attr('checked')) {
             $('#sort_order').attr('checked', true);
         } else {
             $('#sort_order').attr('checked', false);
@@ -297,23 +297,23 @@
         // Synchronize the z3c.form '#form-widgets-ICollection-sort_on' field
         // with the '#sort_on' field on user interaction
         $("#sort_on").live('click', function () {
-            $('#form-widgets-ICollection-sort_on').val($(this).val());
+            $('#form-widgets-sort_on').val($(this).val());
         });
 
         // Synchronize the z3c.form '#form-widgets-ICollection-sort_reversed' field
         // with the '#sort_order' field on user interaction.
         $("#sort_order").live('click', function () {
             if ($(this).is(":checked")) {
-                $('#form-widgets-ICollection-sort_reversed-0').attr('checked', true);
+                $('#form-widgets-sort_reversed-0').attr('checked', true);
             } else {
-                $('#form-widgets-ICollection-sort_reversed-0').attr('checked', false);
+                $('#form-widgets-sort_reversed-0').attr('checked', false);
             }
         });
 
         // Hide the z3c.form widgets for sorting because they are only needed
         // internally.
-        $('#formfield-form-widgets-ICollection-sort_on').hide();
-        $('#formfield-form-widgets-ICollection-sort_reversed').hide();
+        $('#formfield-form-widgets-sort_on').hide();
+        $('#formfield-form-widgets-sort_reversed').hide();
 
     });
 
