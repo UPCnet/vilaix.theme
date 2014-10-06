@@ -6,10 +6,11 @@
 
     <div tal:define="config widget/getConfig;
          indexes config/indexes;
-         rows widget/value;
+         rows python:widget.value or [];
          sortable_indexes config/sortable_indexes;
          addindexselected python:request.has_key('addindex') and request.addindex != '';
          addoperatorselected python:request.has_key('addoperator') and request.addoperator != ''">
+      <script tal:replace="structure widget/js"/>
 
         <tal:counter tal:define="dummy python:request.set('querystringwidgetcounter', 0)"/>
         <tal:row repeat="row rows">
@@ -41,8 +42,8 @@
                     </dt>
                     <dd>
                         <tal:values repeat="index python:indexes[row.i]['values'].keys()">
-                            <label tal:attributes="class python:indexes[row.i]['values'][index].get('header',False) and 'header' or nothing">
-                                <input tal:condition="python:indexes[row.i]['values'][index].get('header', False) == False" type="checkbox" name="form.widgets.query.v:records:list"
+                            <label>
+                                <input type="checkbox" name="form.widgets.query.v:records:list"
                                        tal:attributes="name python:str(fieldName)+'.v:records:list'; value index;
                                        checked python: row.has_key('v') and index in row.v and 'checked' or nothing"/>
                                 <span tal:content="python:indexes[row.i]['values'][index]['title']"/>
@@ -59,19 +60,26 @@
                     </dd>
                 </dl>
 
-                <input class="querywidget queryvalue dateWidget"
+                <input class="querywidget queryvalue dateWidget date"
                        autocomplete="off" type="text" name="form.widgets.query.v:records"
                        tal:attributes="name python:str(fieldName)+'.v:records'; value python:row['v']"
                        tal:condition="python:indexes[row.i]['operators'][row.o]['widget'] == 'DateWidget'"/>
 
                 <div class="querywidget queryvalue dateRangeWidget"
                      tal:condition="python:indexes[row.i]['operators'][row.o]['widget'] == 'DateRangeWidget'">
-                    <input autocomplete="off" type="text" name="form.widgets.query.v:records:list"
+                    <input class="date" autocomplete="off" type="text" name="form.widgets.query.v:records:list"
                            tal:attributes="name python:str(fieldName)+'.v:records:list'; value python:row['v'][0]"/>
                     <span> and </span>
-                    <input autocomplete="off" type="text" name="form.widgets.query.v:records:list"
+                    <input class="date" autocomplete="off" type="text" name="form.widgets.query.v:records:list"
                            tal:attributes="name python:str(fieldName)+'.v:records:list'; value python:row['v'][1]"/>
                 </div>
+
+        <div class="querywidget relativeDateWidget"
+             tal:condition="python:indexes[row.i]['operators'][row.o]['widget'] == 'RelativeDateWidget'">
+             <input class="queryvalue" autocomplete="off" type="text" name="form.widgets.query.v:records"
+                tal:attributes="name python:str(fieldName)+'.v:records'; value python:row['v']"/>
+             <span i18n:translate="">days</span>
+        </div>
 
                 <input class="querywidget queryvalue relativePathWidget"
                        autocomplete="off" type="text" name="form.widgets.query.v:records"
@@ -133,6 +141,7 @@
             <div class="querywidget queryvalue dateWidget"
                  tal:condition="python:indexes[request.form['addindex']]['operators'][request.form['addoperator']]['widget'] == 'DateWidget'">
                 <input autocomplete="off" type="text" class="queryvalue" tal:attributes="name python:str(fieldName)+'.v:records';" name="form.widgets.query.v:records" />
+
             </div>
 
             <div class="querywidget queryvalue dateRangeWidget"
@@ -154,7 +163,7 @@
         <div class="criteria">
             <label for="addindex" class="hiddenStructure">Add criterion</label>
 
-            <select class="addIndex" name="addindex" tal:condition="python: not(addindexselected) or addoperatorselected">
+            <select class="addIndex" name="addindex" id="addindex" tal:condition="python: not(addindexselected) or addoperatorselected">
                 <option value="" selected="selected" i18n:translate="">Select&hellip;</option>
                 <tal:index repeat="groupName python:config['groupedIndexes'].keys()">
                     <optgroup tal:attributes="label python:groupName">

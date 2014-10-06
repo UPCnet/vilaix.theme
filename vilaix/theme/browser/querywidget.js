@@ -74,7 +74,7 @@
                         'type': 'text',
                         'name': fname + '.v:records'
                     })
-                    .addClass('querywidget queryvalue dateWidget');
+                    .addClass('querywidget queryvalue dateWidget date');
             case 'DateRangeWidget':
                 return $(document.createElement('div'))
                     .addClass('querywidget dateRangeWidget')
@@ -84,7 +84,7 @@
                             'type': 'text',
                             'name': fname + '.v:records:list'
                         })
-                        .addClass('queryvalue')
+                        .addClass('queryvalue date')
                     )
                     .append($(document.createElement('span'))
                         .html(' and ')
@@ -95,8 +95,22 @@
                             'type': 'text',
                             'name': fname + '.v:records:list'
                         })
-                        .addClass('queryvalue')
+                        .addClass('queryvalue date')
                     );
+            case 'RelativeDateWidget':
+                return $(document.createElement('div'))
+                    .addClass('querywidget relativeDateWidget')
+                .append($(document.createElement('input'))
+                        .attr({
+                            'autocomplete': 'off',
+                            'type': 'text',
+                            'name': fname + '.v:records'
+            })
+            .addClass('queryvalue')
+            )
+                .append($(document.createElement('span'))
+            .html('days')
+            );
             case 'ReferenceWidget':
                 return $(document.createElement('dl'))
                     .addClass('querywidget referenceWidget')
@@ -137,24 +151,18 @@
                     );
                 var dd = $(document.createElement('dd')).addClass('hiddenStructure widgetPulldownMenu');
                 $.each($.querywidget.config.indexes[index].values, function (i, val) {
-                    var $label = $(document.createElement('label'))
-
-                    var $input = $(document.createElement('input'))
-                    $input.attr({
-                            'type': 'checkbox',
-                            'name': fname + '.v:records:list',
-                            'value': i
-                    })
-
-                    var $span = $(document.createElement('span'))
-                    $span.html(val.title)
-                    console.log(val)
-                    if (val.header)
-                        $label.attr('class', 'header')
-                    else
-                        $label.append($input)
-                    $label.append($span)
-                    dd.append($label)
+                    dd.append($(document.createElement('label'))
+                        .append($(document.createElement('input'))
+                            .attr({
+                                'type': 'checkbox',
+                                'name': fname + '.v:records:list',
+                                'value': i
+                            })
+                        )
+                        .append($(document.createElement('span'))
+                            .html(val.title)
+                        )
+                    );
                 });
                 dl.append(dd);
                 return dl;
@@ -173,6 +181,21 @@
                 var classname = classes[i];
                 return classname.slice(0,1).toUpperCase() + classname.slice(1);
             }
+        }
+    };
+
+    $.querywidget.updateWidget = function (node) {
+    if (typeof(node) === "undefined") {
+        node = $('.querywidget');
+    }
+    if ($().dateinput) {
+            $(node).parents('.criteria').find('.date').dateinput({change: function() { $.querywidget.updateSearch();}, firstDay: 1,selectors: true, trigger: false, yearRange: [-10, 10]}).unbind('change')
+                .bind('onShow', function (event) {
+                    var trigger_offset = $(this).next().offset();
+                    $(this).data('dateinput').getCalendar().offset(
+                        {top: trigger_offset.top+20, left: trigger_offset.left}
+                    );
+                });
         }
     };
 
@@ -206,6 +229,7 @@
                     querylist.push('query.v:records:list=' + $(daterangewidget.children('input')[0]).val());
                     querylist.push('query.v:records:list=' + $(daterangewidget.children('input')[1]).val());
                     break;
+
                 case 'MultipleSelectionWidget':
                     var multipleselectionwidget = $(this).parents('.criteria').find('.querywidget');
                     multipleselectionwidget.find('input:checked').each(function () {
@@ -250,45 +274,46 @@
         // Init
         $.querywidget.init();
 
+
         // We need two keep two fields for each sorting field ('#sort_on',
         // '#sort_reversed'). The query results preview that calls
         // '@@querybuilder_html_results' in plone.app.querystring expects a
         // sort_on and sort_order param. To store the actual setting on the
         // collection we need the two z3c.form-based fields
-        // ('#form-widgets-sort_on', '#form-widgets-sort_reversed')
+        // ('#form-widgets-ICollection-sort_on', '#form-widgets-ICollection-sort_reversed')
 
         // Synchronize the '#sort_on' field with the hidden
-        // #form-widgets-sort_on z3c.form field on load.
-        $('#sort_on').val($('#form-widgets-sort_on').val());
+        // #form-widgets-ICollection-sort_on z3c.form field on load.
+        $('#sort_on').val($('#form-widgets-ICollection-sort_on').val());
 
         // Synchronize the '#sort_order' field with the hidden
-        // #form-widgets-sort_reversed z3c.form field on load.
-        if ($('#form-widgets-sort_reversed-0').attr('checked')) {
+        // #form-widgets-ICollection-sort_reversed z3c.form field on load.
+        if ($('#form-widgets-ICollection-sort_reversed-0').attr('checked')) {
             $('#sort_order').attr('checked', true);
         } else {
             $('#sort_order').attr('checked', false);
         }
 
-        // Synchronize the z3c.form '#form-widgets-sort_on' field
+        // Synchronize the z3c.form '#form-widgets-ICollection-sort_on' field
         // with the '#sort_on' field on user interaction
         $("#sort_on").live('click', function () {
-            $('#form-widgets-sort_on').val($(this).val());
+            $('#form-widgets-ICollection-sort_on').val($(this).val());
         });
 
-        // Synchronize the z3c.form '#form-widgets-sort_reversed' field
+        // Synchronize the z3c.form '#form-widgets-ICollection-sort_reversed' field
         // with the '#sort_order' field on user interaction.
         $("#sort_order").live('click', function () {
             if ($(this).is(":checked")) {
-                $('#form-widgets-sort_reversed-0').attr('checked', true);
+                $('#form-widgets-ICollection-sort_reversed-0').attr('checked', true);
             } else {
-                $('#form-widgets-sort_reversed-0').attr('checked', false);
+                $('#form-widgets-ICollection-sort_reversed-0').attr('checked', false);
             }
         });
 
         // Hide the z3c.form widgets for sorting because they are only needed
         // internally.
-        $('#formfield-form-widgets-sort_on').hide();
-        $('#formfield-form-widgets-sort_reversed').hide();
+        $('#formfield-form-widgets-ICollection-sort_on').hide();
+        $('#formfield-form-widgets-ICollection-sort_reversed').hide();
 
     });
 
@@ -334,6 +359,8 @@
                                                             $(this).children('input').val(), fname));
                 });
                 $.querywidget.updateSearch();
+        $.querywidget.updateWidget();
+
             });
         });
 
@@ -358,6 +385,7 @@
             var querywidget = $(this).parent(".criteria").children('.querywidget');
             if ((widget !== $.querywidget.getCurrentWidget(querywidget)) || (widget === 'MultipleSelectionWidget')) {
                 querywidget.replaceWith($.querywidget.createWidget(widget, index, fname));
+        $.querywidget.updateWidget($(this).parent(".criteria").children('.querywidget'));
             }
             $.querywidget.updateSearch();
         });
@@ -370,8 +398,10 @@
             var querywidget = $(this).parent().children('.querywidget');
             if (widget !== $.querywidget.getCurrentWidget(querywidget)) {
                 querywidget.replaceWith($.querywidget.createWidget(widget, index, fname));
+        $.querywidget.updateWidget($(this).parent().children('.querywidget'));
             }
             $.querywidget.updateSearch();
+
         });
 
         $('#sort_on,#sort_order').live('change', function () {
