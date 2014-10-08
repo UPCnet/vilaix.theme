@@ -3425,7 +3425,7 @@ h1, h2, h3 {
 }
 
 /* line 974, ../scss/VilaixTheme.scss */
-.userrole-anonymous .documentByLine {
+.userrole-anonymous #plone-document-byline {
   display: none;
 }
 
