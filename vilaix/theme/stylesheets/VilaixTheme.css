@@ -3847,3 +3847,20 @@ dt {
 .toggle-div .list-portlet li:first-child {
   border-top: 1px solid #e5e5e5 !important;
 }
+
+/* line 1267, ../scss/VilaixTheme.scss */
+.portlet .icon-plus-sign {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.8;
+  position: relative;
+  left: 0px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+/* line 1276, ../scss/VilaixTheme.scss */
+.more {
+  text-align: right;
+  float: right;
+  color: white !important;
+}

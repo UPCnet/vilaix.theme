@@ -31,6 +31,13 @@
                 </tal:renderer>
             </tal:item>
           </ul>
+          <a class="more" tal:condition="view/data/more"
+             tal:attributes="href view/data/more"
+             >
+              <span class="button">Veure més
+                <i class="icon-plus-sign icon-white"></i>
+              </span>
+          </a>
        </tal:notSlider>
 
        <tal:equipamentTramit tal:define="results python:view.isEquipamentTramit(items);
