@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from plone import api
 from zope.interface import Interface
 
 from zope.interface import implements
@@ -14,10 +15,11 @@ from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 
 from zope.i18nmessageid import MessageFactory
-_ = MessageFactory('upc.genweb.banners')
+_ = MessageFactory('genweb.banners')
 
 from plone.app.vocabularies.catalog import SearchableTextSourceBinder
-from upc.genweb.banners.content.interfaces import IBannerContainer
+#from upc.genweb.banners.content.interfaces import IBannerContainer
+from genweb.banners.content import BannerContainer
 from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from zope.component import getMultiAdapter
 
@@ -58,7 +60,7 @@ class IBannersPortlet(IPortletDataProvider):
                                     "to act as the root of the navigation tree. "
                                     "Leave blank to use the Plone site root."),
             required=False,
-            source=SearchableTextSourceBinder({'object_provides': IBannerContainer.__identifier__,},
+            source=SearchableTextSourceBinder({'type': BannerContainer},
                                               default_query='path:/material-multimedia/banners'))
 
 class Assignment(base.Assignment):
@@ -102,6 +104,9 @@ class Renderer(base.Renderer):
 
     render = ViewPageTemplateFile('templates/bannersportlet.pt')
 
+    def portal(self):
+        return api.portal.get()
+
     def getBanners(self):
         return self._data()
 
@@ -118,7 +123,7 @@ class Renderer(base.Renderer):
                        review_state=state,
                        path=path + content,
                        sort_on='getObjPositionInParent',
-                       sort_limit=limit)[:limit]       
+                       sort_limit=limit)[:limit]
 
     def test(self, value, trueVal, falseVal):
         """
@@ -129,22 +134,31 @@ class Renderer(base.Renderer):
         else:
             return falseVal
 
+
     def getAltAndTitle(self, altortitle):
-        """Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
-           el literal Obriu l'enllac en una finestra nova
+        """ Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
+            el literal Obriu l'enllac en una finestra nova.
         """
-        lt = getToolByName(self, 'portal_languages')
-        idioma = lt.getPreferredLanguage()
-        str = ''
-        if idioma == 'ca':
-            str = "(obriu en una finestra nova)"
-        if idioma == 'es':
-            str = "(abre en ventana nueva)"
-        if idioma == 'en':
-            str = "(open in new window)"
-        if str == '':
-            str = "(obriu en una finestra nova)"
-        return altortitle + ', ' + str
+        return '%s, %s' % (altortitle.decode('utf-8'),
+            self.portal().translate(_('obrir_link_finestra_nova', default=u"(obriu en una finestra nova)")))
+
+
+    # def getAltAndTitle(self, altortitle):
+    #     """Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
+    #        el literal Obriu l'enllac en una finestra nova
+    #     """
+    #     lt = getToolByName(self, 'portal_languages')
+    #     idioma = lt.getPreferredLanguage()
+    #     str = ''
+    #     if idioma == 'ca':
+    #         str = "(obriu en una finestra nova)"
+    #     if idioma == 'es':
+    #         str = "(abre en ventana nueva)"
+    #     if idioma == 'en':
+    #         str = "(open in new window)"
+    #     if str == '':
+    #         str = "(obriu en una finestra nova)"
+    #     return altortitle + ', ' + str
 
 
 # NOTE: If this portlet does not have any configurable parameters, you can
