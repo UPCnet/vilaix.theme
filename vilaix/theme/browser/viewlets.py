@@ -200,7 +200,7 @@ class randomImage(viewletBase):
     #     return self.genweb_config().directori_upc
 
     def get_image_capsalera(self):
-        style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
+        style = 'background-image: url(/++vilaix++static/images/capcalera.jpg)'
         imatges = []
 
         if IPloneSiteRoot.providedBy(self.context):
@@ -235,7 +235,7 @@ class randomImage(viewletBase):
                     etiqueta.append(etiquetas[n].encode())
                 imatges = self.context.portal_catalog.searchResults(portal_type='Image',path=path, Subject=etiqueta)
             else:
-                style = 'background-image: url("/++vilaix++static/images/capcalera.jpg")'
+                style = 'background-image: url(/++vilaix++static/images/capcalera.jpg)'
                 imatges = self.context.portal_catalog.searchResults(portal_type='Image',
                                                                     path=path)
 
