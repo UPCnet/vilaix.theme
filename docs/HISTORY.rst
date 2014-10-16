@@ -1,11 +1,19 @@
 Changelog
 =========
 
-1.3 (unreleased)
+1.3 (2014-10-16)
 ----------------
 
-- Nothing changed yet.
-
+* Treure PhysicalNavigationBreadcrumbs perque error al mostrar tots elem cerca [Pilar Marinas]
+* Afegir js cerca main_template vilaix [Pilar Marinas]
+* Nova capcalera per defecte [Pilar Marinas]
+* Modificado banners portlet para utilizar nuevo genweb.banners DX [Pilar Marinas]
+* Modificar literal portlet Agenda [Pilar Marinas]
+* Add button View More queryportlet [Pilar Marinas]
+* Modificar css que feia que no es veies data esdeveniments com anomim [Pilar Marinas]
+* Oculta sort_on i sort_reversed [Pilar Marinas]
+* Soluciona error filtros queryportlet [Pilar Marinas]
+* Borrar codigo comentado [Pilar Marinas]
 
 1.2 (2014-09-18)
 ----------------
