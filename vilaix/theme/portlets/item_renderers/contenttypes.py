@@ -19,7 +19,7 @@ from genweb.core import GenwebMessageFactory as TAM
 from vilaix.core.content.equipament import IEquipament
 from vilaix.core.content.tramit import ITramit
 from vilaix.core.content.slider import ISlider
-from genweb.banners.content.interfaces import IBanner
+from genweb.banners.content.banner import IBanner
 
 from zope.i18nmessageid import MessageFactory
 PLMF = MessageFactory('plonelocales')

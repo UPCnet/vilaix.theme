@@ -18,10 +18,10 @@ from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('genweb.banners')
 
 from plone.app.vocabularies.catalog import SearchableTextSourceBinder
-#from upc.genweb.banners.content.interfaces import IBannerContainer
-from genweb.banners.content import BannerContainer
 from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from zope.component import getMultiAdapter
+from genweb.banners.content import BannerContainer
+
 
 class IBannersPortlet(IPortletDataProvider):
     """A portlet

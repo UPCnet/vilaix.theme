@@ -19,7 +19,6 @@ from plone.app.portlets.portlets import base
 from plone.app.contenttypes.interfaces import INewsItem
 
 from plone.app.vocabularies.catalog import SearchableTextSourceBinder
-from genweb.banners.content.interfaces import IBannerContainer
 from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 
 
