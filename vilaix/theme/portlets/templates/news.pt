@@ -11,7 +11,8 @@
           <li class="noticies clearfix" tal:repeat="obj dades_noticies">
 
                 <div class="imatge_noticia">
-                  <img tal:define="scale obj/new/@@images"
+                  <img tal:condition="obj/new/@@images"
+                       tal:define="scale obj/new/@@images"
                        tal:replace="structure python: scale.scale('image',
                                     scale='mini').tag(css_class='newsImage')" />
                   <p class="discreet" tal:condition="obj/new/image_caption|nothing"
