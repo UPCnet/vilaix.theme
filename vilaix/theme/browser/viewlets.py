@@ -496,9 +496,8 @@ class TitleViewlet(TitleViewlet, viewletBase):
             genweb_title = 'Genweb Vilaix'
         genweb_title = escape(safe_unicode(re.sub(r'(<.*?>)', r'', genweb_title)))
 
-        marca_UPC = escape(safe_unicode(u"Apropa't & Conversa"))
 
         if page_title == portal_title:
-            self.site_title = u"%s &mdash; %s" % (genweb_title, marca_UPC)
+            self.site_title = u"%s" % (genweb_title)
         else:
-            self.site_title = u"%s &mdash; %s &mdash; %s" % (page_title, genweb_title, marca_UPC)
+            self.site_title = u"%s &mdash; %s" % (page_title, genweb_title)
