@@ -1,11 +1,17 @@
 Changelog
 =========
 
-1.5 (unreleased)
+1.5 (2014-10-22)
 ----------------
 
-- Nothing changed yet.
-
+* Treure width imatge_destacada discreet [Pilar Marinas]
+* Treure etiquetes arxivat sota si anonim [Pilar Marinas]
+* Modificar css Lead Image Caption en noticies [Pilar Marinas]
+* Que es puguin publicar noticies sense foto [Pilar Marinas]
+* Treure apropat i conversa [Pilar Marinas]
+* Solucionar js calendari [Pilar Marinas]
+* Obsolete keywords.js [Pilar Marinas]
+* Quitar imports etc upc.genweb.banners [Pilar Marinas]
 
 1.4 (2014-10-17)
 ----------------
