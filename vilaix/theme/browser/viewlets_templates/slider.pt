@@ -7,7 +7,7 @@
 	    <div class="row-fluid">
 		    <div class="span12">
 
-	            <div id="mySlider" class="carousel slide" data-interval="4000">
+	            <div id="mySlider" class="carousel slide">
 	              <!-- Carousel items -->
 	              <div class="carousel-inner">
 	                <tal:carouselItem repeat="item sliders">

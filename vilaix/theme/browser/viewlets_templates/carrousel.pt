@@ -1,24 +1,24 @@
 <tal:carousel tal:define="banners view/getElementsCarrousel;
-						  blocs view/getBlocs" 
+						  blocs view/getBlocs"
 			  tal:condition="banners"
      		  i18n:domain="vilaix.core">
-	
+
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$('.carousel').carousel({
+			$('.carousel_normal').carousel({
 			  interval: 0,
 			  group: 4,
     		  indicator: true
 			})
 
 		});
-	</script>	
-	
+	</script>
+
 
 	<div class="container">
 	    <div class="row-fluid">
 		    <div class="carousel slide carousel_normal" id="myCarousel">
-	            <div class="carousel-inner">	            
+	            <div class="carousel-inner">
 	              <div class="item active">
 
 	                    <ul tal:define="bannersBloc python:banners[0]" class="thumbnails">
@@ -33,10 +33,10 @@
 						       		 	                      />
 							       	</a>
 						   	    </tal:item>
-							</li> 	                      
+							</li>
 	                    </ul>
-	               
-	              	
+
+
 	              </div>
 	              <div class="item" tal:repeat="x python:range(1, blocs)">
 
@@ -52,14 +52,14 @@
 						       		 	                      />
 							       	</a>
 						   	    </tal:item>
-							</li> 	                      
+							</li>
 	                    </ul>
-	               
-	              	
+
+
 	              </div>
 
-	              
-	              
+
+
 	            </div>
 	            <tal:bloc tal:condition="python: blocs > 1">
 	             <a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
@@ -67,7 +67,7 @@
                 </tal:bloc>
 	        </div>
 		</div>
-	</div>	
+	</div>
 
-	
+
 </tal:carousel>
