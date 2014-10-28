@@ -204,7 +204,7 @@ class randomImage(viewletBase):
         imatges = []
 
         if IPloneSiteRoot.providedBy(self.context):
-            style = 'background-image: url(/++vilaix++static/images/fons-vilaix.png);height: 0px;'
+            style = 'background-image: url(/++vilaix++static/images/fons_vilaix.png);height: 0px;'
         else:
             #Obté totes les imatges de la carpeta imatges-capcalera i fa un random retornant una cada cop
             urltool = getToolByName(self.context, 'portal_url')
