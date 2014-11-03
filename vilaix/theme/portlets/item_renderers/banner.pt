@@ -1,10 +1,10 @@
-<li tal:attributes="class view/rendererClass">     
+<li tal:attributes="class view/rendererClass">
 
    <a target="_blank" href=""
-       tal:attributes="href view/item/URLdesti; 
-       				   target view/getTarget;                       
+       tal:attributes="href view/item/remoteUrl;
+       				   target view/getTarget;
                        title view/item/Title">
-        <img tal:attributes="src string:${view/item/getURL}/@@images/Imatge" />   
-    </a>    
-  
+        <img tal:attributes="src string:${view/item/getURL}/@@images/image" />
+    </a>
+
 </li>

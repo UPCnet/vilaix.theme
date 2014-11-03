@@ -101,11 +101,12 @@ class BannerPortletItemRenderer(PortletItemRenderer):
 
     def getTarget(self):
         obj = self.item.getObject()
-        if obj.Obrirennovafinestra:
+        if obj.open_link_in_new_window:
             result = '_blank'
         else:
             result = ''
         return result
+
 
 @adapter(ISlider)
 @implementer(IPortletItemRenderer)
@@ -113,13 +114,6 @@ class SliderPortletItemRenderer(PortletItemRenderer):
     template = ViewPageTemplateFile('slider.pt')
     css_class = 'slider clearfix'
 
-    def getTarget(self):
-        obj = self.item.getObject()
-        if obj.Obrirennovafinestra:
-            result = '_blank'
-        else:
-            result = ''
-        return result
 
 @adapter(IFile)
 @implementer(IPortletItemRenderer)
