@@ -1,71 +1,73 @@
 <tal:carousel tal:define="banners view/getElementsCarrousel;
-						  blocs view/getBlocs" 
+						  blocs view/getBlocs"
 			  tal:condition="banners"
      		  i18n:domain="vilaix.core">
-	
+
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$('.carousel').carousel({
+			$('.carousel_mobile').carousel({
 			  interval: 0,
 			  group: 2,
     		  indicator: true
 			})
 
 		});
-	</script>	
-	
+	</script>
+
 
 	<div class="container">
 	    <div class="row-fluid">
 		    <div class="carousel slide carousel_mobile" id="myCarouselMobile">
-	            <div class="carousel-inner">	            
+	            <div class="carousel-inner">
 	              <div class="item active">
 
 	                    <ul tal:define="bannersBloc python:banners[0]" class="thumbnails">
 	                    	<li class="span3" tal:repeat="section bannersBloc">
 								<tal:item tal:define="obj python:section.getObject()">
-						   			<a tal:attributes="href obj/URLdesti;
-						   			                   target python:obj.Obrirennovafinestra and '_blank' or nothing;
-						   			                   title python:view.getAltAndTitle(obj.Title())">
-							   		 	<img  class="img_carousel" tal:attributes="src string:${obj/absolute_url}/Imatge;
-						       		 	                     alt python:view.getAltAndTitle(obj.Title());
-						       		 	                     title python:view.getAltAndTitle(obj.Title());"
-						       		 	                      />
+						   			<a tal:attributes="href obj/remoteUrl;
+						   			                   target python:obj.open_link_in_new_window and '_blank' or nothing;
+						   			                   title python:view.getAltAndTitle(obj.Title(), obj.open_link_in_new_window);">
+							   		 	<img  class="img_carousel"
+						       		 		  tal:attributes="src string:${obj/absolute_url}/@@images/image;
+						       		 		  alt python:view.getAltAndTitle(obj.Title(), obj.open_link_in_new_window);
+						       		 		  title python:view.getAltAndTitle(obj.Title(), obj.open_link_in_new_window);"
+                                     						   />
 							       	</a>
 						   	    </tal:item>
-							</li> 	                      
+							</li>
 	                    </ul>
-	               
-	              	
+
+
 	              </div>
 	              <div class="item" tal:repeat="x python:range(1, blocs)">
 
 	                    <ul tal:define="bannersBloc python:banners[x]" class="thumbnails">
 	                    	<li class="span3" tal:repeat="section bannersBloc">
 								<tal:item tal:define="obj python:section.getObject()">
-						   			<a tal:attributes="href obj/URLdesti;
-						   			                   target python:obj.Obrirennovafinestra and '_blank' or nothing;
-						   			                   title python:view.getAltAndTitle(obj.Title())">
-							   		 	<img  class="img_carousel" tal:attributes="src string:${obj/absolute_url}/Imatge;
-						       		 	                     alt python:view.getAltAndTitle(obj.Title());
-						       		 	                     title python:view.getAltAndTitle(obj.Title());"
-						       		 	                      />
+						   			<a tal:attributes="href obj/remoteUrl;
+						   			                   target python:obj.open_link_in_new_window and '_blank' or nothing;
+						   			                   title python:view.getAltAndTitle(obj.Title(), obj.open_link_in_new_window);">
+							   		 	<img  class="img_carousel"
+						       		 		  tal:attributes="src string:${obj/absolute_url}/@@images/image;
+						       		 		  alt python:view.getAltAndTitle(obj.Title(), obj.open_link_in_new_window);
+						       		 		  title python:view.getAltAndTitle(obj.Title(), obj.open_link_in_new_window);"
+                                     						   />
 							       	</a>
 						   	    </tal:item>
-							</li> 	                      
+							</li>
 	                    </ul>
-	               
-	              	
+
+
 	              </div>
 
-	              
-	              
+
+
 	            </div>
 	             <a data-slide="prev" href="#myCarouselMobile" class="left carousel-control">‹</a>
                  <a data-slide="next" href="#myCarouselMobile" class="right carousel-control">›</a>
 	        </div>
 		</div>
-	</div>	
+	</div>
 
-	
+
 </tal:carousel>
