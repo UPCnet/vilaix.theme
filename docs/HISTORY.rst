@@ -1,11 +1,15 @@
 Changelog
 =========
 
-1.6 (unreleased)
+1.6 (2014-11-13)
 ----------------
 
-- Nothing changed yet.
-
+* Carrousel DX [Pilar Marinas]
+* Solucionar rendaritzador banner queryportlet [Pilar Marinas]
+* Treure background html negre [Pilar Marinas]
+* Treure literal [Pilar Marinas]
+* Treure linebreak event view [Pilar Marinas]
+* Solucionar que funcioni slider carousel homepage [Pilar Marinas]
 
 1.5 (2014-10-22)
 ----------------
