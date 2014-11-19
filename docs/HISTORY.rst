@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.7 (unreleased)
+1.7 (2014-11-19)
 ----------------
 
-- Nothing changed yet.
-
+* Modificar event_view quitando etiquetas i timezone [Pilar Marinas]
 
 1.6 (2014-11-13)
 ----------------
