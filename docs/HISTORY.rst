@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.8 (unreleased)
+1.8 (2015-02-11)
 ----------------
 
-- Nothing changed yet.
-
+* Desglosar event_view perque no peti en la nova versio plone.app.event [Pilar Marinas]
 
 1.7 (2014-11-19)
 ----------------
