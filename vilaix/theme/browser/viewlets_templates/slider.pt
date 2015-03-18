@@ -13,10 +13,14 @@
 	                <tal:carouselItem repeat="item sliders">
 	                  <div tal:define="isTheFirst repeat/item/start"
 	                       tal:attributes="class python:isTheFirst and 'item active' or 'item'">
-	                    <img tal:attributes="src item/img;
-	                    					 title item/alt|nothing;
-                                   			 alt   item/alt|nothing;"/>
 
+	                    <a tal:attributes="href item/url; target item/target | nothing;"
+	                    	tal:omit-tag="not:item/url">
+
+		                    <img tal:attributes="src item/img;
+		                    					 title item/alt|nothing;
+	                                   			 alt   item/alt|nothing;"/>
+	                    </a>
 	                  </div>
 	                </tal:carouselItem>
 	              </div>

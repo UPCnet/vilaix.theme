@@ -284,6 +284,8 @@ class slider(viewletBase):
                  'title': item.Title,
                  'text': item.Description,
                  'alt': item.getObject().alt,
+                 'url': item.getObject().remoteUrl,
+                 'target': item.open_link_in_new_window and '_blank' or None,
                  }
             )
 
