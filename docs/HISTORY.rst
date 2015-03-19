@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.9 (unreleased)
+1.9 (2015-03-19)
 ----------------
 
-- Nothing changed yet.
-
+* link url in slider definition [ana.ribas]
 
 1.8 (2015-02-11)
 ----------------
