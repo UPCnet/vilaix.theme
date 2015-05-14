@@ -37,7 +37,7 @@ from zope.security import checkPermission
 
 import random
 from genweb.core import GenwebMessageFactory as _
-
+from DateTime.DateTime import DateTime
 
 grok.context(Interface)
 
@@ -260,25 +260,17 @@ class slider(viewletBase):
         catalog = getToolByName(self.context, 'portal_catalog')
         utool = getToolByName(self.context, 'portal_url')
         path = '{0}/material-multimedia/sliders'.format(utool.getPortalPath()),
-        items = catalog.searchResults(
-            portal_type='Slider',
-            path=dict(query=path,
-                      depth=1),
-            review_state = 'published',
-            Subject = 'principal',
-            sort_on='getObjPositionInParent')
+        now = DateTime()
+
+        items = catalog.searchResults(portal_type='Slider',
+                                      path=dict(query=path, depth=1),
+                                      review_state='published',
+                                      Subject='principal',
+                                      expires={'query': now, 'range': 'min', },
+                                      sort_on='getObjPositionInParent')
 
         results = []
         for item in items:
-            #obj = item.getObject()
-            # results.append(
-            #     {'img': '%s/@@images/image' % (item.getURL()),
-            #      'url': obj.URLdesti,
-            #      'title': item.Title,
-            #      'target': obj.Obrirennovafinestra and 'blank' or None,
-            #      'text': item.Description,
-            #      }
-            # )
             results.append(
                 {'img': '%s/@@images/image' % (item.getURL()),
                  'title': item.Title,
