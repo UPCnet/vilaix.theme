@@ -55,6 +55,21 @@
           </div>
        </tal:equipamentTramit>
 
+       <tal:varis tal:define="results python:view.isVaris(items);
+                              haslimit python:view.haslimit(items)"
+                  tal:condition="results">
+          <div id="dades" class="toggle-div">
+            <ul tal:attributes="class python:view.renderClassUL(items)" style="display:none" >
+              <tal:item tal:repeat="item results">
+                  <tal:renderer replace="structure python:view.renderItem(item)">
+                  </tal:renderer>
+              </tal:item>
+            </ul>
+            <a data-items="#dades" class="portlet-footer"><span style="display:none" class="button toggle-hide">Ocultar<i class="icon-plus-sign icon-white"></i></span></a>
+            <a tal:condition="haslimit" class="portlet-footer"><span class="button toggle-show">Veure Més<i class="icon-plus-sign icon-white"></i></span></a>
+          </div>
+       </tal:varis>
+
 
     </div>
 

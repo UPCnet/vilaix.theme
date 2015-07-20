@@ -278,6 +278,22 @@ class Renderer(base.Renderer):
                     results = results[limitactual:]
         return results
 
+    def isVaris(self, items):
+        item = items[0]
+        results = []
+        limitactual = self.data.limit
+        limit = None
+        if item.Type() == u'News Item' or item.Type() == u'Event' or item.Type() == u'Page' or item.Type() == u'Link' or item.Type() == u'File' or item.Type() == u'Banner':
+            if self.data.query:
+                results = self.queryCatalog(limit=limit)
+                if limitactual == limit and limitactual > 0:
+                    results = results[:limit]
+                elif limitactual == limit and limitactual < 0:
+                    results = results
+                else:
+                    results = results[limitactual:]
+        return results
+
     def haslimit(self, items):
         limit = self.data.limit
         senselimit = None
@@ -289,6 +305,7 @@ class Renderer(base.Renderer):
         else:
             result = True
         return result
+
 
 class AddForm(z3cformhelper.AddForm):
 
