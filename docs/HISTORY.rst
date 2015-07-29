@@ -1,11 +1,11 @@
 Changelog
 =========
 
-1.10 (unreleased)
+1.10 (2015-07-29)
 -----------------
 
-- Nothing changed yet.
-
+* Afegir veure mes al query portlet per la resta de continguts [Pilar Marinas]
+* Despublicar slider segons data venciment [Pilar Marinas]
 
 1.9 (2015-03-19)
 ----------------
