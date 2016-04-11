@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.11 (unreleased)
+1.11 (2016-04-11)
 -----------------
 
-- Nothing changed yet.
-
+* solved links in templates [roberto.diaz]
 
 1.10 (2015-07-29)
 -----------------
