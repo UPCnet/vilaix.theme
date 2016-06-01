@@ -33,7 +33,8 @@ setup(name='vilaix.theme',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'genweb.theme'
+          'genweb.theme',
+          'Products.PloneFormGen',
       ],
       entry_points="""
       # -*- Entry points: -*-

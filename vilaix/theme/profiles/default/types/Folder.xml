@@ -25,6 +25,7 @@
   <element value="News Item"/>
   <element value="Slider"/>
   <element value="Tramit"/>
+  <element value="FormFolder"/>
  </property>
  <property name="allow_discussion">False</property>
  <property name="default_view">folder_summary_view</property>
