@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.12 (unreleased)
+1.12 (2016-06-03)
 -----------------
 
-- Nothing changed yet.
-
+* Added FormGen [sandra.saornil]
 
 1.11 (2016-04-11)
 -----------------
