@@ -20,7 +20,7 @@ from plone.app.contenttypes.interfaces import INewsItem
 
 
 class INoticiaDestacadaPortlet(IPortletDataProvider):
-    """ Defines a new portlet 
+    """ Defines a new portlet
     """
 
 
@@ -46,55 +46,54 @@ class Renderer(base.Renderer):
     # @ram.cache(render_cachekey)
     def render(self):
         return xhtml_compress(self._template())
-  
-    def abrevia(self, summary, sumlenght):   
+
+    def abrevia(self, summary, sumlenght):
         """ Retalla contingut de cadenes
-        """  
+        """
         i=0
         bb=''
 
         if sumlenght<len(summary):
             bb=summary[:sumlenght]
-            
+
             lastspace = bb.rfind(' ')
             cutter = lastspace
             precut = bb[0:cutter]
 
             if precut.count('<b>')>precut.count('</b>'):
                 cutter = summary.find('</b>',lastspace)+4
-            bb=summary[0:cutter]  
-            
+            bb=summary[0:cutter]
+
             if bb.count('<p')>precut.count('</p'):
                 bb+='...</p>'
             else:
                 bb=bb+'...'
         else:
             bb=summary
-             
-        return bb 
 
-   
+        return bb
+
     def retornaDestacats(self):
         """ Mostra la primera noticia destacada
         """
         context = self.context
         # urltool = getToolByName(context, 'portal_url').getPortalObject()
-        # path = urltool.absolute_url() + '/news/noticies_destacades'   
-        destacats = context.portal_catalog.searchResults(portal_type = 'News Item',
-                                                         review_state=['published',],
-                                                         destacat = True,
+        # path = urltool.absolute_url() + '/news/noticies_destacades'
+        destacats = context.portal_catalog.searchResults(portal_type='News Item',
+                                                         review_state=['published'],
+                                                         destacat=True,
                                                          sort_on='modified',
                                                          sort_order='reverse',
-                                                        )
-        destacats = destacats[:1] # Retornem el primer
+                                                         )
+        destacats = destacats[:1]  # Retornem el primer
 
         data = [dict(id=a.id,
-                     description =self.abrevia(a.Description,250), 
-                     url=a.getURL(),                    
+                     description=self.abrevia(a.Description, 250),
+                     url=a.getURL(),
                      title=a.Title,
-                     new = a.getObject(),
-                     image = a.getObject().image,
-                     Text = self.abrevia(a.getObject().text.raw,250)) for a in destacats]
+                     new=a.getObject(),
+                     image=a.getObject().image,
+                     Text=self.abrevia(a.getObject().text.raw, 250)) for a in destacats]
 
         return data
 
@@ -102,8 +101,7 @@ class Renderer(base.Renderer):
     def _data(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
-        portal_state = getMultiAdapter((context, self.request),
-            name='plone_portal_state')
+        portal_state = getMultiAdapter((context, self.request), name='plone_portal_state')
         path = portal_state.navigation_root_path()
         limit = self.data.count
         state = self.data.state
@@ -112,8 +110,9 @@ class Renderer(base.Renderer):
                        path=path,
                        sort_on='Date',
                        sort_order='reverse',
-                       sort_limit=limit)[:limit]      
-   
+                       sort_limit=limit)[:limit]
+
+
 class AddForm(base.AddForm):
     form_fields = form.Fields(INoticiaDestacadaPortlet)
     label = _(u"Add News Portlet")

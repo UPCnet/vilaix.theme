@@ -104,14 +104,13 @@ class Renderer(base.Renderer):
         else:
             return False
 
-    @memoize
+    #@memoize
     def have_events_folder(self):
         return 'events' in self.navigation_root_object.objectIds()
 
     def all_events_link(self):
         if self.have_events_folder:
             events = self.portal.esdeveniments
-            #events = self.portal.events
             return '%s/esdeveniments' % events.absolute_url()
         else:
             return '%s/events_listing' % self.portal_url
@@ -126,35 +125,28 @@ class Renderer(base.Renderer):
     def abrevia(self, summary, sumlenght):
         """ Retalla contingut de cadenes
         """
-        i=0
-        bb=''
-
-        if sumlenght<len(summary):
-            bb=summary[:sumlenght]
-
+        bb = ''
+        if sumlenght < len(summary):
+            bb = summary[:sumlenght]
             lastspace = bb.rfind(' ')
             cutter = lastspace
             precut = bb[0:cutter]
-
-            if precut.count('<b>')>precut.count('</b>'):
-                cutter = summary.find('</b>',lastspace)+4
-            bb=summary[0:cutter]
-
-            if bb.count('<p')>precut.count('</p'):
-                bb+='...</p>'
+            if precut.count('<b>') > precut.count('</b>'):
+                cutter = summary.find('</b>', lastspace)+4
+            bb = summary[0:cutter]
+            if bb.count('<p') > precut.count('</p'):
+                bb += '...</p>'
             else:
-                bb=bb+'...'
+                bb = bb+'...'
         else:
-            bb=summary
+            bb = summary
 
         return bb
 
     def textEsdeveniment(self, a):
-        #return self.abrevia(a.getObject().text.raw,100)
-        #return self.abrevia(a.getObject().SearchableText(),100)
         return self.abrevia(a.getObject().description,100)
 
-    @memoize
+    #@memoize
     def _data(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
@@ -170,41 +162,41 @@ class Renderer(base.Renderer):
                                'range': 'min'
                                },
                           start={'query': [yesterday, tomorrow],
-                               'range': 'min:max'
-                               },
+                                 'range': 'min:max'
+                                 },
                           path=path,
                           sort_on='start',
                           sort_limit=limit)[:limit]
         if len(results) < limit:
-          limit = len(results)
+            limit = len(results)
 
         count = len(results)
 
         if count < limit:
             results2 = catalog(portal_type=('Event'),
-                       review_state=state,
-                       end={'query': now,
-                            'range': 'min'
-                            },
-                       start={'query': yesterday,
-                              'range': 'max'
-                            },
-                       path=path,
-                       sort_on='start',
-                       sort_limit=limit - count)[:limit - count]
+                               review_state=state,
+                               end={'query': now,
+                                    'range': 'min'
+                                    },
+                               start={'query': yesterday,
+                                      'range': 'max'
+                                      },
+                               path=path,
+                               sort_on='start',
+                               sort_limit=limit - count)[:limit - count]
             count = len(results + results2)
             if count < limit:
                 results3 = catalog(portal_type=('Event'),
-                           review_state=state,
-                           end={'query': now,
-                                'range': 'min'
-                                },
-                       start={'query': tomorrow,
-                              'range': 'min'
-                            },
-                       path=path,
-                       sort_on='start',
-                       sort_limit=limit - count)[:limit - count]
+                                   review_state=state,
+                                   end={'query': now,
+                                        'range': 'min'
+                                        },
+                                   start={'query': tomorrow,
+                                          'range': 'min'
+                                          },
+                                   path=path,
+                                   sort_on='start',
+                                   sort_limit=limit - count)[:limit - count]
                 return results + results2 + results3
             else:
                 return results + results2

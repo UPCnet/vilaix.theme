@@ -298,7 +298,7 @@ class Renderer(base.Renderer):
         limit = self.data.limit
         senselimit = None
         results = self.queryCatalog(limit=senselimit)
-        if limit == None:
+        if limit is None:
             result = False
         elif limit == len(results):
             result = False
