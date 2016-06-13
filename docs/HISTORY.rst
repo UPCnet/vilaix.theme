@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.13 (unreleased)
+1.13 (2016-06-13)
 -----------------
 
-- Nothing changed yet.
-
+* changes solved homepage [roberto.diaz]
 
 1.12 (2016-06-03)
 -----------------
