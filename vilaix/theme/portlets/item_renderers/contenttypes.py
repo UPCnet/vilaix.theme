@@ -46,7 +46,7 @@ class EventPortletItemRenderer(PortletItemRenderer):
 
     def getText(self):
         #return self.cropText(self.item.getObject().SearchableText(), 100)
-        return self.cropText(self.item.getObject().Description(), 100)
+        return self.abrevia(self.item.getObject().Description(), 100)
 
     def getMonthAbbr(self, data):
         context = aq_inner(self.context)
@@ -76,7 +76,7 @@ class NewsPortletItemRenderer(PortletItemRenderer):
     css_class = 'noticies clearfix'
 
     def getText(self):
-        return self.cropText(self.item.getObject().text.raw, 230)
+        return self.abrevia(self.item.getObject().text.raw, 230)
 
 
 @adapter(IEquipament)
