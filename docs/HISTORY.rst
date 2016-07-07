@@ -1,11 +1,12 @@
 Changelog
 =========
 
-1.14 (unreleased)
+1.14 (2016-07-07)
 -----------------
 
-- Nothing changed yet.
-
+* Fix bug: text crop not closing html tags [sandra.saornil]
+*  [sandra.saornil]
+* Replaced by "abrevia" method, added <strong> tag closing [sandra.saornil]
 
 1.13 (2016-06-13)
 -----------------
