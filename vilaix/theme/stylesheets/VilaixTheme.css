@@ -1,4 +1,4 @@
-/*
+/*!
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
@@ -11,7 +11,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /* line 15, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa {
   display: inline-block;
@@ -72,7 +71,7 @@
 /* line 54, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-li {
   position: absolute;
-  left: -2.143em;
+  left: -2.142857142857143em;
   width: 2.142857142857143em;
   top: 0.14285714285714285em;
   text-align: center;
@@ -80,7 +79,7 @@
 
 /* line 61, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-li.fa-lg {
-  left: -1.857em;
+  left: -1.8571428571428572em;
 }
 
 /* line 64, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
@@ -119,65 +118,45 @@
 }
 
 @-moz-keyframes spin {
-  /* line 88, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   0% {
     -moz-transform: rotate(0deg);
   }
-
-  /* line 91, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   100% {
     -moz-transform: rotate(359deg);
   }
 }
-
 @-webkit-keyframes spin {
-  /* line 96, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   0% {
     -webkit-transform: rotate(0deg);
   }
-
-  /* line 99, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   100% {
     -webkit-transform: rotate(359deg);
   }
 }
-
 @-o-keyframes spin {
-  /* line 104, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   0% {
     -o-transform: rotate(0deg);
   }
-
-  /* line 107, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   100% {
     -o-transform: rotate(359deg);
   }
 }
-
 @-ms-keyframes spin {
-  /* line 112, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   0% {
     -ms-transform: rotate(0deg);
   }
-
-  /* line 115, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   100% {
     -ms-transform: rotate(359deg);
   }
 }
-
 @keyframes spin {
-  /* line 120, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   0% {
     transform: rotate(0deg);
   }
-
-  /* line 123, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
   100% {
     transform: rotate(359deg);
   }
 }
-
 /* line 127, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
@@ -238,7 +217,7 @@
   vertical-align: middle;
 }
 
-/* line 176, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 175, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-stack-1x,
 .fa-stack-2x {
   position: absolute;
@@ -354,7 +333,7 @@
   content: "\f012";
 }
 
-/* line 248, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 247, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-gear:before,
 .fa-cog:before {
   content: "\f013";
@@ -410,7 +389,7 @@
   content: "\f01d";
 }
 
-/* line 282, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 281, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-rotate-right:before,
 .fa-repeat:before {
   content: "\f01e";
@@ -546,7 +525,7 @@
   content: "\f03a";
 }
 
-/* line 364, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 363, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-dedent:before,
 .fa-outdent:before {
   content: "\f03b";
@@ -587,7 +566,7 @@
   content: "\f043";
 }
 
-/* line 389, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 388, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-edit:before,
 .fa-pencil-square-o:before {
   content: "\f044";
@@ -738,7 +717,7 @@
   content: "\f063";
 }
 
-/* line 480, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 479, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-mail-forward:before,
 .fa-share:before {
   content: "\f064";
@@ -799,7 +778,7 @@
   content: "\f070";
 }
 
-/* line 517, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 516, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-warning:before,
 .fa-exclamation-triangle:before {
   content: "\f071";
@@ -895,7 +874,7 @@
   content: "\f084";
 }
 
-/* line 575, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 574, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-gears:before,
 .fa-cogs:before {
   content: "\f085";
@@ -1111,13 +1090,13 @@
   content: "\f0b2";
 }
 
-/* line 705, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 704, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-group:before,
 .fa-users:before {
   content: "\f0c0";
 }
 
-/* line 709, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 708, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-chain:before,
 .fa-link:before {
   content: "\f0c1";
@@ -1133,13 +1112,13 @@
   content: "\f0c3";
 }
 
-/* line 719, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 718, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-cut:before,
 .fa-scissors:before {
   content: "\f0c4";
 }
 
-/* line 723, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 722, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-copy:before,
 .fa-files-o:before {
   content: "\f0c5";
@@ -1150,7 +1129,7 @@
   content: "\f0c6";
 }
 
-/* line 730, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 729, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-save:before,
 .fa-floppy-o:before {
   content: "\f0c7";
@@ -1251,19 +1230,19 @@
   content: "\f0db";
 }
 
-/* line 791, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 790, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-unsorted:before,
 .fa-sort:before {
   content: "\f0dc";
 }
 
-/* line 795, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 794, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-sort-down:before,
 .fa-sort-asc:before {
   content: "\f0dd";
 }
 
-/* line 799, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 798, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-sort-up:before,
 .fa-sort-desc:before {
   content: "\f0de";
@@ -1279,19 +1258,19 @@
   content: "\f0e1";
 }
 
-/* line 809, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 808, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-rotate-left:before,
 .fa-undo:before {
   content: "\f0e2";
 }
 
-/* line 813, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 812, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-legal:before,
 .fa-gavel:before {
   content: "\f0e3";
 }
 
-/* line 817, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 816, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-dashboard:before,
 .fa-tachometer:before {
   content: "\f0e4";
@@ -1307,7 +1286,7 @@
   content: "\f0e6";
 }
 
-/* line 827, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 826, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-flash:before,
 .fa-bolt:before {
   content: "\f0e7";
@@ -1323,7 +1302,7 @@
   content: "\f0e9";
 }
 
-/* line 837, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 836, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-paste:before,
 .fa-clipboard:before {
   content: "\f0ea";
@@ -1479,7 +1458,7 @@
   content: "\f10a";
 }
 
-/* line 931, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 930, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-mobile-phone:before,
 .fa-mobile:before {
   content: "\f10b";
@@ -1510,7 +1489,7 @@
   content: "\f111";
 }
 
-/* line 950, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 949, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-mail-reply:before,
 .fa-reply:before {
   content: "\f112";
@@ -1586,7 +1565,7 @@
   content: "\f122";
 }
 
-/* line 997, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 995, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-star-half-empty:before,
 .fa-star-half-full:before,
 .fa-star-half-o:before {
@@ -1608,7 +1587,7 @@
   content: "\f126";
 }
 
-/* line 1010, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1009, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-unlink:before,
 .fa-chain-broken:before {
   content: "\f127";
@@ -1799,25 +1778,25 @@
   content: "\f14e";
 }
 
-/* line 1125, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1124, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-toggle-down:before,
 .fa-caret-square-o-down:before {
   content: "\f150";
 }
 
-/* line 1129, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1128, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-toggle-up:before,
 .fa-caret-square-o-up:before {
   content: "\f151";
 }
 
-/* line 1133, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1132, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-toggle-right:before,
 .fa-caret-square-o-right:before {
   content: "\f152";
 }
 
-/* line 1137, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1136, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-euro:before,
 .fa-eur:before {
   content: "\f153";
@@ -1828,19 +1807,19 @@
   content: "\f154";
 }
 
-/* line 1144, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1143, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-dollar:before,
 .fa-usd:before {
   content: "\f155";
 }
 
-/* line 1148, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1147, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-rupee:before,
 .fa-inr:before {
   content: "\f156";
 }
 
-/* line 1154, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1151, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-cny:before,
 .fa-rmb:before,
 .fa-yen:before,
@@ -1848,20 +1827,20 @@
   content: "\f157";
 }
 
-/* line 1159, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1157, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-ruble:before,
 .fa-rouble:before,
 .fa-rub:before {
   content: "\f158";
 }
 
-/* line 1163, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1162, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-won:before,
 .fa-krw:before {
   content: "\f159";
 }
 
-/* line 1167, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1166, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-bitcoin:before,
 .fa-btc:before {
   content: "\f15a";
@@ -2117,7 +2096,7 @@
   content: "\f190";
 }
 
-/* line 1321, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1320, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-toggle-left:before,
 .fa-caret-square-o-left:before {
   content: "\f191";
@@ -2138,7 +2117,7 @@
   content: "\f194";
 }
 
-/* line 1334, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
+/* line 1333, ../../../../genweb.theme/genweb/theme/bootstrap/scss/compass_twitter_bootstrap/_font-awesome.scss */
 .fa-turkish-lira:before,
 .fa-try:before {
   content: "\f195";
@@ -2149,7 +2128,7 @@
   content: "\f196";
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   /* line 5, ../scss/_overrides.scss */
   #portal-header h1.pull-left {
     height: 46px;
@@ -2250,7 +2229,7 @@ h2 a, h3 a {
   background-color: #e7e4e3;
   background-image: none !important;
   border: none !important;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 transparent;
 }
 
 /* line 83, ../scss/VilaixTheme.scss */
@@ -2404,12 +2383,12 @@ h2 a, h3 a {
 
 /* line 205, ../scss/VilaixTheme.scss */
 .imatge_Destacada, .text_Destacat {
-  margin: 0!important;
+  margin: 0 !important;
 }
 
 /* line 208, ../scss/VilaixTheme.scss */
 .text_Destacat {
-  margin-left: 10px!important;
+  margin-left: 10px !important;
 }
 
 /* line 211, ../scss/VilaixTheme.scss */
@@ -2420,7 +2399,7 @@ h2 a, h3 a {
 /* line 214, ../scss/VilaixTheme.scss */
 .link_footer_destacat {
   margin-left: 10px !important;
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
   margin-top: 10px;
 }
 
@@ -2596,7 +2575,7 @@ b, strong {
 #portal-globalnav .nav > li > a {
   background-color: transparent;
   border-right: medium none;
-  color: white!important;
+  color: white !important;
   font-size: 14px;
   font-weight: 600;
   margin-right: 3px;
@@ -2636,13 +2615,19 @@ b, strong {
   width: 32.15%;
 }
 
-/* line 392, ../scss/VilaixTheme.scss */
+/* line 393, ../scss/VilaixTheme.scss */
+#portal-column-content .span5 {
+  margin-left: 2.2%;
+  width: 39.8773%;
+}
+
+/* line 398, ../scss/VilaixTheme.scss */
 #content-area {
   margin-top: 0.8em;
   padding-bottom: 2em;
 }
 
-/* line 402, ../scss/VilaixTheme.scss */
+/* line 408, ../scss/VilaixTheme.scss */
 .text_Destacat h3 {
   font-size: 23px;
   font-weight: 600;
@@ -2650,13 +2635,13 @@ b, strong {
   margin-top: 0;
 }
 
-/* line 411, ../scss/VilaixTheme.scss */
+/* line 417, ../scss/VilaixTheme.scss */
 .portletCalendar .ploneCalendar td.event, .portletCalendar .ploneCalendar td.todayevent {
   background: none repeat scroll 0 0 #F2F2F2;
-  text-shadow: 0 -1px white;
+  text-shadow: 0 -1px #fff;
 }
 
-/* line 415, ../scss/VilaixTheme.scss */
+/* line 421, ../scss/VilaixTheme.scss */
 .portletCalendar .ploneCalendar td.event a, .portletCalendar .ploneCalendar td.todayevent a {
   background: none repeat scroll 0 0 #DDDDDD;
   border-radius: 10px 10px 10px 10px;
@@ -2664,37 +2649,37 @@ b, strong {
   padding: 1px 5px;
 }
 
-/* line 421, ../scss/VilaixTheme.scss */
+/* line 427, ../scss/VilaixTheme.scss */
 .portletCalendar .ploneCalendar td:not(:empty) {
   background: none repeat scroll 0 0 #FFFFFF;
   border-radius: 50px 50px 50px 50px;
   text-shadow: 0 1px #FFFFFF;
 }
 
-/* line 426, ../scss/VilaixTheme.scss */
+/* line 432, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments ul a {
   font-size: 16px;
   font-weight: 600;
   line-height: 21px;
 }
 
-/* line 431, ../scss/VilaixTheme.scss */
+/* line 437, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments li {
-  margin-left: 0px!important;
+  margin-left: 0px !important;
 }
 
-/* line 435, ../scss/VilaixTheme.scss */
+/* line 441, ../scss/VilaixTheme.scss */
 #baners img:hover {
   opacity: 0.75;
   transition: 0.5s ease-out 0s;
 }
 
-/* line 436, ../scss/VilaixTheme.scss */
+/* line 442, ../scss/VilaixTheme.scss */
 #baners a:hover {
   text-decoration: none;
 }
 
-/* line 437, ../scss/VilaixTheme.scss */
+/* line 443, ../scss/VilaixTheme.scss */
 #content-area, #portal-column-content {
   margin-bottom: 0;
   margin-top: 10px;
@@ -2704,73 +2689,73 @@ b, strong {
   transition: box-shadow 0.5s ease-out 0s;
 }
 
-/* line 448, ../scss/VilaixTheme.scss */
+/* line 454, ../scss/VilaixTheme.scss */
 .span12 #baners li {
   display: inline;
 }
 
-/* line 451, ../scss/VilaixTheme.scss */
+/* line 457, ../scss/VilaixTheme.scss */
 .span12 #baners li:hover {
   text-decoration: none;
 }
 
-/* line 454, ../scss/VilaixTheme.scss */
+/* line 460, ../scss/VilaixTheme.scss */
 .span12 #baners li img {
   box-shadow: 2px 2px 2px #777777;
   margin-right: 55px;
   margin-top: 10px;
 }
 
-/* line 459, ../scss/VilaixTheme.scss */
+/* line 465, ../scss/VilaixTheme.scss */
 .span12 #baners li:first-child img {
   margin-top: 0;
 }
 
-/* line 462, ../scss/VilaixTheme.scss */
+/* line 468, ../scss/VilaixTheme.scss */
 .span12 #baners li:last-child img {
   margin-bottom: 10px;
 }
 
-/* line 465, ../scss/VilaixTheme.scss */
+/* line 471, ../scss/VilaixTheme.scss */
 .span12 #baners li:last-child img {
   margin-right: 0;
 }
 
-/* line 468, ../scss/VilaixTheme.scss */
+/* line 474, ../scss/VilaixTheme.scss */
 .navbar-inner {
   background-color: transparent;
 }
 
-/* line 471, ../scss/VilaixTheme.scss */
+/* line 477, ../scss/VilaixTheme.scss */
 #portal-header:not(.no-image) + #portal-globalnav .navbar-inner {
   border-radius: 0 0 0 0 !important;
   margin-top: 0;
 }
 
-/* line 475, ../scss/VilaixTheme.scss */
+/* line 481, ../scss/VilaixTheme.scss */
 #portal-globalnav .navbar-inner {
   background: none repeat scroll 0 0 #0072b8;
   border-bottom: medium none;
   padding: 0 0 0 20px;
 }
 
-/* line 481, ../scss/VilaixTheme.scss */
+/* line 487, ../scss/VilaixTheme.scss */
 #portal-globalnav {
   margin-top: 0;
 }
 
-/* line 484, ../scss/VilaixTheme.scss */
+/* line 490, ../scss/VilaixTheme.scss */
 #eines {
   font-size: 12px;
   margin-top: 10px;
 }
 
-/* line 489, ../scss/VilaixTheme.scss */
+/* line 495, ../scss/VilaixTheme.scss */
 #eines > li > a {
   color: #333;
 }
 
-/* line 492, ../scss/VilaixTheme.scss */
+/* line 498, ../scss/VilaixTheme.scss */
 .thumbnail, .thumb-img img, .photoAlbumEntry a {
   border: 0 none;
   border-radius: 0 0 0 0;
@@ -2781,35 +2766,35 @@ b, strong {
   box-shadow: none;
 }
 
-/* line 501, ../scss/VilaixTheme.scss */
+/* line 507, ../scss/VilaixTheme.scss */
 #mySlider {
   box-shadow: none;
   margin: 0 0 15px;
   padding: 0;
 }
 
-/* line 506, ../scss/VilaixTheme.scss */
+/* line 512, ../scss/VilaixTheme.scss */
 .template-homepage #mySlider {
   margin: 0;
 }
 
-/* line 509, ../scss/VilaixTheme.scss */
+/* line 515, ../scss/VilaixTheme.scss */
 .carousel img {
   border: 0;
 }
 
-/* line 510, ../scss/VilaixTheme.scss */
+/* line 516, ../scss/VilaixTheme.scss */
 .carousel img:hover {
   cursor: pointer;
   border: 0;
 }
 
-/* line 514, ../scss/VilaixTheme.scss */
+/* line 520, ../scss/VilaixTheme.scss */
 .carousel .active > img, .carousel .selected > img {
   border-radius: 0;
 }
 
-/* line 520, ../scss/VilaixTheme.scss */
+/* line 526, ../scss/VilaixTheme.scss */
 .carousel-inner {
   border-image: none;
   border-radius: 0 0 0 0;
@@ -2820,7 +2805,7 @@ b, strong {
   box-shadow: none;
 }
 
-/* line 530, ../scss/VilaixTheme.scss */
+/* line 536, ../scss/VilaixTheme.scss */
 .menu_peu {
   background: none repeat scroll 0 0 #0072b8;
   border: 0 none;
@@ -2828,39 +2813,39 @@ b, strong {
   width: 99.8% !important;
 }
 
-/* line 536, ../scss/VilaixTheme.scss */
+/* line 542, ../scss/VilaixTheme.scss */
 #peu {
   background: none repeat scroll 0 0 #FFFFFF;
   border-top: 0 none;
   font-size: 92.3077%;
 }
 
-/* line 541, ../scss/VilaixTheme.scss */
+/* line 547, ../scss/VilaixTheme.scss */
 #peu .container {
   border-top: 0 none;
   margin-top: 0;
 }
 
-/* line 545, ../scss/VilaixTheme.scss */
+/* line 551, ../scss/VilaixTheme.scss */
 .menu_peu li a {
   color: white;
   font-size: 12px;
   margin-left: 10px;
 }
 
-/* line 550, ../scss/VilaixTheme.scss */
+/* line 556, ../scss/VilaixTheme.scss */
 .menu_peu_links ul li {
   border-bottom: 1px solid #5995B9;
   padding-bottom: 4px;
   padding-top: 4px;
 }
 
-/* line 555, ../scss/VilaixTheme.scss */
+/* line 561, ../scss/VilaixTheme.scss */
 .portlet_mes_consultat {
   margin-bottom: 20px;
 }
 
-/* line 559, ../scss/VilaixTheme.scss */
+/* line 565, ../scss/VilaixTheme.scss */
 .portlet-static-social-links {
   background: none repeat scroll 0 0 white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -2869,7 +2854,7 @@ b, strong {
   text-align: center;
 }
 
-/* line 566, ../scss/VilaixTheme.scss */
+/* line 572, ../scss/VilaixTheme.scss */
 .portlet-static-social-links img {
   height: auto;
   margin-left: 6px;
@@ -2877,28 +2862,28 @@ b, strong {
   width: 50px;
 }
 
-/* line 572, ../scss/VilaixTheme.scss */
+/* line 578, ../scss/VilaixTheme.scss */
 .portlet-static-social-links img:hover {
   opacity: 0.9;
   transition: all 0.2s ease-in-out 0s;
 }
 
-/* line 573, ../scss/VilaixTheme.scss */
+/* line 579, ../scss/VilaixTheme.scss */
 .portlet-noticies {
   padding-bottom: 3px;
 }
 
-/* line 576, ../scss/VilaixTheme.scss */
+/* line 582, ../scss/VilaixTheme.scss */
 .portlet-noticies .icon-news {
   display: none;
 }
 
-/* line 578, ../scss/VilaixTheme.scss */
+/* line 584, ../scss/VilaixTheme.scss */
 .portlet-noticies .list-portlet li {
   border-top: 0;
 }
 
-/* line 581, ../scss/VilaixTheme.scss */
+/* line 587, ../scss/VilaixTheme.scss */
 .dropdown-menu {
   background: none repeat scroll 0 0 #555;
   border-radius: 0;
@@ -2906,7 +2891,7 @@ b, strong {
   border: 1px solid #555555;
 }
 
-/* line 587, ../scss/VilaixTheme.scss */
+/* line 593, ../scss/VilaixTheme.scss */
 .dropdown-menu a {
   clear: both;
   color: #FFFFFF;
@@ -2917,118 +2902,117 @@ b, strong {
   white-space: nowrap;
 }
 
-/* line 596, ../scss/VilaixTheme.scss */
+/* line 602, ../scss/VilaixTheme.scss */
 .userrole-authenticated .dropdown-menu {
   background: none repeat scroll 0 0 #000;
 }
 
-/* line 600, ../scss/VilaixTheme.scss */
+/* line 606, ../scss/VilaixTheme.scss */
 .navbar .nav > li > .dropdown-menu:after, .navbar .contentViews > li > .dropdown-menu:after, .navbar .configlets > li > .dropdown-menu:after, .navbar .formTabs > li > .dropdown-menu:after {
   border-bottom: 6px solid #555;
 }
 
-/* line 603, ../scss/VilaixTheme.scss */
+/* line 609, ../scss/VilaixTheme.scss */
 .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
   background-color: #444444;
   background-image: none;
 }
 
-/* line 607, ../scss/VilaixTheme.scss */
+/* line 613, ../scss/VilaixTheme.scss */
 .portletStaticText ul {
   font-size: 14px;
   list-style: disc outside none;
   margin-left: 15px;
 }
 
-/* line 612, ../scss/VilaixTheme.scss */
+/* line 618, ../scss/VilaixTheme.scss */
 .portletStaticText li {
   margin-top: 10px;
 }
 
-/* line 616, ../scss/VilaixTheme.scss */
+/* line 622, ../scss/VilaixTheme.scss */
 .carousel-control {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: none repeat scroll 0 0 transparent;
   opacity: 1;
   top: 45%;
   margin-top: 0;
   line-height: 30px;
 }
 
-/* line 623, ../scss/VilaixTheme.scss */
+/* line 629, ../scss/VilaixTheme.scss */
 .carousel-control:hover {
   background: white;
   opacity: 1;
 }
 
-/* line 627, ../scss/VilaixTheme.scss */
+/* line 633, ../scss/VilaixTheme.scss */
 .breadcrumb a {
   color: #777;
 }
 
-/* line 634, ../scss/VilaixTheme.scss */
+/* line 640, ../scss/VilaixTheme.scss */
 #portal-header h1 {
   float: left;
   margin-bottom: 5px;
   margin-top: 15px;
 }
 
-/* line 640, ../scss/VilaixTheme.scss */
+/* line 646, ../scss/VilaixTheme.scss */
 .text_Destacat {
   float: left;
   width: 65%;
 }
 
-/* line 644, ../scss/VilaixTheme.scss */
+/* line 650, ../scss/VilaixTheme.scss */
 .imatge_Destacada {
   float: left;
   width: 30%;
 }
 
-/* line 649, ../scss/VilaixTheme.scss */
+/* line 655, ../scss/VilaixTheme.scss */
 #baners ul li {
   background: none repeat scroll 0 0 transparent;
 }
 
-/* line 652, ../scss/VilaixTheme.scss */
+/* line 658, ../scss/VilaixTheme.scss */
 #portal-globalnav .navbar .brand {
   color: #FFFFFF;
   text-shadow: none;
 }
 
-/* line 656, ../scss/VilaixTheme.scss */
+/* line 662, ../scss/VilaixTheme.scss */
 input, button, select, textarea {
   font-family: 'Open Sans',sans-serif;
 }
 
-/* line 659, ../scss/VilaixTheme.scss */
+/* line 665, ../scss/VilaixTheme.scss */
 .nav.nav-list.accordion {
   padding-left: 0;
 }
 
-@media only screen
-and (max-width : 640px) {
-  /* line 666, ../scss/VilaixTheme.scss */
+@media only screen and (max-width: 640px) {
+  /* line 672, ../scss/VilaixTheme.scss */
   #portal-globalnav .navbar-inner {
     padding: 0 0 0 5px;
   }
 
-  /* line 669, ../scss/VilaixTheme.scss */
+  /* line 675, ../scss/VilaixTheme.scss */
   .navbar .btn-navbar, .navbar .btn-navbar:active {
     background-color: #444444;
     background-image: none;
   }
 
-  /* line 673, ../scss/VilaixTheme.scss */
+  /* line 679, ../scss/VilaixTheme.scss */
   #portal-globalnav .nav-collapse .nav > li > a, #portal-globalnav .nav-collapse .contentViews > li > a, #portal-globalnav .nav-collapse .configlets > li > a, #portal-globalnav .nav-collapse .formTabs > li > a, #portal-globalnav .nav-collapse .dropdown-menu a, .nav-collapse-eines.nav-collapse .nav > li > a, .nav-collapse-eines.nav-collapse .contentViews > li > a, .nav-collapse-eines.nav-collapse .configlets > li > a, .nav-collapse-eines.nav-collapse .formTabs > li > a, .nav-collapse-eines.nav-collapse .dropdown-menu a {
     padding: 5px 15px 5px 5px;
   }
 
-  /* line 676, ../scss/VilaixTheme.scss */
+  /* line 682, ../scss/VilaixTheme.scss */
   #portal-globalnav .nav > li {
     border-bottom: 1px solid;
   }
 
-  /* line 679, ../scss/VilaixTheme.scss */
+  /* line 685, ../scss/VilaixTheme.scss */
   #content-area, #portal-column-content {
     margin-top: 5px;
     padding-bottom: 0;
@@ -3036,17 +3020,17 @@ and (max-width : 640px) {
     padding-right: 0;
   }
 
-  /* line 685, ../scss/VilaixTheme.scss */
+  /* line 691, ../scss/VilaixTheme.scss */
   #portal-breadcrumbs {
     margin-top: 10px;
   }
 
-  /* line 690, ../scss/VilaixTheme.scss */
+  /* line 696, ../scss/VilaixTheme.scss */
   .subnavbar {
     margin-bottom: 15px;
   }
 
-  /* line 694, ../scss/VilaixTheme.scss */
+  /* line 700, ../scss/VilaixTheme.scss */
   #baners ul {
     background: none repeat scroll 0 0 white;
     border: 8px solid white;
@@ -3055,100 +3039,100 @@ and (max-width : 640px) {
     margin-left: 0;
   }
 
-  /* line 701, ../scss/VilaixTheme.scss */
+  /* line 707, ../scss/VilaixTheme.scss */
   #baners ul li:last-child {
     margin-bottom: 0;
   }
 
-  /* line 704, ../scss/VilaixTheme.scss */
+  /* line 710, ../scss/VilaixTheme.scss */
   #portal-column-content .span9, #portal-column-content .span4 {
     margin-left: 0;
   }
 
-  /* line 707, ../scss/VilaixTheme.scss */
+  /* line 713, ../scss/VilaixTheme.scss */
   [class*="span"], .cella {
     margin-bottom: 15px;
   }
 
-  /* line 710, ../scss/VilaixTheme.scss */
+  /* line 716, ../scss/VilaixTheme.scss */
   .imatge_Destacada {
-    margin-bottom: 10px!important;
+    margin-bottom: 10px !important;
   }
 
-  /* line 711, ../scss/VilaixTheme.scss */
+  /* line 717, ../scss/VilaixTheme.scss */
   .text_Destacat {
     margin-left: 0 !important;
   }
 
-  /* line 712, ../scss/VilaixTheme.scss */
+  /* line 718, ../scss/VilaixTheme.scss */
   .text_Destacat {
     float: left;
     width: 100%;
   }
 
-  /* line 716, ../scss/VilaixTheme.scss */
+  /* line 722, ../scss/VilaixTheme.scss */
   .imatge_Destacada {
     float: left;
     width: 100%;
   }
 
-  /* line 720, ../scss/VilaixTheme.scss */
+  /* line 726, ../scss/VilaixTheme.scss */
   .link_footer_destacat {
     float: left;
     clear: both;
   }
 
-  /* line 724, ../scss/VilaixTheme.scss */
+  /* line 730, ../scss/VilaixTheme.scss */
   .imatge_Destacada img {
     width: 100%;
   }
 
-  /* line 727, ../scss/VilaixTheme.scss */
+  /* line 733, ../scss/VilaixTheme.scss */
   .header-image {
     background-size: auto;
     background-position: center center;
   }
 
-  /* line 731, ../scss/VilaixTheme.scss */
+  /* line 737, ../scss/VilaixTheme.scss */
   .portletCalendar .ploneCalendar {
     font-size: 100%;
   }
 
-  /* line 734, ../scss/VilaixTheme.scss */
+  /* line 740, ../scss/VilaixTheme.scss */
   .weekdays th {
     padding: 12px;
   }
 
-  /* line 737, ../scss/VilaixTheme.scss */
+  /* line 743, ../scss/VilaixTheme.scss */
   .carousel-inner {
     padding-left: 0;
   }
 
-  /* line 741, ../scss/VilaixTheme.scss */
+  /* line 747, ../scss/VilaixTheme.scss */
   .carousel img {
     width: 100%;
   }
 
-  /* line 744, ../scss/VilaixTheme.scss */
+  /* line 750, ../scss/VilaixTheme.scss */
   .carousel .item {
     margin-left: 0;
     margin-right: 0;
   }
 
-  /* line 748, ../scss/VilaixTheme.scss */
+  /* line 754, ../scss/VilaixTheme.scss */
   #portal-header .btn-navbar.pull-right, #portal-header .btn-navbar.newsImageContainer {
     margin-left: 85%;
     position: absolute;
   }
 
-  /* line 752, ../scss/VilaixTheme.scss */
+  /* line 758, ../scss/VilaixTheme.scss */
   #portal-header h1 {
     width: 260px;
     margin-bottom: -5px;
   }
 }
 /* NOVA NAVEGACIO PAGINA PRINCIPAL */
-/* line 759, ../scss/VilaixTheme.scss */
+/* line 765, ../scss/VilaixTheme.scss */
 .accordion {
   margin-bottom: 18px;
   background: none repeat scroll 0 0 white;
@@ -3161,7 +3145,7 @@ and (max-width : 640px) {
   margin-bottom: 18px;
 }
 
-/* line 771, ../scss/VilaixTheme.scss */
+/* line 777, ../scss/VilaixTheme.scss */
 .accordion-toggle {
   font-size: 14px;
   background-color: #0073B8;
@@ -3180,7 +3164,7 @@ and (max-width : 640px) {
   text-shadow: none !important;
 }
 
-/* line 789, ../scss/VilaixTheme.scss */
+/* line 795, ../scss/VilaixTheme.scss */
 .accordion-heading a:hover {
   background-color: #e7e7e7;
   background-image: -moz-linear-gradient(top, #eeeeee, #dddddd);
@@ -3193,7 +3177,7 @@ and (max-width : 640px) {
   color: #222222;
 }
 
-/* line 801, ../scss/VilaixTheme.scss */
+/* line 807, ../scss/VilaixTheme.scss */
 .accordion-group {
   margin-bottom: 2px;
   border: none;
@@ -3203,7 +3187,7 @@ and (max-width : 640px) {
   background: #fcfcfc;
 }
 
-/* line 812, ../scss/VilaixTheme.scss */
+/* line 816, ../scss/VilaixTheme.scss */
 .accordion-heading a:hover:after,
 .accordion-heading .active a:after,
 .accordion-heading .selected a:after {
@@ -3228,7 +3212,7 @@ and (max-width : 640px) {
   height: 17px;
 }
 
-/* line 834, ../scss/VilaixTheme.scss */
+/* line 840, ../scss/VilaixTheme.scss */
 .accordion-body {
   margin-left: 0;
   margin-right: 0x;
@@ -3241,47 +3225,47 @@ and (max-width : 640px) {
   overflow: visible;
 }
 
-/* line 845, ../scss/VilaixTheme.scss */
+/* line 851, ../scss/VilaixTheme.scss */
 #accordionLogin {
   margin-top: 20px;
   min-height: 280px;
   padding: 20px;
 }
 
-/* line 850, ../scss/VilaixTheme.scss */
+/* line 856, ../scss/VilaixTheme.scss */
 #accordionLogin .accordion-body {
   box-shadow: none;
 }
 
-/* line 853, ../scss/VilaixTheme.scss */
+/* line 859, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul, .subnavbar .nav-list .selected ul {
   border-top: 0 none;
 }
 
-/* line 856, ../scss/VilaixTheme.scss */
+/* line 862, ../scss/VilaixTheme.scss */
 #accordionLogin .accordion-inner {
   border-top: 0;
   margin-top: 25px;
 }
 
-/* line 860, ../scss/VilaixTheme.scss */
+/* line 866, ../scss/VilaixTheme.scss */
 #accordionLogin .accordion-group {
   background: transparent;
 }
 
-/* line 863, ../scss/VilaixTheme.scss */
+/* line 869, ../scss/VilaixTheme.scss */
 .accordion-inner {
   border-top: 1px solid #DEDEDE;
   padding: 0;
 }
 
-/* line 868, ../scss/VilaixTheme.scss */
+/* line 874, ../scss/VilaixTheme.scss */
 h1, h2, h3 {
   color: #444;
   margin-top: 27px;
 }
 
-/* line 872, ../scss/VilaixTheme.scss */
+/* line 878, ../scss/VilaixTheme.scss */
 #portal-column-content {
   background: none repeat scroll 0 0 #FFFFFF;
   box-shadow: none;
@@ -3290,21 +3274,21 @@ h1, h2, h3 {
   padding: 0;
 }
 
-/* line 879, ../scss/VilaixTheme.scss */
+/* line 885, ../scss/VilaixTheme.scss */
 #portal-column-one {
   margin-right: 20px;
 }
 
-/* line 882, ../scss/VilaixTheme.scss */
+/* line 888, ../scss/VilaixTheme.scss */
 .template-homepage #portal-column-content {
   background: transparent;
   box-shadow: none;
   margin-top: 0;
   padding: 5px 0 0;
-  margin-left: 0!important;
+  margin-left: 0 !important;
 }
 
-/* line 889, ../scss/VilaixTheme.scss */
+/* line 895, ../scss/VilaixTheme.scss */
 .liniaBaix, .documentFirstHeading {
   color: #0072B8;
   border-bottom: 1px solid #BEBEBE;
@@ -3316,25 +3300,25 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-/* line 899, ../scss/VilaixTheme.scss */
+/* line 905, ../scss/VilaixTheme.scss */
 #viewlet-below-content-title {
   color: #888888;
   font-size: 11px;
   margin-bottom: 15px;
 }
 
-/* line 904, ../scss/VilaixTheme.scss */
+/* line 910, ../scss/VilaixTheme.scss */
 #portal-breadcrumbs {
   margin-top: 5px;
   font-size: 14px;
 }
 
-/* line 908, ../scss/VilaixTheme.scss */
+/* line 914, ../scss/VilaixTheme.scss */
 #portal-breadcrumbs h2 {
   padding-left: 0;
 }
 
-/* line 911, ../scss/VilaixTheme.scss */
+/* line 917, ../scss/VilaixTheme.scss */
 .documentDescription {
   font-size: 16px;
   color: #777;
@@ -3342,12 +3326,12 @@ h1, h2, h3 {
   font-weight: normal;
 }
 
-/* line 917, ../scss/VilaixTheme.scss */
+/* line 923, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul a span:before, .subnavbar .nav-list .selected ul a span:before {
   top: 2px;
 }
 
-/* line 920, ../scss/VilaixTheme.scss */
+/* line 926, ../scss/VilaixTheme.scss */
 .carousel {
   background: none repeat scroll 0 0 #FFFFFF;
   box-shadow: none;
@@ -3359,29 +3343,29 @@ h1, h2, h3 {
   position: relative;
 }
 
-/* line 930, ../scss/VilaixTheme.scss */
+/* line 936, ../scss/VilaixTheme.scss */
 .navTreeItem li {
   margin-bottom: 0;
 }
 
-/* line 933, ../scss/VilaixTheme.scss */
+/* line 939, ../scss/VilaixTheme.scss */
 .carousel li {
   padding-top: 0;
 }
 
-/* line 934, ../scss/VilaixTheme.scss */
+/* line 940, ../scss/VilaixTheme.scss */
 .carousel_normal .carousel-control {
   margin-top: 0;
   opacity: 0.2;
   top: 30%;
 }
 
-/* line 940, ../scss/VilaixTheme.scss */
+/* line 946, ../scss/VilaixTheme.scss */
 .carousel_mobile {
   display: block;
 }
 
-/* line 943, ../scss/VilaixTheme.scss */
+/* line 949, ../scss/VilaixTheme.scss */
 .list-portlet h2 {
   font-size: 16px;
   font-weight: bold;
@@ -3391,14 +3375,14 @@ h1, h2, h3 {
   text-transform: none;
 }
 
-/* line 951, ../scss/VilaixTheme.scss */
+/* line 957, ../scss/VilaixTheme.scss */
 .list-portlet li .smaller {
   color: #999999;
   font-size: 14px;
   white-space: nowrap;
 }
 
-/* line 956, ../scss/VilaixTheme.scss */
+/* line 962, ../scss/VilaixTheme.scss */
 .noticies .newsImage {
   float: left;
   height: auto;
@@ -3409,55 +3393,55 @@ h1, h2, h3 {
   width: 185px;
 }
 
-/* line 965, ../scss/VilaixTheme.scss */
+/* line 971, ../scss/VilaixTheme.scss */
 #portal-column-content {
   margin-left: 0;
 }
 
-/* line 968, ../scss/VilaixTheme.scss */
+/* line 974, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments ul time {
   color: #000000;
 }
 
-/* line 971, ../scss/VilaixTheme.scss */
+/* line 977, ../scss/VilaixTheme.scss */
 .portlet-esdeveniments ul a {
   border-left: 0 none;
 }
 
-/* line 974, ../scss/VilaixTheme.scss */
+/* line 980, ../scss/VilaixTheme.scss */
 .userrole-anonymous #plone-document-byline {
   display: none;
 }
 
-/* line 975, ../scss/VilaixTheme.scss */
+/* line 981, ../scss/VilaixTheme.scss */
 dd {
   margin-bottom: 10px;
   margin-left: 0;
 }
 
-/* line 979, ../scss/VilaixTheme.scss */
+/* line 985, ../scss/VilaixTheme.scss */
 dt {
   font-size: 16px;
 }
 
-/* line 982, ../scss/VilaixTheme.scss */
+/* line 988, ../scss/VilaixTheme.scss */
 .list-portlet li {
   padding: 8px 0 !important;
 }
 
-/* line 985, ../scss/VilaixTheme.scss */
+/* line 991, ../scss/VilaixTheme.scss */
 .liniaDalt, .tileHeadline {
   border-top: 0;
   box-shadow: none;
 }
 
-/* line 989, ../scss/VilaixTheme.scss */
+/* line 995, ../scss/VilaixTheme.scss */
 .tileItem {
   border-bottom: 1px solid #B2B2B2;
   padding-bottom: 10px;
 }
 
-/* line 994, ../scss/VilaixTheme.scss */
+/* line 1000, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list {
   background: none repeat scroll 0 0 #FFFFFF;
   border: 0 none;
@@ -3467,13 +3451,13 @@ dt {
   padding-right: 0;
 }
 
-/* line 1002, ../scss/VilaixTheme.scss */
+/* line 1008, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list a {
   color: white;
   font-weight: 600;
 }
 
-/* line 1006, ../scss/VilaixTheme.scss */
+/* line 1012, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list a {
   font-size: 13px;
   background-color: #0072B8;
@@ -3493,20 +3477,20 @@ dt {
   text-transform: uppercase;
 }
 
-/* line 1024, ../scss/VilaixTheme.scss */
+/* line 1030, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list li:first-child a {
   border-radius: 0 0 0 0;
   border-top: 0 none !important;
 }
 
-/* line 1028, ../scss/VilaixTheme.scss */
+/* line 1034, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list li:last-child a:only-child {
   border-radius: 0 0 0 0;
 }
 
-/* line 1031, ../scss/VilaixTheme.scss */
+/* line 1037, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul a, .subnavbar .nav-list .selected ul a {
-  background: #eeeeee!important;
+  background: #eeeeee !important;
   border-radius: 0 !important;
   border-right: 0;
   border-top: 0 none !important;
@@ -3518,129 +3502,129 @@ dt {
   padding: 0 !important;
 }
 
-/* line 1044, ../scss/VilaixTheme.scss */
+/* line 1050, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul a span:before, .subnavbar .nav-list .selected ul a span:before {
   color: #444;
 }
 
-/* line 1048, ../scss/VilaixTheme.scss */
+/* line 1054, ../scss/VilaixTheme.scss */
 .pad {
   padding: 10px 0 0;
 }
 
-/* line 1051, ../scss/VilaixTheme.scss */
+/* line 1057, ../scss/VilaixTheme.scss */
 .portlet > .pad {
   border-bottom: 0 none;
 }
 
-/* line 1054, ../scss/VilaixTheme.scss */
+/* line 1060, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul, .subnavbar .nav-list .selected ul {
-  margin-left: 0!important;
+  margin-left: 0 !important;
   margin-right: 0;
   box-shadow: none;
 }
 
-/* line 1059, ../scss/VilaixTheme.scss */
+/* line 1065, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list a:hover:after, .subnavbar .nav-list .active a:after, .subnavbar .nav-list .selected a:after {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
 }
 
-/* line 1064, ../scss/VilaixTheme.scss */
+/* line 1070, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul a[class^="contenttype-"] span:after, .subnavbar .nav-list .selected ul a[class^="contenttype-"] span:after, .subnavbar .nav-list .active ul a[class*=" contenttype-"] span:after, .subnavbar .nav-list .selected ul a[class*=" contenttype-"] span:after {
   background-image: none;
   background-repeat: no-repeat;
 }
 
-/* line 1068, ../scss/VilaixTheme.scss */
+/* line 1074, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul a span, .subnavbar .nav-list .selected ul a span {
-  border-top: 0 none!important;
+  border-top: 0 none !important;
   text-transform: none;
   font-size: 13px;
   margin-right: 10px;
   margin-left: 0;
 }
 
-/* line 1075, ../scss/VilaixTheme.scss */
+/* line 1081, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul a {
   font-size: 13px;
 }
 
-/* line 1076, ../scss/VilaixTheme.scss */
+/* line 1082, ../scss/VilaixTheme.scss */
 .navTreeLevel2 {
-  background: #eee!important;
+  background: #eee !important;
 }
 
-/* line 1079, ../scss/VilaixTheme.scss */
+/* line 1085, ../scss/VilaixTheme.scss */
 .navTreeLevel2 .navTreeFolderish {
   margin-left: 15px;
 }
 
-/* line 1082, ../scss/VilaixTheme.scss */
+/* line 1088, ../scss/VilaixTheme.scss */
 .navTreeLevel2 .navTreeFolderish span {
   margin-left: 5px;
-  font-size: 13px!important;
+  font-size: 13px !important;
 }
 
-/* line 1086, ../scss/VilaixTheme.scss */
+/* line 1092, ../scss/VilaixTheme.scss */
 .navTreeLevel2 li span {
   font-size: 13px !important;
   margin-left: 10px !important;
 }
 
-/* line 1090, ../scss/VilaixTheme.scss */
+/* line 1096, ../scss/VilaixTheme.scss */
 #rufous-sandbox {
   display: none;
 }
 
-/* line 1091, ../scss/VilaixTheme.scss */
+/* line 1097, ../scss/VilaixTheme.scss */
 #portlet-navigation-tree {
   padding-left: 0;
 }
 
-/* line 1095, ../scss/VilaixTheme.scss */
+/* line 1101, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul a span:before, .subnavbar .nav-list .selected ul a span:before {
   content: none;
 }
 
-/* line 1098, ../scss/VilaixTheme.scss */
+/* line 1104, ../scss/VilaixTheme.scss */
 #rufous-sandbox {
-  display: none!important;
+  display: none !important;
 }
 
-/* line 1099, ../scss/VilaixTheme.scss */
+/* line 1105, ../scss/VilaixTheme.scss */
 .template-folder_full_view h1:first-child, .template-folder_full_view h2:first-child, .template-folder_full_view h3:first-child {
   margin-top: 25px;
 }
 
-/* line 1102, ../scss/VilaixTheme.scss */
+/* line 1108, ../scss/VilaixTheme.scss */
 .table tr:first-child td, .listing tr:first-child td, .taulaRegistres tr:first-child td, .portaltype-packet .estudis table.minimal tr:first-child td {
   border-top: 5px solid #BBBBBB;
 }
 
-/* line 1105, ../scss/VilaixTheme.scss */
+/* line 1111, ../scss/VilaixTheme.scss */
 .listing a {
   color: black;
 }
 
-/* line 1106, ../scss/VilaixTheme.scss */
+/* line 1112, ../scss/VilaixTheme.scss */
 .template-folder_listing dt {
   padding-bottom: 10px;
 }
 
-/* line 1109, ../scss/VilaixTheme.scss */
+/* line 1115, ../scss/VilaixTheme.scss */
 .template-folder_listing dd {
   border-bottom: 1px solid #B2B2B2;
   padding: 0px 10px 15px 0;
 }
 
-/* line 1113, ../scss/VilaixTheme.scss */
+/* line 1119, ../scss/VilaixTheme.scss */
 .template-folder_listing .summary a {
   color: #333333;
 }
 
-/* line 1116, ../scss/VilaixTheme.scss */
+/* line 1122, ../scss/VilaixTheme.scss */
 .photoAlbumEntry {
   float: left;
   margin-bottom: 15px;
@@ -3650,17 +3634,17 @@ dt {
   position: relative;
 }
 
-/* line 1124, ../scss/VilaixTheme.scss */
+/* line 1130, ../scss/VilaixTheme.scss */
 .photoAlbumEntry a img:hover {
   opacity: 0.8;
 }
 
-/* line 1127, ../scss/VilaixTheme.scss */
+/* line 1133, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active ul a.active, .subnavbar .nav-list .selected ul a.active, .subnavbar .nav-list .active ul a.selected, .subnavbar .nav-list .selected ul a.selected {
   background-color: #F5F5F5 !important;
 }
 
-/* line 1130, ../scss/VilaixTheme.scss */
+/* line 1136, ../scss/VilaixTheme.scss */
 .photoAlbumEntryTitle {
   background: none repeat scroll 0 0 #333333;
   color: #FFFFFF !important;
@@ -3672,18 +3656,18 @@ dt {
   width: 157px;
 }
 
-/* line 1141, ../scss/VilaixTheme.scss */
+/* line 1147, ../scss/VilaixTheme.scss */
 #equipament iframe {
   width: 100%;
   margin-top: 20px;
 }
 
-/* line 1145, ../scss/VilaixTheme.scss */
+/* line 1151, ../scss/VilaixTheme.scss */
 #equipament img {
   margin-bottom: 20px;
 }
 
-/* line 1148, ../scss/VilaixTheme.scss */
+/* line 1154, ../scss/VilaixTheme.scss */
 #equipament label.horizontal {
   font-size: 15px;
   margin-bottom: 15px;
@@ -3691,7 +3675,7 @@ dt {
   line-height: 30px;
 }
 
-/* line 1154, ../scss/VilaixTheme.scss */
+/* line 1160, ../scss/VilaixTheme.scss */
 #equipament .columnes {
   column-count: 2;
   -moz-column-count: 2;
@@ -3703,19 +3687,19 @@ dt {
   padding: 25px 20px 20px 30px;
 }
 
-/* line 1162, ../scss/VilaixTheme.scss */
+/* line 1168, ../scss/VilaixTheme.scss */
 #equipament .columnes label.horizontal {
   line-height: 15px;
 }
 
-/* line 1165, ../scss/VilaixTheme.scss */
+/* line 1171, ../scss/VilaixTheme.scss */
 #tramit .camptramit {
   background: none repeat scroll 0 0 #F5F5F5;
   margin-bottom: 20px;
   padding: 10px 20px;
 }
 
-/* line 1170, ../scss/VilaixTheme.scss */
+/* line 1176, ../scss/VilaixTheme.scss */
 #tramit .camptramit label.horizontal {
   font-size: 15px;
   margin-bottom: 15px;
@@ -3723,7 +3707,7 @@ dt {
   line-height: 30px;
 }
 
-/* line 1176, ../scss/VilaixTheme.scss */
+/* line 1182, ../scss/VilaixTheme.scss */
 #tramit .tramita {
   background: none repeat scroll 0 0 #000000;
   border-radius: 2px;
@@ -3734,14 +3718,14 @@ dt {
   padding: 10px 20px;
 }
 
-/* line 1185, ../scss/VilaixTheme.scss */
+/* line 1191, ../scss/VilaixTheme.scss */
 #tramit .tramita:hover {
   color: #ccc;
 }
 
-/* line 1188, ../scss/VilaixTheme.scss */
+/* line 1194, ../scss/VilaixTheme.scss */
 .tramit_annex:before {
-  background: url("/++genweb++static/images/gh-w.png?1370877920") no-repeat scroll -162px -163px #111111;
+  background: url("/++genweb++static/images/gh-w.png?1370877920") no-repeat scroll -162px -163px #111;
   border: 1px solid;
   border-right: 0px solid;
   content: " ";
@@ -3754,7 +3738,7 @@ dt {
   width: 25px;
 }
 
-/* line 1201, ../scss/VilaixTheme.scss */
+/* line 1207, ../scss/VilaixTheme.scss */
 .tramit_annex {
   background: none repeat scroll 0 0 #FFFFFF;
   border: 1px solid #777777;
@@ -3764,91 +3748,91 @@ dt {
   vertical-align: middle;
 }
 
-/* line 1209, ../scss/VilaixTheme.scss */
+/* line 1215, ../scss/VilaixTheme.scss */
 .tramit_annex:hover {
   text-decoration: none;
   background: none repeat scroll 0 0 #eee;
 }
 
-/* line 1213, ../scss/VilaixTheme.scss */
+/* line 1219, ../scss/VilaixTheme.scss */
 .navbar .nav li.dropdown > .dropdown-toggle .caret, .navbar .contentViews li.dropdown > .dropdown-toggle .caret, .navbar .configlets li.dropdown > .dropdown-toggle .caret, .navbar .formTabs li.dropdown > .dropdown-toggle .caret {
   border-bottom-color: #FFFFFF;
   border-top-color: #FFFFFF;
 }
 
-/* line 1217, ../scss/VilaixTheme.scss */
+/* line 1223, ../scss/VilaixTheme.scss */
 .navbar .nav li.dropdown.open > .dropdown-toggle .caret, .navbar .contentViews li.dropdown.open > .dropdown-toggle .caret, .navbar .configlets li.dropdown.open > .dropdown-toggle .caret, .navbar .formTabs li.dropdown.open > .dropdown-toggle .caret, .navbar .nav li.dropdown.active > .dropdown-toggle .caret, .navbar .contentViews li.dropdown.active > .dropdown-toggle .caret, .navbar .configlets li.dropdown.active > .dropdown-toggle .caret, .navbar .formTabs li.dropdown.active > .dropdown-toggle .caret, .navbar .nav li.dropdown.selected > .dropdown-toggle .caret, .navbar .configlets li.dropdown.selected > .dropdown-toggle .caret, .navbar .formTabs li.dropdown.selected > .dropdown-toggle .caret, .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret, .navbar .contentViews li.dropdown.open.active > .dropdown-toggle .caret, .navbar .configlets li.dropdown.open.active > .dropdown-toggle .caret, .navbar .formTabs li.dropdown.open.active > .dropdown-toggle .caret, .navbar .nav li.dropdown.open.selected > .dropdown-toggle .caret, .navbar .configlets li.dropdown.open.selected > .dropdown-toggle .caret, .navbar .formTabs li.dropdown.open.selected > .dropdown-toggle .caret {
   border-bottom-color: #555;
   border-top-color: #555;
 }
 
-/* line 1221, ../scss/VilaixTheme.scss */
+/* line 1227, ../scss/VilaixTheme.scss */
 .subnavbar .nav-list .active a, .subnavbar .nav-list .selected a {
   background: none repeat scroll 0 0 #0072B8;
   color: #FFFFFF;
 }
 
-/* line 1225, ../scss/VilaixTheme.scss */
+/* line 1231, ../scss/VilaixTheme.scss */
 [class^="icon-"], #category.documentByLine:before, .tileFooter:before, [class*=" icon-"] {
   width: 20px;
 }
 
-/* line 1228, ../scss/VilaixTheme.scss */
+/* line 1234, ../scss/VilaixTheme.scss */
 .icon-carrousel {
   background-position: -335px -72px;
 }
 
-/* line 1231, ../scss/VilaixTheme.scss */
+/* line 1237, ../scss/VilaixTheme.scss */
 .icon-banner, .contenttype-bannercontainer:before {
   background-position: -191px -192px !important;
 }
 
-/* line 1234, ../scss/VilaixTheme.scss */
+/* line 1240, ../scss/VilaixTheme.scss */
 .icon-bannercontainer {
   background-position: -432px -143px;
 }
 
-/* line 1237, ../scss/VilaixTheme.scss */
+/* line 1243, ../scss/VilaixTheme.scss */
 .icon-equipament, .contenttype-equipament:before {
   background-position: -145px -193px;
 }
 
-/* line 1240, ../scss/VilaixTheme.scss */
+/* line 1246, ../scss/VilaixTheme.scss */
 .icon-tramit, .contenttype-tramit:before {
   background-position: -145px -72px;
 }
 
-/* line 1243, ../scss/VilaixTheme.scss */
+/* line 1249, ../scss/VilaixTheme.scss */
 .icon-slider {
   background-position: -360px -72px;
 }
 
-/* line 1246, ../scss/VilaixTheme.scss */
+/* line 1252, ../scss/VilaixTheme.scss */
 .icon-collection {
   background-position: -74px -192px;
 }
 
-/* line 1249, ../scss/VilaixTheme.scss */
+/* line 1255, ../scss/VilaixTheme.scss */
 .icons-on .contenttype-collection {
-  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: none repeat scroll 0 0 transparent;
 }
 
-/* line 1252, ../scss/VilaixTheme.scss */
+/* line 1258, ../scss/VilaixTheme.scss */
 .icons-on .contenttype-collection {
   padding-left: 11px !important;
 }
 
-/* line 1259, ../scss/VilaixTheme.scss */
+/* line 1265, ../scss/VilaixTheme.scss */
 #portal-globalnav .navbar .nav > li {
   background: none;
 }
 
-/* line 1263, ../scss/VilaixTheme.scss */
+/* line 1269, ../scss/VilaixTheme.scss */
 .toggle-div .list-portlet li:first-child {
   border-top: 1px solid #e5e5e5 !important;
 }
 
-/* line 1267, ../scss/VilaixTheme.scss */
+/* line 1273, ../scss/VilaixTheme.scss */
 .portlet .icon-plus-sign {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.8;
@@ -3858,24 +3842,25 @@ dt {
   margin-right: 3px;
 }
 
-/* line 1276, ../scss/VilaixTheme.scss */
+/* line 1282, ../scss/VilaixTheme.scss */
 .more {
   text-align: right;
   float: right;
   color: white !important;
 }
 
-/* line 1282, ../scss/VilaixTheme.scss */
+/* line 1288, ../scss/VilaixTheme.scss */
 .imatge_noticia .discreet {
   width: 185px;
 }
 
-/* line 1286, ../scss/VilaixTheme.scss */
+/* line 1292, ../scss/VilaixTheme.scss */
 .newsImageContainer .discreet {
   width: 185px;
 }
 
+/* line 1296, ../scss/VilaixTheme.scss */
 .template-subhome strong div.span5 {
-    width: 39.8773%;
-    margin-left: 3.06748% !important;
+  width: 39.8773%;
+  margin-left: 3.06748% !important;
 }
