@@ -61,6 +61,13 @@
       />
 
     <browser:page
+      name="viewGetGeoFromIframe"
+      for="*"
+      class=".getGeoFromIframe.ViewScript"
+      permission="zope2.View"
+      />
+
+    <browser:page
       name="viewGeneralMap"
       for="*"
       class=".generalMap.generalMap"
