@@ -2,12 +2,12 @@
 from five import grok
 from plone.memoize.view import memoize_contextless
 from zope.component.hooks import getSite
-from vilaix.core.content.equipament import IEquipament
+from vilaix.core.content.associacio import IAssociacio
 from Products.CMFCore.utils import getToolByName
 from urllib import quote
 
 class View(grok.View):
-    grok.context(IEquipament)
+    grok.context(IAssociacio)
     grok.require('zope2.View')
 
     @memoize_contextless
@@ -34,7 +34,6 @@ class View(grok.View):
     def getMapa(self):
         catalog = getToolByName(self.context, 'portal_catalog')
         utool = getToolByName(self.context, 'portal_url')
-        
         if self.context.ubicacio_iframe:
             return self.context.ubicacio_iframe.raw
         else:       

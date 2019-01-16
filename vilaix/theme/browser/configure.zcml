@@ -60,4 +60,19 @@
       layer=".interfaces.IVilaixTheme"
       />
 
+    <browser:page
+      name="viewGeneralMap"
+      for="*"
+      class=".generalMap.generalMap"
+      permission="zope2.View"
+      />
+
+     <browser:page
+      name="viewToCSV"
+      for="*"
+      class=".toCsv_script.toCsv_script"
+      permission="zope2.View"
+      />
+
+
 </configure>
