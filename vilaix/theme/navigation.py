@@ -1,5 +1,3 @@
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
 
@@ -22,10 +20,10 @@ class PhysicalNavigationBreadcrumbs(BrowserView):
     def breadcrumbs(self):
         real_context = aq_inner(self.context)
         request_path = self.request.get('PATH_INFO', '')
-        
+
         if 'VirtualHostBase' in request_path:
             path = ('',) + re.search(r'VirtualHostBase/\w+/.*?/(.*?)/VirtualHostRoot/(.*)', request_path).groups()
-            #path = ('',) + re.search(r'VirtualHostBase/\w+/.*?/(.*?)/VirtualHostRoot/(?:.*?/)?(.*)', request_path).groups()
+
             request_path = '/'.join(path)
         context_path = '/'.join(real_context.getPhysicalPath())
 

@@ -6,28 +6,18 @@ from zope.interface import Interface
 from zope.component import getMultiAdapter, queryMultiAdapter, getUtility, queryUtility
 from zope.contentprovider import interfaces
 
-from Products.CMFPlone import utils
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.interfaces import IPloneSiteRoot
-from Products.CMFPlone.browser.navigation import CatalogNavigationTabs
-from Products.CMFPlone.browser.navigation import get_id, get_view_url
 
 from plone.portlets.interfaces import IPortletManager
 from plone.portlets.interfaces import IPortletManagerRenderer
 from plone.portlets.interfaces import ILocalPortletAssignmentManager
 from plone.portlets.constants import CONTEXT_CATEGORY
-from plone.memoize import ram
-
-from genweb.core.interfaces import IGenwebLayer, IHomePage
-from genweb.theme.browser.interfaces import IGenwebTheme, IHomePageView
+from genweb.core.interfaces import IHomePage
+from genweb.theme.browser.interfaces import IHomePageView
 from genweb.theme.browser.views import HomePageBase
 from genweb.core.utils import genweb_config, pref_lang
 from genweb.portlets.browser.manager import ISpanStorage
-
-from scss import Scss
-
-from plone.formwidget.recaptcha.view import RecaptchaView, IRecaptchaInfo
-from recaptcha.client.captcha import displayhtml
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from interfaces import IVilaixTheme

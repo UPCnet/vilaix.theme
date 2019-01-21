@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 from five import grok
-from plone.memoize.view import memoize_contextless
-from zope.component.hooks import getSite
 from vilaix.core.content.equipament import IEquipament
 from Products.CMFCore.utils import getToolByName
-from urllib import quote
-from plone import api
-
-from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 import csv
@@ -29,15 +23,12 @@ class toCsv_script(grok.View):
         return self.render()
 
     def convertToCsv(self):
-
-        import pdb; pdb.set_trace()
-    
-        catalog = getToolByName(self.context , 'portal_catalog')
+        catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog.searchResults(portal_type="Equipament")
 
-        with open('equipaments.csv' , 'w') as csvfile:
+        with open('equipaments.csv', 'w') as csvfile:
             spamwriter = csv.writer(csvfile, delimiter=',')
-            spamwriter.writerow(['title','geolocalitzacio'])
+            spamwriter.writerow(['title', 'geolocalitzacio'])
             for brain in brains:
                 equipament = brain.getObject()
                 try:
@@ -45,25 +36,19 @@ class toCsv_script(grok.View):
                 except:
                     title = equipament.title
                 geo = equipament.geolocalitzacio
-                spamwriter.writerow([title,geo])
+                spamwriter.writerow([title, geo])
 
     def CsvEquipToAsso(self):
-        #llamar vista en la carpeta de associaciones
+        # llamar vista en la carpeta de associaciones
+        catalog = getToolByName(self.context, 'portal_catalog')
 
-        #self.context.portal_types.listContentTypes()
-        catalog = getToolByName(self.context , 'portal_catalog')
-
-        import pdb; pdb.set_trace()
-        with open('associacions.csv' , 'r') as csvfile:
+        with open('/tmp/associacions.csv', 'r') as csvfile:
             reader = csv.reader(csvfile)
-
             for row in reader:
-                
                 try:
-                    equipToAsso = catalog.searchResults({'portal_type':'Equipament','Title':row[0]})[0].getObject()
-                    #creem una nova associacio amb els valors daquest equipament
+                    equipToAsso = catalog.searchResults({'portal_type': 'Equipament', 'Title': row[0]})[0].getObject()
+                    # creem una nova associacio amb els valors daquest equipament
                     asso = _createObjectByType("Associacio", self.context, equipToAsso.id)
-
                 except:
                     continue
 
@@ -89,11 +74,5 @@ class toCsv_script(grok.View):
 
                 asso.ubicacio_iframe = equipToAsso.ubicacio_iframe
 
-                #delete from equipments
+                # delete from equipments
                 equipToAsso.aq_parent.manage_delObjects([equipToAsso.id])
-
-
-
-
-        
-

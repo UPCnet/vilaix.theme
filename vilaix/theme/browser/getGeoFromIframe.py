@@ -4,11 +4,8 @@ from plone.memoize.view import memoize_contextless
 from zope.component.hooks import getSite
 from vilaix.core.content.equipament import IEquipament
 from Products.CMFCore.utils import getToolByName
-from urllib import quote
-from plone import api
-
-from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+
 
 class ViewScript(grok.View):
     grok.context(IEquipament)
@@ -32,9 +29,8 @@ class ViewScript(grok.View):
 
     def getGeoFromIframe(self):
 
-        catalog = getToolByName(self.context , 'portal_catalog')
+        catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog.searchResults(portal_type="Equipament")
-        aux = 0
         for brain in brains:
             equipament = brain.getObject()
             if equipament.ubicacio_iframe:
@@ -44,7 +40,6 @@ class ViewScript(grok.View):
                 except:
                     equipament.geolocalitzacio = ""
                     continue
-
                 lat = float(equipament.latitude)
                 lon = float(equipament.longitude)
                 equipament.geolocalitzacio = "".join(str(lat) + ", " + str(lon))
