@@ -45,8 +45,8 @@ class ViewScript(grok.View):
                     equipament.geolocalitzacio = ""
                     continue
 
-                lat = "{0:.6f}".format(float(equipament.latitude))
-                lon = "{0:.6f}".format(float(equipament.longitude))
-                equipament.geolocalitzacio = "".join(lat + ", " + lon)
+                lat = float(equipament.latitude)
+                lon = float(equipament.longitude)
+                equipament.geolocalitzacio = "".join(str(lat) + ", " + str(lon))
             else:
                 equipament.geolocalitzacio = ""

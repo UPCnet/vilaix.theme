@@ -53,9 +53,14 @@
 		            	<p><span tal:content="context/poblacio | nothing"></span></p>
 
                   <label class="horizontal">
-                  Geolocalització
+                  Latitud
                   </label>
-                  <p><span tal:content="context/geolocalitzacio | nothing"></span></p>
+                  <p><span tal:content="context/latitude | nothing"></span></p>
+
+                  <label class="horizontal">
+                  Longitud
+                  </label>
+                  <p><span tal:content="context/longitude | nothing"></span></p>
 
 		            	<label class="horizontal">
         					Telèfon
