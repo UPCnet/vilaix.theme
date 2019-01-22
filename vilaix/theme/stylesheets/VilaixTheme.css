@@ -3865,10 +3865,20 @@ dt {
   margin-left: 3.06748% !important;
 }
 
+/* line 1301, ../scss/VilaixTheme.scss */
 .leaflet-control-zoom-fullscreen {
-    background-image: url("++vilaix++static/images/icon-fullscreen.png");
+  background-image: url("++vilaix++static/images/icon-fullscreen.png");
 }
 
+/* line 1305, ../scss/VilaixTheme.scss */
 .icon-associacio {
   background-position: -145px -193px;
+}
+
+/* line 1309, ../scss/VilaixTheme.scss */
+.greyback {
+  background: none repeat scroll 0 0 #F5F5F5;
+  margin-bottom: 20px;
+  padding: 25px 20px 20px 30px;
+  margin-left: 0px !important;
 }
