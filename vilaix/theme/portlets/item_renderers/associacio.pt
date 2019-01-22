@@ -1,0 +1,10 @@
+<li tal:attributes="class view/rendererClass">
+
+   <a href=""
+       tal:attributes="href view/url">
+        <span tal:replace="view/item/Title">
+         Títol associacio
+        </span>
+    </a>
+
+</li>

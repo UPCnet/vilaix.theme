@@ -17,6 +17,7 @@ from Acquisition import aq_inner
 from genweb.core import GenwebMessageFactory as TAM
 
 from vilaix.core.content.equipament import IEquipament
+from vilaix.core.content.associacio import IAssociacio
 from vilaix.core.content.tramit import ITramit
 from vilaix.core.content.slider import ISlider
 from genweb.banners.content.banner import IBanner
@@ -45,7 +46,6 @@ class EventPortletItemRenderer(PortletItemRenderer):
             return False
 
     def getText(self):
-        #return self.cropText(self.item.getObject().SearchableText(), 100)
         return self.abrevia(self.item.getObject().Description(), 100)
 
     def getMonthAbbr(self, data):
@@ -53,7 +53,7 @@ class EventPortletItemRenderer(PortletItemRenderer):
         month = DateTime.month(data)
         self._ts = getToolByName(context, 'translation_service')
         monthName = TAM(self._ts.month_msgid(month, format='a'),
-                              default=self._ts.month_english(month, format='a'))
+                        default=self._ts.month_english(month, format='a'))
         return monthName
 
     def getMonth(self, data):
@@ -61,7 +61,7 @@ class EventPortletItemRenderer(PortletItemRenderer):
         month = DateTime.month(data)
         self._ts = getToolByName(context, 'translation_service')
         monthName = PLMF(self._ts.month_msgid(month),
-                              default=self._ts.month_english(month))
+                         default=self._ts.month_english(month))
         return monthName
 
     def getDay(self, data):
@@ -84,6 +84,13 @@ class NewsPortletItemRenderer(PortletItemRenderer):
 class EquipamentPortletItemRenderer(PortletItemRenderer):
     template = ViewPageTemplateFile('equipament.pt')
     css_class = 'equipament clearfix'
+
+
+@adapter(IAssociacio)
+@implementer(IPortletItemRenderer)
+class AssociacioPortletItemRenderer(PortletItemRenderer):
+    template = ViewPageTemplateFile('associacio.pt')
+    css_class = 'associacio clearfix'
 
 
 @adapter(ITramit)
@@ -117,6 +124,6 @@ class SliderPortletItemRenderer(PortletItemRenderer):
 
 @adapter(IFile)
 @implementer(IPortletItemRenderer)
-class EquipamentPortletItemRenderer(PortletItemRenderer):
+class FilePortletItemRenderer(PortletItemRenderer):
     template = ViewPageTemplateFile('file.pt')
     css_class = 'file clearfix'
