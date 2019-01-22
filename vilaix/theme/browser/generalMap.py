@@ -1,19 +1,13 @@
 # -*- coding: utf-8 -*-
 from five import grok
-from plone.memoize.view import memoize_contextless
-from zope.component.hooks import getSite
-from vilaix.core.content.equipament import IEquipament
 from Products.CMFCore.utils import getToolByName
-from urllib import quote
-from plone import api
-
-from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from OFS.interfaces import IFolder
 
 
 class generalMap(grok.View):
 
-    grok.context(IEquipament)
+    grok.context(IFolder)
     grok.require('zope2.View')
 
     index = ViewPageTemplateFile("content_views/equipament_templates/viewGeneralMap.pt")
@@ -71,11 +65,14 @@ class generalMap(grok.View):
 
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog.searchResults(portal_type="Equipament")
+        ordered_params = ('Tipus', 'Telefon', 'Address', 'Horari', 'Correu')
 
         for brain in brains:
             equipament = brain.getObject()
             if equipament.ubicacio_iframe:
-                try:
+                if not equipament.latitude or not equipament.longitude:
+                    continue
+                else:
                     equip_base_params = dict(
                         lat=equipament.latitude,
                         long=equipament.longitude,
@@ -88,26 +85,19 @@ class generalMap(grok.View):
                         Address=equipament.adreca_contacte,
                         Horari=equipament.horari,
                         Correu=equipament.adreca_correu)
-                    ordered_params = ('Tipus', 'Telefon', 'Address', 'Horari', 'Correu')
-                except:
-                    continue
 
-            try:
-                addmark = """
-                L.marker([%(lat)s, %(long)s],{icon:markIcon}).addTo(map)
-                .bindPopup("<a href=%(url)s>%(title)s</a><br>""" % equip_base_params
+                    addmark = """
+                       L.marker([%(lat)s, %(long)s],{icon:markIcon}).addTo(map)
+                        .bindPopup("<a href=%(url)s>%(title)s</a><br>""" % equip_base_params
 
-                for i in ordered_params:
-                    if equip_params[i] != None:
-                        addmark = addmark + "%s: %s<br>" % (i, equip_params[i])
+                    for i in ordered_params:
+                        if equip_params[i]:
+                            addmark = addmark + "%s: %s<br>" % (i, equip_params[i])
 
-                addmark = addmark + """").openPopup();"""
+                    addmark = addmark + """").openPopup();"""
 
-            except:
-                continue
-
-            addmark = addmark.encode('utf-8')
-            mapa = mapa + addmark
+                    addmark = addmark.encode('utf-8')
+                    mapa = mapa + addmark
 
         mapa = mapa + "</script>"
 

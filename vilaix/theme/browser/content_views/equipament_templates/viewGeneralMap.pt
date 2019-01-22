@@ -1,36 +1,23 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="genweb.portlets">
+      i18n:domain="serveiesports">
 
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <head>
-      <div metal:fill-slot="javascript_head_slot" tal:omit-tag=""></div>
-    </head>
+<metal:main fill-slot="main">
 
-<body class="generalMap">
+  <tal:main-macro metal:define-macro="main">
 
-  <metal:block fill-slot="top_slot"
-               tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
-                           disable_column_two python:request.set('disable_plone.rightcolumn',1)" />
+    <div id="content-core">
+      <h1 class="documentFirstHeading">Mapa Equipaments</h1>
+      <br>
+      <p tal:replace="structure view/getGeneralMap | nothing"></p>
+    </div>
 
-  <div metal:fill-slot="portlets_one_slot">
-      <tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
-  </div>
+  </tal:main-macro>
 
-  <div metal:fill-slot="main">
-    <h1 class="documentFirstHeading">Mapa Equipaments</h1>
-    <br>
-    <p tal:replace="structure view/getGeneralMap | nothing"></p>
-
-  </div>
-
-  <div metal:fill-slot="portlets_two_slot">
-      <tal:comment tal:replace="nothing">get rid of the left hand column portlets to avoid confusion</tal:comment>
-  </div>
-
-</body>
+</metal:main>
 
 </html>
