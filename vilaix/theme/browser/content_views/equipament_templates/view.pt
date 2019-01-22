@@ -11,62 +11,89 @@
 <metal:main fill-slot="main">
     <tal:main-macro metal:define-macro="main"
         tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
-      <head>
-          <style type="text/css">
-            .greyback {
-                background: none repeat scroll 0 0 #F5F5F5;
-                margin-bottom: 20px;
-                padding: 25px 20px 20px 30px;}
-          </style>
-      </head>
-
       <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
-
     	<h1 class="documentFirstHeading" tal:content="context/Title" />
-
 	    <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
-
 	    <div class="documentDescription description"  tal:content="context/Description"></div>
-
 	    <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
 
-      <div id="content-core">
+      <div id="content-core" 
+           tal:define="horari context/horari;
+                       mes_informacio context/mes_informacio;
+                       tipus context/tipus;
+                       adreca_contacte context/adreca_contacte;
+                       codi_postal context/codi_postal;
+                       poblacio context/poblacio;
+                       latitude context/latitude;
+                       longitude context/longitude;
+                       telefon context/telefon;
+                       adreca_correu context/adreca_correu;
+                       getMapa view/getMapa">
        	<div id="equipament">
           <div class="row-fluid">
             <div class="span12">
             	<img tal:define="imatge view/getImage" tal:condition="imatge" tal:attributes="src string:${imatge}" />
             	<div class="greyback row-fluid span12">
                 <div class="span6">
-              		<label class="horizontal"> Tipus equipament </label>
-  	            	<p><span tal:content="context/tipus | nothing"></span></p>
-  	            	<label class="horizontal"> Adreça de contacte </label>
-  	            	<p><span tal:content="context/adreca_contacte | nothing"></span></p>
-  	            	<label class="horizontal"> Codi Postal </label>
-        			    <p><span tal:content="context/codi_postal | nothing"></span></p>
-  					      <label class="horizontal"> Població </label>
-  	            	<p><span tal:content="context/poblacio | nothing"></span></p>
+                  <tal:block tal:condition="tipus">
+                		<label class="horizontal"> Tipus equipament </label>
+    	            	<p><span tal:content="tipus"></span></p>
+                  </tal:block>
+
+                  <tal:block tal:condition="adreca_contacte">
+    	            	<label class="horizontal"> Adreça de contacte </label>
+    	            	<p><span tal:content="adreca_contacte"></span></p>
+                  </tal:block>
+
+                  <tal:block tal:condition="codi_postal">
+  	            	  <label class="horizontal"> Codi Postal </label>
+        			     <p><span tal:content="codi_postal"></span></p>
+                 </tal:block>
+
+                  <tal:block tal:condition="poblacio">
+  					        <label class="horizontal"> Població </label>
+  	            	  <p><span tal:content="poblacio"></span></p>
+                  </tal:block>
                 </div>
+                
                 <div class="span6">
-                  <label class="horizontal"> Geolocalització </label>
-                  <p>
-                    <span tal:content="context/latitude | nothing"></span> /
-                    <span tal:content="context/longitude | nothing"></span>
-                  </p>
-  	            	<label class="horizontal"> Telèfon </label>
-  	            	<p><span tal:content="context/telefon | nothing"></span></p>
-  	            	<label class="horizontal"> Adreça de correu </label>
-  	            	<p><span tal:content="context/adreca_correu | nothing"></span></p>
-  	            	<label class="horizontal"> Horari </label>
-  	            	<p><span tal:content="context/horari | nothing"></span></p>
+                  <tal:block tal:condition="python: latitude and longitude">
+                    <label class="horizontal"> Geolocalització </label>
+                    <p>
+                      Lat: <span tal:content="latitude"></span> /
+                      Long: <span tal:content="longitude"></span>
+                    </p>
+                  </tal:block>
+
+                  <tal:block tal:condition="telefon">
+                    <label class="horizontal"> Telèfon </label>
+                    <p><span tal:content="telefon"></span></p>
+                  </tal:block>
+
+                  <tal:block tal:condition="adreca_correu">
+                    <label class="horizontal"> Adreça de correu </label>
+                    <p><span tal:content="adreca_correu"></span></p>
+                  </tal:block>
+
+                  <tal:horari tal:condition="horari">
+                    <label class="horizontal"> Horari </label>
+                    <p><span tal:content="horari"></span></p>
+                  </tal:horari>
                 </div>
 				      </div>
+
               <div class="clearfix"></div>
-              <div tal:condition="context/mes_informacio">
+
+              <div tal:condition="mes_informacio">
               	<label class="horizontal"> Més informació </label>
-      			    <p tal:replace="structure context/mes_informacio/raw | nothing"></p>
+      			    <p tal:replace="structure mes_informacio/raw"></p>
               </div>
-            	<label class="horizontal"> Ubicació </label>
-    			    <p tal:replace="structure view/getMapa | nothing"></p>
+
+              <div tal:condition="getMapa">
+              	<label class="horizontal"> Ubicació </label>
+      			    <p tal:replace="structure getMapa"></p>
+              </div>
+
             </div>
           </div>
         </div>

@@ -53,12 +53,11 @@ class View(grok.View):
                     poblacio_utf8 = quote(poblacio[i].encode('utf-8'))
                     poblacio_cont.append(poblacio_utf8)
 
-            # if self.context.geolocalitzacio:
-            #     geolocalitzacio = self.context.geolocalitzacio
+            if self.context.latitude and self.context.longitude:
+                geolocalitzacio = self.context.latitude.encode('ascii', 'ignore') + ',' + self.context.longitude.encode('ascii', 'ignore')
 
-            geolocalitzacio = self.context.latitude.encode('ascii', 'ignore') + ',' + self.context.longitude.encode('ascii', 'ignore')
+                adreca_postal = caracter.join(adreca) + '+' + caracter.join(cp) + '+' + caracter.join(poblacio_cont)
 
-            adreca_postal = caracter.join(adreca) + '+' + caracter.join(cp) + '+' + caracter.join(poblacio_cont)
-
-            mapa = '<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=ca&amp;geocode=&amp;q=%s;aq=&amp;sll=%s;ie=UTF8&amp;hnear=%s;radius=15000&amp;t=m&amp;ll=%s;z=14&amp;iwloc=A&amp;output=embed"></iframe>' % (adreca_postal, geolocalitzacio, adreca_postal, geolocalitzacio)
-            return mapa
+                mapa = '<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=ca&amp;geocode=&amp;q=%s;aq=&amp;sll=%s;ie=UTF8&amp;hnear=%s;radius=15000&amp;t=m&amp;ll=%s;z=14&amp;iwloc=A&amp;output=embed"></iframe>' % (adreca_postal, geolocalitzacio, adreca_postal, geolocalitzacio)
+                return mapa
+            return None

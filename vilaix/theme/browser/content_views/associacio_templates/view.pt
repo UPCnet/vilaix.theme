@@ -11,33 +11,24 @@
 <metal:main fill-slot="main">
     <tal:main-macro metal:define-macro="main"
         tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
-      <head>
-          <style type="text/css">
-            .greyback {
-                background: none repeat scroll 0 0 #F5F5F5;
-                margin-bottom: 20px;
-                padding: 25px 20px 20px 30px;}
-          </style>
-      </head>
-
       <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
-
     	<h1 class="documentFirstHeading" tal:content="context/Title" />
 	    <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
 	    <div class="documentDescription description"  tal:content="context/Description"></div>
-	     <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
+	    <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
 
       <div id="content-core"
-          tal:define="horari context/horari;
-                      mes_informacio context/mes_informacio;
-                      tipus context/tipus;
-                      adreca_contacte context/adreca_contacte;
-                      codi_postal context/codi_postal;
-                      poblacio context/poblacio;
-                      latitude context/latitude;
-                      longitude context/longitude;
-                      telefon context/telefon;
-                      adreca_correu context/adreca_correu;">
+           tal:define="horari context/horari;
+                       mes_informacio context/mes_informacio;
+                       tipus context/tipus;
+                       adreca_contacte context/adreca_contacte;
+                       codi_postal context/codi_postal;
+                       poblacio context/poblacio;
+                       latitude context/latitude;
+                       longitude context/longitude;
+                       telefon context/telefon;
+                       adreca_correu context/adreca_correu;
+                       getMapa view/getMapa">
        	<div id="associacio">
           <div class="row-fluid">
             <div class="span12">
@@ -63,16 +54,14 @@
   						      <label class="horizontal"> Població </label>
   		            	<p><span tal:content="poblacio"></span></p>
                   </tal:block>
-
                 </div>
 
                 <div class="span6">
-
                   <tal:block tal:condition="python: latitude and longitude">
                     <label class="horizontal"> Geolocalització </label>
                     <p>
-                      <span tal:content="latitude"></span> /
-                      <span tal:content="longitude"></span>
+                      Lat: <span tal:content="latitude"></span> /
+                      Long: <span tal:content="longitude"></span>
                     </p>
                   </tal:block>
 
@@ -90,19 +79,20 @@
                     <label class="horizontal"> Horari </label>
   		            	<p><span tal:content="horari"></span></p>
                   </tal:horari>
-
  					      </div>
               </div>
+
               <div class="clearfix"></div>
+
               <div tal:condition="mes_informacio">
                 <label class="horizontal"> Més informació </label>
-                <p tal:replace="structure context/mes_informacio/raw"></p>
+                <p tal:replace="structure mes_informacio/raw"></p>
               </div>
-111 --- <span tal:content="context/geolocalitzacio"></span> <br/>
-111 --- <span tal:content="context/latitude"></span> <br/>
-111 --- <span tal:content="context/longitude"></span> <br/>
-            	<label class="horizontal"> Ubicació </label>
-    			     <p tal:replace="structure view/getMapa"></p>
+
+              <div tal:condition="getMapa">
+                <label class="horizontal"> Ubicació </label>
+                <p tal:replace="structure getMapa"></p>
+              </div>
 
             </div>
           </div>
