@@ -22,65 +22,64 @@
                      telefon context/telefon;
                      adreca_correu context/adreca_correu;
                      getMapa view/getMapa">
-       	<div id="equipament">
-          <div class="row-fluid">
-            <div class="span12">
-            	<img tal:define="imatge view/getImage" tal:condition="imatge" tal:attributes="src string:${imatge}"
-                     style="display: block; margin-left: auto; margin-right: auto; width: 70%;"/>
-              <div class="columnes">
-                    <tal:block tal:condition="tipus">
-                  		<label class="horizontal"> Tipus equipament </label>
-      	            	<p><span tal:content="tipus"></span></p>
-                    </tal:block>
+     	<div id="equipament">
+        <div class="row-fluid">
+          <div class="span12">
+          	<img tal:define="imatge view/getImage" tal:condition="imatge" tal:attributes="src string:${imatge}"
+                   style="display: block; margin-left: auto; margin-right: auto; width: 70%;"/>
+            <div class="columnes">
+              <tal:block tal:condition="tipus">
+            		<label class="horizontal"> Tipus equipament </label>
+	            	<p><span tal:content="tipus"></span></p>
+              </tal:block>
 
-                    <tal:block tal:condition="adreca_contacte">
-      	            	<label class="horizontal"> Adreça de contacte </label>
-      	            	<p><span tal:content="adreca_contacte"></span></p>
-                    </tal:block>
+              <tal:block tal:condition="adreca_contacte">
+	            	<label class="horizontal"> Adreça de contacte </label>
+	            	<p><span tal:content="adreca_contacte"></span></p>
+              </tal:block>
 
-                    <tal:block tal:condition="codi_postal">
-    	            	  <label class="horizontal"> Codi Postal </label>
-          			     <p><span tal:content="codi_postal"></span></p>
-                   </tal:block>
+              <tal:block tal:condition="codi_postal">
+            	  <label class="horizontal"> Codi Postal </label>
+    			     <p><span tal:content="codi_postal"></span></p>
+             </tal:block>
 
-                    <tal:block tal:condition="poblacio">
-    					        <label class="horizontal"> Població </label>
-    	            	  <p><span tal:content="poblacio"></span></p>
-                    </tal:block>
+              <tal:block tal:condition="poblacio">
+				        <label class="horizontal"> Població </label>
+            	  <p><span tal:content="poblacio"></span></p>
+              </tal:block>
 
-                    <tal:block tal:condition="telefon">
-                      <label class="horizontal"> Telèfon </label>
-                      <p><span tal:content="telefon"></span></p>
-                    </tal:block>
+              <tal:block tal:condition="telefon">
+                <label class="horizontal"> Telèfon </label>
+                <p><span tal:content="telefon"></span></p>
+              </tal:block>
 
-                    <tal:block tal:condition="adreca_correu">
-                      <label class="horizontal"> Adreça de correu </label>
-                      <p><span tal:content="adreca_correu"></span></p>
-                    </tal:block>
+              <tal:block tal:condition="adreca_correu">
+                <label class="horizontal"> Adreça de correu </label>
+                <p><span tal:content="adreca_correu"></span></p>
+              </tal:block>
 
-                    <tal:horari tal:condition="horari">
-                      <label class="horizontal"> Horari </label>
-                      <p><span tal:content="horari"></span></p>
-                    </tal:horari>
-				      </div>
+              <tal:horari tal:condition="horari">
+                <label class="horizontal"> Horari </label>
+                <p><span tal:content="horari"></span></p>
+              </tal:horari>
+			      </div>
 
-              <div class="clearfix"></div>
+            <div class="clearfix"></div>
 
-              <div tal:condition="mes_informacio">
-              	<label class="horizontal"> Més informació </label>
-      			    <p tal:replace="structure mes_informacio/raw"></p>
-              </div>
-
-              <div tal:condition="getMapa">
-              	<label class="horizontal"> Ubicació </label>
-      			    <p tal:replace="structure getMapa"></p>
-              </div>
-
+            <div tal:condition="mes_informacio">
+            	<label class="horizontal"> Més informació </label>
+    			    <p tal:replace="structure mes_informacio/raw"></p>
             </div>
+
+            <div tal:condition="getMapa">
+            	<label class="horizontal"> Ubicació </label>
+    			    <p tal:replace="structure getMapa"></p>
+            </div>
+
           </div>
         </div>
-
-</div>
+      </div>
+    </div>
 
 </metal:main>
 </body>
