@@ -4,7 +4,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="serveiesports">
+      i18n:domain="vilaix.core">
 
 <body class="equipament">
 
@@ -12,41 +12,29 @@
     <tal:main-macro metal:define-macro="main"
         tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
 
-        <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
-  
-    	<h1 class="documentFirstHeading" tal:content="context/Title" /> 
-    
-	    <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
+      <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
+    	<h1 class="documentFirstHeading" tal:content="context/Title" />
+      <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
+      <div class="documentDescription description"  tal:content="context/Description"></div>
+      <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
 
-	    <div class="documentDescription description"  tal:content="context/Description"></div>
+      <div id="content-core">
+       	<div id="equipament">
+          <div class="row-fluid">
+            <div class="span12">
+            	<!--Create csv with all equipments and his geolocation
+                <p tal:replace="structure view/convertToCsv | nothing"></p>-->
+              <!--Read from csv "associacions" and create them-->
+              <p tal:replace="structure view/CsvEquipToAsso | nothing"></p>
+              <p>Script executed</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-	     <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
-         
-         <div id="content-core">
-
-         	<div id="equipament">
-	          <div class="row-fluid">
-	            <div class="span12">
-
-
-              	<!--Create csv with all equipments and his geolocation
-                  <p tal:replace="structure view/convertToCsv | nothing"></p>-->
-
-                <!--Read from csv "associacions" and create them-->
-                <p tal:replace="structure view/CsvEquipToAsso | nothing"></p>
-                <p>Script executed</p>
-		       
-  
-	            </div>
-	          </div>
-	        </div>
-            
-         </div>
-         <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
-
+      <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
 
     </tal:main-macro>
-
 </metal:main>
 
 </body>
