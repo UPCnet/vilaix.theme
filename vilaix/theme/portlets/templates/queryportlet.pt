@@ -37,7 +37,7 @@
           </a>
        </tal:notSlider>
 
-       <tal:equipamentTramit tal:define="results python:view.isEquipamentTramit(items);
+       <tal:equipamentTramit tal:define="results python:view.isEquipamentTramitAssociacio(items);
                                          haslimit python:view.haslimit(items)"
                              tal:condition="results">
           <div id="dades" class="toggle-div">

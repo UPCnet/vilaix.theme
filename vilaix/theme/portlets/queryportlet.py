@@ -261,13 +261,13 @@ class Renderer(base.Renderer):
             result = 'unstyled'
         return result
 
-    def isEquipamentTramit(self, items):
+    def isEquipamentTramitAssociacio(self, items):
         item = items[0]
         results = []
         limitactual = self.data.limit
         limit = None
 
-        if item.Type() == u'Equipament' or item.Type() == u'Tramit':
+        if item.Type() == u'Equipament' or item.Type() == u'Tramit' or item.Type() == u'Associacio':
             if self.data.query:
                 results = self.queryCatalog(limit=limit)
                 if limitactual == limit and limitactual > 0:

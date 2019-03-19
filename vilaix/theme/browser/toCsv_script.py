@@ -9,6 +9,7 @@ import csv
 from Products.CMFPlone.utils import _createObjectByType
 
 
+
 class toCsv_script(grok.View):
 
     grok.context(IEquipament)
@@ -38,7 +39,7 @@ class toCsv_script(grok.View):
                 geo = equipament.geolocalitzacio
                 spamwriter.writerow([title, geo])
 
-    def CsvEquipToAsso(self):
+    def csvEquipToAsso(self):
         # llamar vista en la carpeta de associaciones
         catalog = getToolByName(self.context, 'portal_catalog')
 
@@ -62,17 +63,57 @@ class toCsv_script(grok.View):
                 asso.poblacio = equipToAsso.poblacio
                 asso.mes_informacio = equipToAsso.mes_informacio
 
+                #agafar tambe imatge + etiquetes
+                asso.image = equipToAsso.image
+                asso.subject = (row[1].lower(), )
+
                 try:
                     asso.geolocalitzacio = equipToAsso.geolocalitzacio
                     asso.latitude = equipToAsso.latitude
                     asso.longitude = equipToAsso.longitude
 
                 except:
-                    asso.latitude = row[1].split(", ")[0]
-                    asso.longitude = row[1].split(", ")[1]
+                    asso.latitude = row[2].split(", ")[0]
+                    asso.longitude = row[2].split(", ")[1]
                     asso.geolocalitzacio = asso.latitude + ", " + asso.longitude
 
                 asso.ubicacio_iframe = equipToAsso.ubicacio_iframe
 
+                import transaction; transaction.commit()
+                asso.reindexObject()
+
                 # delete from equipments
-                equipToAsso.aq_parent.manage_delObjects([equipToAsso.id])
+                # equipToAsso.aq_parent.manage_delObjects([equipToAsso.id])
+
+    def getLablesFromCsv(self):
+
+        catalog = getToolByName(self.context, 'portal_catalog')
+
+        with open('/tmp/labels.csv', 'r') as csvfile:
+            reader = csv.reader(csvfile)
+
+            assoToDelete = []
+            for row in reader:
+                try:
+                    asso = catalog.searchResults({'portal_type': 'Associacio', 'Title': row[0]})[0].getObject()
+                except:
+                    assoToDelete.append(row[0])
+                    continue
+                asso.subject = (row[1].lower(), )
+                import transaction; transaction.commit()
+                asso.reindexObject()
+
+    def imgToAsso(self):
+
+
+        catalog = getToolByName(self.context, 'portal_catalog')
+        getAllAssos = catalog.searchResults({'portal_type': 'Associacio'})
+        for asso in getAllAssos:
+            obj = asso.getObject()
+            try:
+                equip = catalog.searchResults({'portal_type': 'Equipament', 'Title': obj.id})[0].getObject()
+                if equip.image:
+                    obj.image = equip.image
+
+            except:
+                continue

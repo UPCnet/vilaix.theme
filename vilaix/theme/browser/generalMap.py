@@ -62,17 +62,17 @@ class generalMap(grok.View):
             })
 
         """
-
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog.searchResults(portal_type="Equipament")
         ordered_params = ('Tipus', 'Telefon', 'Address', 'Horari', 'Correu')
-
         for brain in brains:
             equipament = brain.getObject()
             if equipament.ubicacio_iframe:
                 if not equipament.latitude or not equipament.longitude:
                     continue
                 else:
+                    if type(equipament.title) == type("str"):
+                        equipament.title = equipament.title.decode('utf-8')
                     equip_base_params = dict(
                         lat=equipament.latitude,
                         long=equipament.longitude,
@@ -86,19 +86,20 @@ class generalMap(grok.View):
                         Horari=equipament.horari,
                         Correu=equipament.adreca_correu)
 
-                    addmark = """
-                       L.marker([%(lat)s, %(long)s],{icon:markIcon}).addTo(map)
-                        .bindPopup("<a href=%(url)s>%(title)s</a><br>""" % equip_base_params
+                    try:
+                        addmark = """
+                           L.marker([%(lat)s, %(long)s],{icon:markIcon}).addTo(map)
+                            .bindPopup("<a href=%(url)s>%(title)s</a><br>""" % equip_base_params
+                    except:
+                        continue
 
                     for i in ordered_params:
                         if equip_params[i]:
                             addmark = addmark + "%s: %s<br>" % (i, equip_params[i])
 
                     addmark = addmark + """").openPopup();"""
-
                     addmark = addmark.encode('utf-8')
                     mapa = mapa + addmark
 
         mapa = mapa + "</script>"
-
         return mapa
