@@ -71,7 +71,7 @@ class generalMap(grok.View):
                 if not equipament.latitude or not equipament.longitude:
                     continue
                 else:
-                    if type(equipament.title) == type("str"):
+                    if isinstance(equipament.title, str):
                         equipament.title = equipament.title.decode('utf-8')
                     equip_base_params = dict(
                         lat=equipament.latitude,

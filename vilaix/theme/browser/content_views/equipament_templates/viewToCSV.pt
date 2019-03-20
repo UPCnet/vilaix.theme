@@ -25,7 +25,7 @@
             	<!--Create csv with all equipments and his geolocation
                 <p tal:replace="structure view/convertToCsv | nothing"></p>-->
               <!--Read from csv "associacions" and create them-->
-              <p tal:replace="structure view/csvEquipToAsso | nothing"></p>
+              <p tal:content="view/csvEquipToAsso"></p>
               <p>Script executed</p>
             </div>
           </div>
