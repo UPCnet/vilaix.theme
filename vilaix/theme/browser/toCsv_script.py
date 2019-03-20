@@ -3,11 +3,11 @@ from five import grok
 from vilaix.core.content.equipament import IEquipament
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
-import csv
-
 from Products.CMFPlone.utils import _createObjectByType
 
+import csv
+import transaction
+import unicodedata
 
 
 class toCsv_script(grok.View):
@@ -28,7 +28,7 @@ class toCsv_script(grok.View):
         brains = catalog.searchResults(portal_type="Equipament")
 
         with open('equipaments.csv', 'w') as csvfile:
-            spamwriter = csv.writer(csvfile, delimiter=',')
+            spamwriter = csv.writer(csvfile, delimiter=';')
             spamwriter.writerow(['title', 'geolocalitzacio'])
             for brain in brains:
                 equipament = brain.getObject()
@@ -44,7 +44,7 @@ class toCsv_script(grok.View):
         catalog = getToolByName(self.context, 'portal_catalog')
 
         with open('/tmp/associacions.csv', 'r') as csvfile:
-            reader = csv.reader(csvfile)
+            reader = csv.reader(csvfile, delimiter=';')
             for row in reader:
                 try:
                     equipToAsso = catalog.searchResults({'portal_type': 'Equipament', 'Title': row[0]})[0].getObject()
@@ -54,6 +54,7 @@ class toCsv_script(grok.View):
                     continue
 
                 asso.title = equipToAsso.title
+                asso.description = equipToAsso.description
                 asso.tipus = equipToAsso.tipus
                 asso.telefon = equipToAsso.telefon
                 asso.adreca_contacte = equipToAsso.adreca_contacte
@@ -63,32 +64,29 @@ class toCsv_script(grok.View):
                 asso.poblacio = equipToAsso.poblacio
                 asso.mes_informacio = equipToAsso.mes_informacio
 
-                #agafar tambe imatge + etiquetes
+                # agafar tambe imatge + etiquetes
                 asso.image = equipToAsso.image
-                asso.subject = (row[1].lower(), )
+                keys = unicodedata.normalize('NFKD', unicode(row[1].lower(), "utf-8")).encode('ascii', errors='ignore')
+                asso.subject = (keys, )
 
                 try:
-                    asso.geolocalitzacio = equipToAsso.geolocalitzacio
-                    asso.latitude = equipToAsso.latitude
-                    asso.longitude = equipToAsso.longitude
-
-                except:
                     asso.latitude = row[2].split(", ")[0]
                     asso.longitude = row[2].split(", ")[1]
                     asso.geolocalitzacio = asso.latitude + ", " + asso.longitude
+                except:
+                    continue
 
                 asso.ubicacio_iframe = equipToAsso.ubicacio_iframe
 
-                import transaction; transaction.commit()
+                transaction.commit()
                 asso.reindexObject()
 
                 # delete from equipments
+                print "Deleting: " + equipToAsso.absolute_url_path()
                 # equipToAsso.aq_parent.manage_delObjects([equipToAsso.id])
 
     def getLablesFromCsv(self):
-
         catalog = getToolByName(self.context, 'portal_catalog')
-
         with open('/tmp/labels.csv', 'r') as csvfile:
             reader = csv.reader(csvfile)
 
@@ -100,12 +98,10 @@ class toCsv_script(grok.View):
                     assoToDelete.append(row[0])
                     continue
                 asso.subject = (row[1].lower(), )
-                import transaction; transaction.commit()
+                transaction.commit()
                 asso.reindexObject()
 
     def imgToAsso(self):
-
-
         catalog = getToolByName(self.context, 'portal_catalog')
         getAllAssos = catalog.searchResults({'portal_type': 'Associacio'})
         for asso in getAllAssos:
@@ -114,6 +110,5 @@ class toCsv_script(grok.View):
                 equip = catalog.searchResults({'portal_type': 'Equipament', 'Title': obj.id})[0].getObject()
                 if equip.image:
                     obj.image = equip.image
-
             except:
                 continue
