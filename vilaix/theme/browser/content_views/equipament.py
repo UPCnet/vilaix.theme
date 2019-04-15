@@ -28,7 +28,10 @@ class View(grok.View):
 
     def getMapa(self):
         if self.context.ubicacio_iframe:
-            return self.context.ubicacio_iframe.raw
+            try:
+                return self.context.ubicacio_iframe.raw
+            except:
+                return self.context.ubicacio_iframe
         else:
             caracter = "+"
             adreca_cont = ''
@@ -59,5 +62,6 @@ class View(grok.View):
                 adreca_postal = caracter.join(adreca) + '+' + caracter.join(cp) + '+' + caracter.join(poblacio_cont)
 
                 mapa = '<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=ca&amp;geocode=&amp;q=%s;aq=&amp;sll=%s;ie=UTF8&amp;hnear=%s;radius=15000&amp;t=m&amp;ll=%s;z=14&amp;iwloc=A&amp;output=embed"></iframe>' % (adreca_postal, geolocalitzacio, adreca_postal, geolocalitzacio)
+                self.context.ubicacio_iframe = mapa
                 return mapa
             return None

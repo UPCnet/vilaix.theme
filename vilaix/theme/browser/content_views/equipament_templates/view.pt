@@ -9,7 +9,8 @@
 <body class="equipament">
 
 <metal:main fill-slot="main">
-
+    <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
+    <h1 class="documentFirstHeading" tal:content="context/Title" />
     <div id="content-core"
          tal:define="horari context/horari;
                      mes_informacio context/mes_informacio;

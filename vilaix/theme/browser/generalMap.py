@@ -24,8 +24,9 @@ class generalMap(grok.View):
             <link href='//cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.css' rel='stylesheet'/>
             <script src='//cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.js'></script>
             <script src="//unpkg.com/leaflet.fullscreen@1.4.5/Control.FullScreen.js"></script>
-            <script src="++vilaix++js/leaflet-bing-layer.js"></script>
-
+            <!--[if !IE]-->
+                <script src="++vilaix++js/leaflet-bing-layer.js"></script>
+            <!--[endif]-->
             <script type='text/javascript'>
 
             var openStreetLayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -35,8 +36,24 @@ class generalMap(grok.View):
             accessToken: 'pk.eyJ1Ijoicm9naXZlbnR1dXBjIiwiYSI6ImNqcGRzejRjdDAxNmkzc3FyZjlvbG5nb2gifQ.IptrsYJTdxFTxVMQeT_XwQ'
             });
 
-            var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L'
-            var bingLayer = L.tileLayer.bing(BING_KEY)
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf("MSIE");
+            var tri = ua.indexOf("Trident");
+
+            if (msie > -1 || tri > -1){
+                var mapType = {
+                "Open Street Maps":openStreetLayer
+                }
+            }
+            else{
+                var BING_KEY = 'AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L'
+                var bingLayer = L.tileLayer.bing(BING_KEY)
+
+                var mapType = {
+                    "Open Street Maps":openStreetLayer,
+                    "Bing Maps":bingLayer
+                }
+            }
 
             var map = L.map('map', {
             fullscreenControl: true,
@@ -47,12 +64,7 @@ class generalMap(grok.View):
             zoom: 16,
             layers:[openStreetLayer]});
 
-            var mapType = {
-            "Open Street Maps":openStreetLayer,
-            "Bing Maps":bingLayer}
-
             L.control.layers(mapType).addTo(map);
-
 
             var markIcon = L.icon({
             iconUrl: 'https://i.stack.imgur.com/pQ1Cq.png',
