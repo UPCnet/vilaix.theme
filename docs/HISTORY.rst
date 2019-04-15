@@ -1,11 +1,29 @@
 Changelog
 =========
 
-1.15 (unreleased)
+1.16 (unreleased)
 -----------------
 
 - Nothing changed yet.
 
+
+1.15 (2019-03-22)
+-----------------
+
+* PEP8 [Roberto Diaz]
+* added description to migration and utf-8 to keywords [Roberto Diaz]
+* view associacio like equipaments, map fixed [r.ventura]
+* PEP8 [Roberto Diaz]
+* updated views [Roberto Diaz]
+* updated general map [Roberto Diaz]
+* added geo to asso and equip [Roberto Diaz]
+* updated compass CSS [Roberto Diaz]
+* added changes [Roberto Diaz]
+* updated code + PEP8 [Roberto Diaz]
+* mapa i vista de cada equip/asso es mostra amb leaflet [r.ventura]
+* script para llenar el campo de geolocalizaciÃ³n a partir de los datos del Iframe [r.ventura]
+* mapa equipaments i script per crear associacions a partir de csv [r.ventura]
+* fixed portlet solaping if span5 [Roberto Diaz]
 
 1.14 (2016-07-07)
 -----------------
