@@ -1,11 +1,11 @@
 Changelog
 =========
 
-1.16 (unreleased)
+1.16 (2019-04-23)
 -----------------
 
-- Nothing changed yet.
-
+* Merge branch 'master' of github.com:UPCnet/vilaix.theme [r.ventura]
+* mapa equipaments works on IE, tittle equip/asso added and iframe updated when no iframe [r.ventura]
 
 1.15 (2019-03-22)
 -----------------
