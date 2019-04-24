@@ -21,20 +21,17 @@ class generalMap(grok.View):
     def getGeneralMap(self):
         mapa = """
             <div id='map' style='height:400px;'></div>
-            <link href='//cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.css' rel='stylesheet'/>
-            <script src='//cdn.leafletjs.com/leaflet/v1.0.0-rc.1/leaflet.js'></script>
-            <script src="//unpkg.com/leaflet.fullscreen@1.4.5/Control.FullScreen.js"></script>
+            <link href="++vilaix++js/leaflet.css" rel='stylesheet'/>
+            <script src="++vilaix++js/leaflet.js"></script>
+            <script src="++vilaix++js/Control.FullScreen.js"></script>
             <!--[if !IE]-->
                 <script src="++vilaix++js/leaflet-bing-layer.js"></script>
             <!--[endif]-->
             <script type='text/javascript'>
 
-            var openStreetLayer = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            maxZoom: 18,
-            id: 'mapbox.streets',
-            accessToken: 'pk.eyJ1Ijoicm9naXZlbnR1dXBjIiwiYSI6ImNqcGRzejRjdDAxNmkzc3FyZjlvbG5nb2gifQ.IptrsYJTdxFTxVMQeT_XwQ'
-            });
+            var openStreetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            })
 
             var ua = window.navigator.userAgent;
             var msie = ua.indexOf("MSIE");
