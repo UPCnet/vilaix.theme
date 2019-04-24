@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.18 (unreleased)
+1.18 (2019-04-24)
 -----------------
 
-- Nothing changed yet.
-
+* added missing images from leaflet [Roberto Diaz]
 
 1.17 (2019-04-24)
 -----------------
