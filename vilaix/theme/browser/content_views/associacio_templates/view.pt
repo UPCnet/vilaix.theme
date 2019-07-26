@@ -22,6 +22,7 @@
                      longitude context/longitude;
                      telefon context/telefon;
                      adreca_correu context/adreca_correu;
+                     pag_xs context/pag_xs;
                      getMapa view/getMapa">
       <div id="equipament">
         <div class="row-fluid">
@@ -30,7 +31,7 @@
                  style="display: block; margin-left: auto; margin-right: auto; width: 70%;"/>
               <div class="columnes">
                 <tal:block tal:condition="tipus">
-	            		<label class="horizontal"> Tipus associació </label>
+	            		<label class="horizontal"> Finalitats </label>
 		            	<p><span tal:content="tipus"></span></p>
                 </tal:block>
 
@@ -38,16 +39,6 @@
 		            	<label class="horizontal"> Adreça de contacte </label>
 		            	<p><span tal:content="adreca_contacte"></span></p>
                 </tal:tipus>
-
-                <tal:block tal:condition="codi_postal">
-		            	<label class="horizontal"> Codi Postal </label>
-        			    <p><span tal:content="codi_postal"></span></p>
-                </tal:block>
-
-                <tal:block tal:condition="poblacio">
-						      <label class="horizontal"> Població </label>
-		            	<p><span tal:content="poblacio"></span></p>
-                </tal:block>
 
                 <tal:block tal:condition="telefon">
 		            	<label class="horizontal"> Telèfon </label>
@@ -57,6 +48,11 @@
                 <tal:block tal:condition="adreca_correu">
 		            	<label class="horizontal"> Adreça de correu </label>
 		            	<p><span tal:content="adreca_correu"></span></p>
+                </tal:block>
+
+                <tal:block tal:condition="pag_xs">
+                  <label class="horizontal"> Pàgina web i xarxes socials </label>
+                  <p><span tal:content="structure pag_xs/raw"></span></p>
                 </tal:block>
 
 	            	<tal:horari tal:condition="horari">
