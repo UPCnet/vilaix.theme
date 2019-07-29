@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.19 (unreleased)
+1.19 (2019-07-29)
 -----------------
 
-- Nothing changed yet.
-
+* Associacio view [r.ventura]
 
 1.18 (2019-04-24)
 -----------------
